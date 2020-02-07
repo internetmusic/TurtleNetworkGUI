@@ -153,10 +153,9 @@
          * @returns {string}
          */
         hash(str) {
-             //This is to overcome limitation base58 encoding not allowing zeroes
-            if(str.includes('0'))
-            {
-                str = str.replace(/0/g, "");
+            // This is to overcome limitation base58 encoding not allowing zeroes
+            if( str.includes('0')) {
+                str = str.replace(/0/g, '');
             }
             return base58Encode(blake2b(base58Decode(str)));
         }
