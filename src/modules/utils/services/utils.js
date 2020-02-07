@@ -6,10 +6,10 @@
     const tsApiValidator = require('ts-api-validator');
     const { splitEvery, pipe, path, map, ifElse, concat, defaultTo, identity, isNil, propEq } = require('ramda');
     const { WindowAdapter, Bus } = require('@waves/waves-browser-bus');
-    const { libs } = require('@waves/waves-transactions');
+    const { libs } = require('@turtlenetwork/waves-transactions');
     const { base58Decode, base58Encode, stringToBytes, bytesToString } = libs.crypto;
     const ds = require('data-service');
-    const { SIGN_TYPE } = require('@waves/signature-adapter');
+    const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
     const { Money } = require('@waves/data-entities');
     const { STATUS_LIST } = require('@waves/oracle-data');
     const { BigNumber } = require('@waves/bignumber');

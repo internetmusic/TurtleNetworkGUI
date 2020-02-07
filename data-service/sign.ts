@@ -1,4 +1,4 @@
-import { Adapter, getAdapterByType, adapterList, AdapterType } from '@waves/signature-adapter';
+import { Adapter, getAdapterByType, adapterList, AdapterType } from '@turtlenetwork/signature-adapter';
 
 export interface IUserData {
     userType: AdapterType;

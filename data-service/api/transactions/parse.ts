@@ -1,7 +1,7 @@
 import { Asset, AssetPair, Money } from '@waves/data-entities';
 import { BigNumber } from '@waves/bignumber';
-import { TRANSACTION_TYPE_NUMBER, WAVES_ID } from '@waves/signature-adapter';
-import { libs } from '@waves/waves-transactions';
+import { TRANSACTION_TYPE_NUMBER, WAVES_ID } from '@turtlenetwork/signature-adapter';
+import { libs } from '@turtlenetwork/waves-transactions';
 import { get } from '../assets/assets';
 import {
     IBurn,

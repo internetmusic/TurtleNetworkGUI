@@ -13,8 +13,8 @@
 
         const ds = require('data-service');
         const { Money } = require('@waves/data-entities');
-        const { currentFeeFactory, SIGN_TYPE } = require('@waves/signature-adapter');
-        const { libs } = require('@waves/waves-transactions');
+        const { currentFeeFactory, SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
+        const { libs } = require('@turtlenetwork/waves-transactions');
         const { address } = libs.crypto;
         const { path } = require('ramda');
         const { BigNumber } = require('@waves/bignumber');

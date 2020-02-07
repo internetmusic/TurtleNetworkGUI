@@ -2,7 +2,7 @@
 (() => {
     'use strict';
 
-    const { libs } = require('@waves/waves-transactions');
+    const { libs } = require('@turtlenetwork/waves-transactions');
     const {
         encryptSeed,
         decryptSeed,
@@ -92,7 +92,6 @@
         addUser({ userType, networkByte, seed, id, privateKey, publicKey }) {
             const _publicKey = publicKey || buildPublicKey(seed || { privateKey });
             const userHash = this.hash(networkByte + _publicKey);
-
             _users[userHash] = {
                 userType,
                 networkByte,
@@ -154,6 +153,11 @@
          * @returns {string}
          */
         hash(str) {
+             //This is to overcome limitation base58 encoding not allowing zeroes
+            if(str.includes('0'))
+            {
+                str = str.replace(/0/g, "");
+            }
             return base58Encode(blake2b(base58Decode(str)));
         }
 

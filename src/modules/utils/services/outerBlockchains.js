@@ -4,7 +4,7 @@
     const factory = function (waves) {
 
         const VALIDATOR = {
-            [WavesApp.defaultAssets.BTC]: WavesApp.network.code === 'W' ?
+            [WavesApp.defaultAssets.BTC]: WavesApp.network.code === 'l' ?
                 /^([13][a-km-zA-HJ-NP-Z1-9]{25,34}|(bc1)[a-z0-9]{25,90})$/ :
                 /^[2mn][1-9A-HJ-NP-Za-km-z]{26,35}/,
             [WavesApp.defaultAssets.ETH]: /^0x[0-9a-f]{40}$/i,

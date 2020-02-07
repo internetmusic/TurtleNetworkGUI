@@ -12,7 +12,7 @@
                                  $mdDialog,
                                  utils) {
 
-        const { SIGN_TYPE } = require('@waves/signature-adapter');
+        const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
         const WCT_ID = WavesApp.WCTAsset;
         const WAVES_ID = WavesApp.defaultAssets.WAVES;
         const NEED_WCT = 1;

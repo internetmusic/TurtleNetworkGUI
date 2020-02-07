@@ -11,7 +11,7 @@
     const controller = function (Base, $scope, waves) {
 
         const { indexBy, prop, head } = require('ramda');
-        const { SIGN_TYPE } = require('@waves/signature-adapter');
+        const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
         const { Money } = require('@waves/data-entities');
         const ds = require('data-service');
         const analytics = require('@waves/event-sender');

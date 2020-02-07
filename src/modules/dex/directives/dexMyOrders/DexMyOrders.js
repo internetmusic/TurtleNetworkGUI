@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    const { SIGN_TYPE } = require('@waves/signature-adapter');
+    const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
     const { filter, whereEq, uniqBy, prop, where, gt, pick, __, map } = require('ramda');
     const ds = require('data-service');
     const analytics = require('@waves/event-sender');

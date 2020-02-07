@@ -4,8 +4,8 @@
     const ds = require('data-service');
     const { Money } = require('@waves/data-entities');
     const { BigNumber } = require('@waves/bignumber');
-    const { currentCreateOrderFactory } = require('@waves/signature-adapter');
-    const { libs } = require('@waves/waves-transactions');
+    const { currentCreateOrderFactory } = require('@turtlenetwork/signature-adapter');
+    const { libs } = require('@turtlenetwork/waves-transactions');
     const { address } = libs.crypto;
 
     /**

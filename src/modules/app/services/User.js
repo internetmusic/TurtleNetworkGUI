@@ -3,7 +3,7 @@
     'use strict';
 
     const { equals } = require('ramda');
-    const { isValidAddress } = require('@waves/signature-adapter');
+    const { isValidAddress } = require('@turtlenetwork/signature-adapter');
 
     /**
      * @param {Storage} storage
