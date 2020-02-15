@@ -161,7 +161,7 @@
             static _parseOrder(data) {
                 const moneyFactory = ds.api.matcher.factory;
                 return Promise.all([
-                    waves.node.assets.getAsset('WAVES'),
+                    waves.node.assets.getAsset('TN'),
                     waves.node.assets.getAsset(ds.utils.normalizeAssetId(data.assetPair.amountAsset)),
                     waves.node.assets.getAsset(ds.utils.normalizeAssetId(data.assetPair.priceAsset))
                 ])

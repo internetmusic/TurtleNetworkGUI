@@ -693,7 +693,7 @@
                 const address = item ? item.address : this.address;
                 try {
                     this.networkError = false;
-                    waves = await ds.api.assets.get(WavesApp.defaultAssets.WAVES);
+                    waves = await ds.api.assets.get(WavesApp.defaultAssets.TN);
                 } catch (e) {
                     this.networkError = true;
                     throw new Error('Can\'t get Waves asset');

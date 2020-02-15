@@ -114,7 +114,7 @@ export class DataManager {
             status: 4
         };
 
-        if (id === 'WAVES') {
+        if (id === 'TN') {
             return { status: STATUS_LIST.VERIFIED, description: descriptionHash.WAVES } as any;
         }
 

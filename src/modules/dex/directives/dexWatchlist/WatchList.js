@@ -9,7 +9,7 @@
         DROP_DOWN_LIST.push({ name, id: WavesApp.defaultAssets[name] });
     });
     Object.keys(WavesApp.defaultAssets).forEach((name) => {
-        if (!DROP_DOWN_ORDER_LIST.includes(name) && name !== 'WAVES' && name !== 'BTC') {
+        if (!DROP_DOWN_ORDER_LIST.includes(name) && name !== 'TN' && name !== 'BTC') {
             DROP_DOWN_LIST.push({ name, id: WavesApp.defaultAssets[name] });
         }
     });
@@ -74,7 +74,7 @@
              */
             tabs = [
                 { name: 'directives.watchlist.all', value: 'all' },
-                { name: 'WAVES', value: WavesApp.defaultAssets.WAVES },
+                { name: 'TN', value: WavesApp.defaultAssets.WAVES },
                 { name: 'BTC', value: WavesApp.defaultAssets.BTC }
             ];
             /**
@@ -710,7 +710,7 @@
              * @private
              */
             static _isId(query) {
-                return WatchList._getBytes(query) > 16 || query === 'WAVES';
+                return WatchList._getBytes(query) > 16 || query === 'TN';
             }
 
             /**

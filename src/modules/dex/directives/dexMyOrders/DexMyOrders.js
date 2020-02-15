@@ -520,7 +520,7 @@
                     const pair = `${assetPair.amountAsset.displayName} / ${assetPair.priceAsset.displayName}`;
                     const isNew = DexMyOrders._isNewOrder(order.timestamp.getTime());
                     const percent = new BigNumber(order.progress * 100).toFixed(2);
-                    const feeAsset = order.feeAsset || order.matcherFeeAssetId || 'WAVES';
+                    const feeAsset = order.feeAsset || order.matcherFeeAssetId || 'TN';
                     const matcherFee = order.fee || order.matcherFee;
                     if (matcherFee) {
                         if (matcherFee instanceof Money) {

@@ -41,8 +41,16 @@ export function set<K extends keyof IConfigParams>(key: K, value: IConfigParams[
         }).then(data => data.priceAssets);
     }
     if (key === 'api' || key === 'apiVersion') {
-        if (config.api && config.apiVersion) {
+        if (config.api && config.apiVersion) { 
             dataService = new DataServiceClient({ rootUrl: `${config.api}/${config.apiVersion}`, parse });
+        }
+        else if(!config.apiVersion && config.api)
+        {
+            dataService = new DataServiceClient({ rootUrl: `${config.api}`, parse });
+        }
+        else
+        {
+            console.error("Failed to log data-service as api was not given")
         }
     }
     change.dispatch(key);

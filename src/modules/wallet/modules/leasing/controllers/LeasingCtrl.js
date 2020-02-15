@@ -103,7 +103,7 @@
              * @private
              */
             _updateLeasingData() {
-                const waves = balanceWatcher.getFullBalanceList().find(pathEq(['asset', 'id'], 'WAVES'));
+                const waves = balanceWatcher.getFullBalanceList().find(pathEq(['asset', 'id'], 'TN'));
 
                 if (!waves) {
                     return null;

@@ -44,9 +44,9 @@ export function get(assets: string | Array<string>): Promise<any> {
 }
 
 export const wavesAsset = new Asset({
-    ticker: 'WAVES',
-    id: 'WAVES',
-    name: 'Waves',
+    ticker: 'TN',
+    id: 'TN',
+    name: 'TN',
     precision: 8,
     description: '',
     height: 0,
