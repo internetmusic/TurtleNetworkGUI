@@ -101,7 +101,7 @@
   "dependencies": {
     "@sentry/browser": "5.4.3",
     "@turtlenetwork/ledger": "^3.1.5",
-    "@turtlenetwork/signature-adapter": "file:../tn-signature-adapter",
+    "@turtlenetwork/signature-adapter": "5.7.2",
     "@turtlenetwork/waves-transactions": "^3.25.2",
     "@types/ramda": "0.25.34",
     "@uirouter/angularjs": "1.0.8",

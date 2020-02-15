@@ -6,10 +6,10 @@
 
 FROM node:lts-alpine as static-VERSION-NUMBER
 RUN apk update && apk add git
+ARG platform=web
 
 COPY ./TurtleNetworkGUI/ /srv/www/TurtleNetworkGUI/
 WORKDIR /srv/www/TurtleNetworkGUI
-ARG platform=web
 RUN npm ci --unsafe-perm && \
     node_modules/.bin/gulp build --platform \$platform --config ./configs/testnet.json && \
     mv ./dist/\$platform/testnet ./testnet && \
@@ -21,8 +21,8 @@ RUN npm ci --unsafe-perm && \
 RUN rm -rf /srv/www/TurtleNetworkGUI/node_modules/
 
 FROM nginx:stable-alpine
-ARG web_environment=mainnet
 ARG platform=web
+ARG web_environment=mainnet
 ENV WEB_ENVIRONMENT=\$web_environment
 ENV PLATFORM=\$platform
 
