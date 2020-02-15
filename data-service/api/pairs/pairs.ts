@@ -4,7 +4,7 @@ import { getDataService, matcherSettingsPromise } from '../../config';
 import { request } from '../../utils/request';
 import { get as getAsset } from '../assets/assets';
 import { createOrderPair } from '@waves/assets-pairs-order';
-import { WAVES_ID } from '@waves/signature-adapter';
+import { WAVES_ID } from '@turtlenetwork/signature-adapter';
 import { TPairJSON } from '@waves/data-service-client-js/src/types';
 import { TMoneyInput } from '@waves/data-entities/dist/entities/Money';
 

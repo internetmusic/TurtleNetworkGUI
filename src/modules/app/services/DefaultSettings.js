@@ -63,31 +63,15 @@
                     },
                     orderLimit: 0.05,
                     pinnedAssetIdList: [
-                        WavesApp.defaultAssets.WAVES,
-                        WavesApp.defaultAssets.BTC,
-                        WavesApp.defaultAssets.ETH,
-                        WavesApp.defaultAssets.USD,
-                        WavesApp.defaultAssets.EUR,
-                        WavesApp.defaultAssets.LTC,
-                        WavesApp.defaultAssets.ZEC,
-                        WavesApp.defaultAssets.BCH,
-                        WavesApp.defaultAssets.BSV,
-                        WavesApp.defaultAssets.TRY,
-                        WavesApp.defaultAssets.DASH,
-                        WavesApp.defaultAssets.XMR,
-                        WavesApp.defaultAssets.WEST,
-                        WavesApp.defaultAssets.ERGO,
-                        WavesApp.defaultAssets.BNT
+                        WavesApp.defaultAssets.TN
                     ],
                     wallet: {
                         activeState: 'assets',
                         assets: {
                             chartMode: 'month',
-                            activeChartAssetId: WavesApp.defaultAssets.WAVES,
+                            activeChartAssetId: WavesApp.defaultAssets.TN,
                             chartAssetIdList: [
-                                WavesApp.defaultAssets.WAVES,
-                                WavesApp.defaultAssets.BTC,
-                                WavesApp.defaultAssets.ETH
+                                WavesApp.defaultAssets.TN
                             ]
                         },
                         transactions: {

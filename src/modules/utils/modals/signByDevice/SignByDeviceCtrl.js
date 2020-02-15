@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    const { SIGN_TYPE } = require('@waves/signature-adapter');
+    const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
     const $ = require('jquery');
 
     /**

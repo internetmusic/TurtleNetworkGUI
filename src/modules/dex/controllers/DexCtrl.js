@@ -138,7 +138,7 @@
                     const amountAssetName = amountAsset.ticker || amountAsset.displayName;
                     const priceAssetName = priceAsset.ticker || priceAsset.displayName;
 
-                    const findUnlocked = assetId => assetId !== 'WAVES' && !utils.isLockedInDex(assetId);
+                    const findUnlocked = assetId => assetId !== 'TN' && !utils.isLockedInDex(assetId);
 
                     const unLockedAsset = utils.isLockedInDex(WavesApp.defaultAssets.BTC) ?
                         Object.values(WavesApp.defaultAssets).find(findUnlocked) :

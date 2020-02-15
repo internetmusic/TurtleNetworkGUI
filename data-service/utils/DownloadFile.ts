@@ -2,7 +2,7 @@ const xhr = new XMLHttpRequest();
 
 export async function downloadFile (url: string, progressCb?: (progress: number, size?: number) => void): Promise<Uint8Array> {
     return new Promise(resolve => {
-        xhr.open('GET', url, true);
+       /* xhr.open('GET', url, true);
         xhr.responseType = "blob";
 
         xhr.onprogress = (event): void => {
@@ -11,14 +11,13 @@ export async function downloadFile (url: string, progressCb?: (progress: number,
             }
         };
 
-
         xhr.onload = (): void => {
             new Response(xhr.response).arrayBuffer().then(buffer => {
                 resolve(new Uint8Array(buffer));
             })
         };
 
-        xhr.send();
+        xhr.send();*/
     });
 
 }

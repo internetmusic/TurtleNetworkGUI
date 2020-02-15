@@ -3,7 +3,7 @@ import { BigNumber } from '@waves/bignumber';
 import { get as configGet, getDataService } from '../../config';
 import { request } from '../../utils/request';
 import { IBalanceItem, assetsApi } from './interface';
-import { WAVES_ID } from '@waves/signature-adapter';
+import { WAVES_ID } from '@turtlenetwork/signature-adapter';
 import { assetStorage } from '../../utils/AssetStorage';
 import { clearTransferFee, normalizeAssetId, setTransferFeeItem, toArray, toHash } from '../../utils/utils';
 import { isEmpty } from 'ts-utils';
@@ -44,9 +44,9 @@ export function get(assets: string | Array<string>): Promise<any> {
 }
 
 export const wavesAsset = new Asset({
-    ticker: 'WAVES',
-    id: 'WAVES',
-    name: 'Waves',
+    ticker: 'TN',
+    id: 'TN',
+    name: 'TN',
     precision: 8,
     description: '',
     height: 0,

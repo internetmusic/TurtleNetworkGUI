@@ -4,7 +4,7 @@
     const MIN_ALIAS_LENGTH = 4;
     const MAX_ALIAS_LENGTH = 30;
     const ALIAS_PATTERN = /^[a-z0-9-@_.]*$/;
-    const { SIGN_TYPE } = require('@waves/signature-adapter');
+    const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
 
     /**
      * @param Base

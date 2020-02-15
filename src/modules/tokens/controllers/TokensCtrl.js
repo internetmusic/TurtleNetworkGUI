@@ -13,7 +13,7 @@
      */
     const controller = function (Base, $scope, modalManager, waves, balanceWatcher, user, utils, PromiseControl) {
 
-        const { SIGN_TYPE, WAVES_ID } = require('@waves/signature-adapter');
+        const { SIGN_TYPE, WAVES_ID } = require('@turtlenetwork/signature-adapter');
         const { BigNumber } = require('@waves/bignumber');
         const ds = require('data-service');
         const $ = require('jquery');

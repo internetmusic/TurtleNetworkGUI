@@ -120,8 +120,7 @@
 
 <div class="margin-top-3">
     <w-sign-button on-click="$ctrl.createTx()"
-                   on-success="$ctrl.onSignTx(signable)"
-                   disabled="$ctrl.wavesSend.$invalid || !$ctrl.hasFee">
+                   on-success="$ctrl.onSignTx(signable)">
         <span w-i18n="button.continue"></span>
     </w-sign-button>
 </div>

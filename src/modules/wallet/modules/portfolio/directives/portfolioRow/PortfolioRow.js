@@ -4,7 +4,7 @@
     const Handlebars = require('handlebars');
     const { STATUS_LIST } = require('@waves/oracle-data');
     const { path } = require('ramda');
-    const { SIGN_TYPE } = require('@waves/signature-adapter');
+    const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
     const analytics = require('@waves/event-sender');
     const { BigNumber } = require('@waves/bignumber');
 

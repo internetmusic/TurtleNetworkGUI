@@ -12,7 +12,7 @@
     const controller = function (Base, $scope, waves, balanceWatcher, utils) {
 
         const { isEmpty } = require('ts-utils');
-        const { SIGN_TYPE } = require('@waves/signature-adapter');
+        const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
         const { Money } = require('@waves/data-entities');
         const ds = require('data-service');
         const analytics = require('@waves/event-sender');

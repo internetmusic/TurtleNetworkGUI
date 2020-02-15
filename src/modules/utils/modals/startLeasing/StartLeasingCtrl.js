@@ -12,7 +12,7 @@
      */
     const controller = function (Base, $scope, user, utils, waves, i18n) {
 
-        const { SIGN_TYPE } = require('@waves/signature-adapter');
+        const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
         const ds = require('data-service');
         const analytics = require('@waves/event-sender');
 
