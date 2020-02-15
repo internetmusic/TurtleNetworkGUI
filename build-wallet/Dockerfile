@@ -11,20 +11,21 @@ ARG platform=web
 COPY ./TurtleNetworkGUI/ /srv/www/TurtleNetworkGUI/
 WORKDIR /srv/www/TurtleNetworkGUI
 RUN npm ci --unsafe-perm && \
-    node_modules/.bin/gulp build --platform \$platform --config ./configs/testnet.json && \
-    mv ./dist/\$platform/testnet ./testnet && \
-    node_modules/.bin/gulp build --platform \$platform --config ./configs/stagenet.json && \
-    mv ./dist/\$platform/stagenet ./stagenet && \
-    node_modules/.bin/gulp build --platform \$platform --config ./configs/mainnet.json && \
-    mv ./testnet ./dist/\$platform/testnet  && \
-    mv ./stagenet ./dist/\$platform/stagenet
+    node_modules/.bin/gulp build --platform \web --config ./configs/testnet.json && \
+    mv ./dist/\web/testnet ./testnet && \
+    node_modules/.bin/gulp build --platform \web --config ./configs/stagenet.json && \
+    mv ./dist/\web/stagenet ./stagenet && \
+    node_modules/.bin/gulp build --platform \web --config ./configs/mainnet.json && \
+    mv ./testnet ./dist/\web/testnet  && \
+    mv ./stagenet ./dist/\web/stagenet
 RUN rm -rf /srv/www/TurtleNetworkGUI/node_modules/
 
 FROM nginx:stable-alpine
 ARG platform=web
 ARG web_environment=mainnet
 ENV WEB_ENVIRONMENT=\$web_environment
-ENV PLATFORM=\$platform
+#ENV PLATFORM=\$platform
+ENV PLATFORM=web
 
 RUN  mkdir -p /etc/nginx/sites-enabled && \
     apk update && \
