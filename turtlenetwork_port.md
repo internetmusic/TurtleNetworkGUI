@@ -17,6 +17,7 @@ Dependencies
 
 Wallet
 - [x] Change Base currency to TN
+- [ ] Update fees document
 - [ ] Account Creation
   - [ ] Import accounts
     - [x] Use existing seed
@@ -55,6 +56,8 @@ Aesthetic
 Infrastructure
 - [ ] Design Kubernetes architecture to run GUI
 - [ ] Write Ansible Playbooks for hardened hosts designs
+- [ ] Disable Sentry.io
+- [ ] Disable Google-analytics
 
 
 Bugs to Fix

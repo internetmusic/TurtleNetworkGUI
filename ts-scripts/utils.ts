@@ -409,13 +409,13 @@ export async function getInitScript(
                         type: 'logic'
                     });
 
-                    analytics.addApi({
+                    /*analytics.addApi({
                         apiToken: config._isProduction() ? 'UA-75283398-20' : 'UA-75283398-21',
                         libraryUrl: location.origin + '/googleAnalytics.js',
                         initializeMethod: 'gaInit',
                         sendMethod: 'gaPushEvent',
                         type: 'ui'
-                    });
+                    });*/
 
                     if (location.pathname.replace('/', '') === '') {
                         analytics.send({ name: 'Onboarding In Show', target: 'ui' });
