@@ -32,23 +32,8 @@
   "WESTNetworkByte": "F",
   "tokenrating": "https://dev.voting.wavesplatform.com",
   "assets": {
-    "EUR": "AsuWyM9MUUsMmWkK7jS48L3ky6gA1pxx7QtEYPbfLjAJ",
-    "USD": "D6N2rAqWN6ZCWnCeNFWLGqqjS6nJLeK4m19XiuhdDenr",
-    "BTC": "DWgwcZTMhSvnyYCoWLRUXXSH1RSkzThXLJhww9gwkqdn",
-    "ETH": "BrmjyAWT5jjr3Wpsiyivyvg5vDuzoX2s93WgiexXetB3",
-    "LTC": "BNdAstuFogzSyN2rY3beJbnBYwYcu7RzTHFjW88g8roK",
-    "ZEC": "CFg2KQfkUgUVM2jFCMC5Xh8T8zrebvPc4HjHPfAugU1S",
-    "BCH": "8HT8tXwrXAYqwm8XrZ2hywWWTUAXxobHB5DakVC1y6jn",
-    "BSV": "6KSUNALdYEd1EVTE4dTcSHzNw1dA3Q6ieokSRVuEcALV",
-    "TRY": "7itsmgdmomeTXvZzaaxqF3346h4FhciRoWceEw9asNV3",
-    "DASH": "DGgBtwVoXKAKKvV2ayUpSoPzTJxt7jo9KiXMJRzTH2ET",
-    "EFYT": "FvKx3cerSVYGfXKFvUgp7koNuTAcLs8DmtmwRrFVCqJv",
-    "WNET": "3P8gkhcLhFQvBkDzMnWeqqwvq3qxkpTNQPs4LUQ95tKD",
-    "XMR": "8oPbSCKFHkXBy1hCGSg9pJkSARE7zhTQTLpc8KZwdtr7",
-    "WEST": "AMFteLfPzPhTsFc3NfvHG7fSRUnsp3tJXPH88G1PCisT",
-    "ERGO": "AvxDjVat8ErppBRxM56KewbQq3RMv8QibBNssqn6P7Fd",
-    "WCT": "EmcmfM27TPaemhuREZGD8WLvsuLCdqx8WovMrDQKbXS1",
-    "BNT": "B6pP4SJY1aCXfVneF9P2hmBeQBPhNTVTGPDPZ57VGYQp"
+    "BTC": "4bXds5VEHFQth6AhpF1k6rjvNKzaMf1Yz2Wab9pn9msD",
+    "ETH": "2GRJaVYhhQPKVoWQFyJfTfx3eB5DD7CPdG7ZYx3Cs6Mk"
   },
   "matcherPriorityList": [
     { "ticker": "TN", "id": "TN"},
