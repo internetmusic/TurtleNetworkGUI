@@ -25,5 +25,5 @@ stages:
         containerRegistry: 'turtlenetwork docker'
         repository: 'turtlenetwork/tngui'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+        Dockerfile: 'Dockerfile'
       displayName: 'Build and push docker container'  
