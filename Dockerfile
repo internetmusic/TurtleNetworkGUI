@@ -26,7 +26,7 @@ WORKDIR /srv/www
 COPY ./build-wallet/nginx/default.conf /etc/nginx/sites-available/default.conf
 #COPY ./build-wallet/info.html /srv/www/info
 COPY ./build-wallet/nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ./dist/web/testnet /srv/www/TurtleNetworkGUI/dist/web/testnet/
+COPY --from=static-temp /srv/www/TurtleNetworkGUI/dist/web/testnet/ /srv/www/TurtleNetworkGUI/dist/web/testnet/
 EXPOSE 80
 
 CMD ["/bin/sh","-c", "envsubst 'testnet' < /etc/nginx/sites-available/default.conf > /etc/nginx/sites-enabled/web-testnet.conf ; nginx -g 'daemon off;'"]
