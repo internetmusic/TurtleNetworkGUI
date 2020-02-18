@@ -188,7 +188,7 @@
                 const isDesktop = WavesApp.isDesktop();
                 if (isDesktop) {
                     this.decryptedData.saveUsers = this.decryptedData.saveUsers
-                        .filter((user) => user.userType !== 'wavesKeeper');
+                        .filter((user) => user.userType !== 'TurtleShell');
                 }
 
                 this.decryptedData.saveUsers = this.decryptedData.saveUsers

@@ -1933,7 +1933,7 @@
                 }
 
                 const getError = (user, error) => {
-                    if (user.userType === 'wavesKeeper' && error &&
+                    if (user.userType === 'TurtleShell' && error &&
                         error.code === 5 && error.msg.includes('another active account')) {
                         return { error: 'sign-user-error', userType: user.userType };
                     }

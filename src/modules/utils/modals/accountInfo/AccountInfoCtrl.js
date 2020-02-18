@@ -95,7 +95,7 @@
                 /**
                  * @type {boolean}
                  */
-                this.isKeeper = user.userType === 'wavesKeeper';
+                this.isKeeper = user.userType === 'TurtleShell';
 
                 /**
                  * @type {boolean}

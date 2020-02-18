@@ -99,7 +99,7 @@
                 this.isDesktop = WavesApp.isDesktop();
 
                 this.isScript = user.hasScript();
-                this.isKeeper = user.userType === 'wavesKeeper';
+                this.isKeeper = user.userType === 'TurtleShell';
                 this.isLedger = user.userType === 'ledger';
 
                 this.hasTypeHelp = this.isScript && (this.isLedger || this.isKeeper);
@@ -442,7 +442,7 @@
                 this.userName = user.name;
                 this.userType = user.userType;
                 this.isScript = user.hasScript();
-                this.isKeeper = user.userType === 'wavesKeeper';
+                this.isKeeper = user.userType === 'TurtleShell';
                 this.isLedger = user.userType === 'ledger';
                 this.hasTypeHelp = this.isScript && (this.isLedger || this.isKeeper);
                 this.userList = [];

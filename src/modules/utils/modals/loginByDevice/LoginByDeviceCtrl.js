@@ -39,7 +39,7 @@
 
                 const { promise, type } = callback();
                 this.isLedger = type === 'ledger';
-                this.isKeeper = type === 'wavesKeeper';
+                this.isKeeper = type === 'TurtleShell';
 
                 this.deferred.promise()
                     .then(() => this.onLoad())

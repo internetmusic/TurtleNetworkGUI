@@ -81,7 +81,7 @@
                 }
 
                 this.isLedger = user.userType === 'ledger';
-                this.isKeeper = user.userType === 'wavesKeeper';
+                this.isKeeper = user.userType === 'TurtleShell';
 
                 this.deferred.promise()
                     .then(signable => {
