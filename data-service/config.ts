@@ -2,7 +2,7 @@ import DataServiceClient from '@waves/data-service-client-js';
 import { IHash } from './interface';
 import { time } from './api/node/node';
 import { request } from './utils/request';
-import { MAINNET_DATA } from '@waves/assets-pairs-order';
+import { MAINNET_DATA } from '@turtlenetwork/assets-pairs-order';
 import { Signal } from 'ts-utils';
 import {IAssetInfo} from "@waves/data-entities/dist/entities/Asset";
 
@@ -41,7 +41,7 @@ export function set<K extends keyof IConfigParams>(key: K, value: IConfigParams[
         }).then(data => data.priceAssets);
     }
     if (key === 'api' || key === 'apiVersion') {
-        if (config.api && config.apiVersion) { 
+        if (config.api && config.apiVersion) {
             dataService = new DataServiceClient({ rootUrl: `${config.api}/${config.apiVersion}`, parse });
         }
         else if(!config.apiVersion && config.api)

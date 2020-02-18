@@ -105,7 +105,7 @@
     "@turtlenetwork/waves-transactions": "^3.25.2",
     "@types/ramda": "0.25.34",
     "@uirouter/angularjs": "1.0.8",
-    "@waves/assets-pairs-order": "4.0.0",
+    "@turtlenetwork/assets-pairs-order": "4.0.2",
     "@waves/bignumber": "0.0.1",
     "@waves/data-entities": "^2.0.0",
     "@waves/data-service-client-js": "^4.1.0",
