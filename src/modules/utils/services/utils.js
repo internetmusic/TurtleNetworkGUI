@@ -1774,7 +1774,7 @@
                  */
                 const isAdvancedMode = user.getSetting('advancedMode');
 
-                const hasCustomFee = data.matcherFee.asset.id && data.matcherFee.asset.id !== 'WAVES';
+                const hasCustomFee = data.matcherFee.asset.id && data.matcherFee.asset.id !== 'TN';
 
                 /**
                  * @type {number | undefined}

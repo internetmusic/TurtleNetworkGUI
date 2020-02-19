@@ -39,15 +39,15 @@
         const PAIRS_IN_SLIDER = [
             {
                 amount: WavesApp.defaultAssets.WEST,
-                price: 'WAVES'
+                price: 'TN'
             },
             {
                 amount: WavesApp.defaultAssets.BTC,
-                price: 'WAVES'
+                price: 'TN'
             },
             {
                 amount: WCT_ID,
-                price: 'WAVES'
+                price: 'TN'
             },
             {
                 amount: WavesApp.defaultAssets.DASH,
@@ -63,15 +63,15 @@
             },
             {
                 amount: WavesApp.defaultAssets.ETH,
-                price: 'WAVES'
+                price: 'TN'
             },
             {
-                amount: 'WAVES',
+                amount: 'TN',
                 price: WavesApp.defaultAssets.USD
             },
             {
                 amount: WavesApp.defaultAssets.ZEC,
-                price: 'WAVES'
+                price: 'TN'
             },
             {
                 amount: WavesApp.defaultAssets.XMR,
