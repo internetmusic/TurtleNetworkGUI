@@ -14,7 +14,7 @@
   "node": "https://nodes.wavesplatform.com",
   "matcher": "https://matcher.wavesplatform.com/matcher",
   "api": "https://data-service.turtlenetwork.eu",
-  "explorer": "https://wavesexplorer.com",
+  "explorer": "https://explorer.turtlenetwork.eu",
   "coinomat": "https://coinomat.com",
   "wavesGateway": "https://gw.wavesplatform.com",
   "support": "https://support.wavesplatform.com",
