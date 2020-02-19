@@ -33,7 +33,9 @@
   "tokenrating": "https://dev.voting.wavesplatform.com",
   "assets": {
     "BTC": "4bXds5VEHFQth6AhpF1k6rjvNKzaMf1Yz2Wab9pn9msD",
-    "ETH": "2GRJaVYhhQPKVoWQFyJfTfx3eB5DD7CPdG7ZYx3Cs6Mk"
+    "ETH": "2GRJaVYhhQPKVoWQFyJfTfx3eB5DD7CPdG7ZYx3Cs6Mk",
+    "WAVES": "3z9tHpm7ZvD3RBTswdc33yQYP4oqkSnzXgLMK4EzFYdV",
+    "LTC":"EZehVXn6NC8hZQwkYTGp1Rfyp783fsGK2VAJi6tc9zDC"
   },
   "matcherPriorityList": [
     { "ticker": "BTC", "id": "4bXds5VEHFQth6AhpF1k6rjvNKzaMf1Yz2Wab9pn9msD"},
