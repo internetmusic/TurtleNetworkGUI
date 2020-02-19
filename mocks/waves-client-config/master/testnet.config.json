@@ -35,26 +35,15 @@
     "DEX": {
       "WATCH_LIST_PAIRS": [
         "TN",
-        "AsuWyM9MUUsMmWkK7jS48L3ky6gA1pxx7QtEYPbfLjAJ",
-        "D6N2rAqWN6ZCWnCeNFWLGqqjS6nJLeK4m19XiuhdDenr",
-        "DWgwcZTMhSvnyYCoWLRUXXSH1RSkzThXLJhww9gwkqdn",
-        "BrmjyAWT5jjr3Wpsiyivyvg5vDuzoX2s93WgiexXetB3",
-        "BNdAstuFogzSyN2rY3beJbnBYwYcu7RzTHFjW88g8roK",
-        "CFg2KQfkUgUVM2jFCMC5Xh8T8zrebvPc4HjHPfAugU1S",
-        "8HT8tXwrXAYqwm8XrZ2hywWWTUAXxobHB5DakVC1y6jn",
-        "7itsmgdmomeTXvZzaaxqF3346h4FhciRoWceEw9asNV3",
-        "DGgBtwVoXKAKKvV2ayUpSoPzTJxt7jo9KiXMJRzTH2ET",
-        "FvKx3cerSVYGfXKFvUgp7koNuTAcLs8DmtmwRrFVCqJv",
-        "3P8gkhcLhFQvBkDzMnWeqqwvq3qxkpTNQPs4LUQ95tKD",
-        "8oPbSCKFHkXBy1hCGSg9pJkSARE7zhTQTLpc8KZwdtr7",
-        "6KSUNALdYEd1EVTE4dTcSHzNw1dA3Q6ieokSRVuEcALV"
+        "4bXds5VEHFQth6AhpF1k6rjvNKzaMf1Yz2Wab9pn9msD",
+        "2GRJaVYhhQPKVoWQFyJfTfx3eB5DD7CPdG7ZYx3Cs6Mk",
+        "3z9tHpm7ZvD3RBTswdc33yQYP4oqkSnzXgLMK4EzFYdV",
+        "EZehVXn6NC8hZQwkYTGp1Rfyp783fsGK2VAJi6tc9zDC"
       ]
     }
   },
   "SERVICE_TEMPORARILY_UNAVAILABLE": false,
   "GATEWAYS_SOON": [
-    "GVWSgVsmEx4KTAZPm31JZDmdehxFTFZBuy7V8gzb8JxE",
-    "E9KLFjmbD4psBWyHs8Wq3Uux9U45AeFxXb9eCask43YZ"
   ],
   "DEXW_LOCKED": false
 }
