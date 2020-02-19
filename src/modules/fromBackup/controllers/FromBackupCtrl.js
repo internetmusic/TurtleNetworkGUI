@@ -83,7 +83,6 @@
             constructor() {
                 super($scope);
                 this.selectIsVisible = true;
-                analytics.send({ name: 'Import From Backup Click', target: 'ui' });
             }
 
             static parseUsers(data) {

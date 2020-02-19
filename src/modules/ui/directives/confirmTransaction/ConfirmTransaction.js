@@ -54,12 +54,10 @@
                 if (this.isAnyTx) {
                     this.observe('activeTab', () => {
                         const name = `Wallet Assets JSON ${ANALYTICS_TABS_NAMES[this.activeTab]} Show`;
-                        analytics.send({ name, target: 'ui' });
                     });
                 }
 
                 const NAME = this.getEventName(tx);
-                analytics.send({ name: `${NAME} Info Show`, target: 'ui' });
 
                 this.signable.hasMySignature().then(state => {
                     this.step = state ? 1 : 0;
@@ -78,9 +76,7 @@
             sendTransaction() {
                 if (this.isAnyTx) {
                     const name = `Wallet Assets JSON ${ANALYTICS_TABS_NAMES[this.activeTab]} Send Click`;
-                    analytics.send({ name, target: 'ui' });
                 }
-                analytics.send(this._getConfirmAnalytics(this.signable.getTxData(), true));
                 return super.sendTransaction().then(data => {
                     this.onTransactionSend();
                     return data;
@@ -101,10 +97,8 @@
             getSignableAndSendEvent() {
                 switch (this.signable.type) {
                     case 14:
-                        analytics.send({ name: 'Disable Sponsorship Continue Click', target: 'ui' });
                         break;
                     case 9:
-                        analytics.send({ name: 'Leasing Cancel Sign Click', target: 'ui' });
                         break;
                     default:
                         break;
@@ -220,7 +214,6 @@
              * @public
              */
             back() {
-                analytics.send(this._getConfirmAnalytics(this.signable.getTxData(), false));
                 this.onClickBack();
             }
 

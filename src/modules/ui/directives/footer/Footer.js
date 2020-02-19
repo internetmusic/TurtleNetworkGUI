@@ -53,10 +53,7 @@
                     this.isToasterMobilesVisible = !wasHidden && window.innerWidth <= 768;
 
                     if (this.isToasterMobilesVisible) {
-                        analytics.send({
-                            name: 'Download Mobile Display',
-                            target: 'all'
-                        });
+
                     }
                     utils.safeApply($scope);
                 });
@@ -66,10 +63,7 @@
              * @public
              */
             hideToaster() {
-                analytics.send({
-                    name: 'Download Mobile Close',
-                    target: 'all'
-                });
+
                 $element.find('.toaster-mobiles').addClass('hidden-toaster');
                 storage.save(this._toasterMobilesStorageKey, true);
             }

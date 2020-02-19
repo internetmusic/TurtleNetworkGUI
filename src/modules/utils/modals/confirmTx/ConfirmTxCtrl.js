@@ -23,7 +23,6 @@
                 super($scope);
                 this.signable = signable;
                 if (analyticsText) {
-                    analytics.send({ name: analyticsText, target: 'ui' });
                 }
             }
 

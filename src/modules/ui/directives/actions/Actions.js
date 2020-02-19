@@ -47,7 +47,6 @@
                 this.observe('expanded', () => {
                     if (this.expanded) {
                         if (this.analyticsText) {
-                            analytics.send({ name: this.analyticsText, target: 'ui' });
                         }
                         $(document).on('mousedown', this._handler);
                     } else {

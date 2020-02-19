@@ -34,11 +34,7 @@
                         if (!$scope.event) {
                             return null;
                         }
-                        analytics.send({
-                            name: $scope.event,
-                            target: $scope.eventTarget,
-                            params: $scope.eventParams
-                        });
+
                     };
                     this.listenEventEmitter($element, 'click', this.handler);
                 }

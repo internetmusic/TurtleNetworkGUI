@@ -30,7 +30,6 @@
             constructor() {
                 super($scope);
 
-                analytics.send({ name: 'Onboarding Sign In Show', target: 'ui', params: { from: 'sign-in' } });
 
                 Promise.all([
                     user.getMultiAccountData(),

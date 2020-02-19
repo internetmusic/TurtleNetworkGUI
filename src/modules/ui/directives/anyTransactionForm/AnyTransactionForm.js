@@ -47,7 +47,6 @@
             }
 
             next() {
-                analytics.send({ name: 'Wallet Assets JSON Continue Click', target: 'ui' });
                 this.onSuccess({ signable: this.signable });
             }
 

@@ -133,7 +133,6 @@
             }
 
             onSignTx(signable) {
-                analytics.send({ name: 'Transfer Continue Click', target: 'ui' });
                 this.onSign({ signable });
             }
 

@@ -145,7 +145,6 @@
 
             getSignable() {
                 const name = this.txType.slice(0, 1).toUpperCase() + this.txType.slice(1);
-                analytics.send({ name: `${name} Token Continue Click`, target: 'ui' });
                 return this.signable;
             }
 

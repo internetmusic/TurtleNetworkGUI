@@ -130,7 +130,6 @@
              * @public
              */
             clickCopySeed() {
-                analytics.send({ name: 'Migration Import Continue Click', target: 'ui' });
             }
 
             /**

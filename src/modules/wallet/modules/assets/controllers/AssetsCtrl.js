@@ -188,7 +188,6 @@
              * @param {Asset} asset
              */
             unpin(asset) {
-                analytics.send({ name: 'Wallet Assets Unpin', params: { Currency: asset.id }, target: 'ui' });
                 this.pinnedAssetIdList = this.pinnedAssetIdList.filter((fAsset) => fAsset !== asset.id);
             }
 
@@ -201,11 +200,7 @@
             }
 
             showReceivePopup(asset) {
-                analytics.send({
-                    name: 'Wallet Assets Receive Click',
-                    params: { Currency: asset ? asset.id : 'All' },
-                    target: 'ui'
-                });
+
                 return modalManager.showReceiveModal(asset);
             }
 
@@ -224,11 +219,7 @@
              * @param {Asset} asset
              */
             showSend(asset) {
-                analytics.send({
-                    name: 'Wallet Assets Send Click',
-                    params: { Currency: asset ? asset.id : 'All' },
-                    target: 'ui'
-                });
+
                 return modalManager.showSendAsset({ assetId: asset && asset.id || null });
             }
 

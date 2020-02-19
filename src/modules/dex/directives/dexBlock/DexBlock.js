@@ -69,14 +69,12 @@
                     this.collapsed = !collapsed;
                     utils.wait(100)
                         .then(() => {
-                            analytics.send({ name: `${this.analyticsText} Show`, target: 'ui' });
                             this._parent.collapseBlock(this.block, this.collapsed);
                         });
                 } else {
                     this._parent.collapseBlock(this.block, !this.collapsed);
                     utils.wait(300)
                         .then(() => {
-                            analytics.send({ name: `${this.analyticsText} Hide`, target: 'ui' });
                             this.collapsed = !collapsed;
                         });
                 }

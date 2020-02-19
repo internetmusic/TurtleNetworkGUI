@@ -455,20 +455,14 @@
 
                                 notify.addClass('success');
                                 this.createOrderFailed = false;
-                                analytics.send({
-                                    name: `DEX ${this.type} Order Transaction Success`,
-                                    params: this.analyticsPair
-                                });
+
                                 dexDataService.createOrder.dispatch();
                                 CreateOrder._animateNotification(notify);
                             })
                             .catch(() => {
                                 this.createOrderFailed = true;
                                 notify.addClass('error');
-                                analytics.send({
-                                    name: `DEX ${this.type} Order Transaction Error`,
-                                    params: this.analyticsPair
-                                });
+
                                 $scope.$apply();
                                 CreateOrder._animateNotification(notify);
                             });

@@ -215,7 +215,6 @@
                     signature: user.matcherSign.signature
                 })
                     .then(() => {
-                        analytics.send({ name: 'Cancel All Orders', target: 'all' });
 
                         notification.info({
                             ns: 'app.dex',
@@ -301,7 +300,6 @@
                 dataPromise
                     .then((signedTxData) => ds.cancelOrder(signedTxData, order.amount.asset.id, order.price.asset.id))
                     .then(() => {
-                        analytics.send({ name: 'Cancel Order', target: 'all' });
 
                         classNameToOrder('force-leave');
                         const canceledOrder = this.orders.find(whereEq({ id: order.id }));

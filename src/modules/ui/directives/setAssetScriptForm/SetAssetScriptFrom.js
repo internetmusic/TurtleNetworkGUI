@@ -74,7 +74,6 @@
             }
 
             onClickSign() {
-                analytics.send({ name: 'Update Script Continue Click', target: 'ui' });
                 const tx = this._getTx();
                 const signable = signature.getSignatureApi().makeSignable({
                     type: tx.type,

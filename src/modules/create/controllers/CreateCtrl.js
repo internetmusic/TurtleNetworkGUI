@@ -78,19 +78,16 @@
             }
 
             create() {
-                analytics.send({ name: 'Create Confirm Phrase Confirm Click' });
 
                 return this._create(true);
             }
 
             createWithoutBackup() {
-                analytics.send({ name: 'Create Do It Later Click' });
 
                 return this._create(false);
             }
 
             clickCopySeed() {
-                analytics.send({ name: 'Create Backup Phrase Copy Click' });
             }
 
             /**
@@ -107,25 +104,18 @@
                 }
 
                 if (index === STATE_HASH.CREATE_ACCOUNT_DATA) {
-                    analytics.send({ name: 'Create Protect Your Account Show' });
                 }
                 if (this.stepIndex === STATE_HASH.CREATE_ACCOUNT_DATA && index > this.stepIndex) {
-                    analytics.send({ name: 'Create Protect Your Account Continue Click' });
                 }
                 if (index === STATE_HASH.SHOW_NO_BACKUP_NOW_MONEY) {
-                    analytics.send({ name: 'Create No Backup Show' });
                 }
                 if (this.stepIndex === STATE_HASH.SHOW_NO_BACKUP_NOW_MONEY && index > this.stepIndex) {
-                    analytics.send({ name: 'Create Back Up Now Click' });
                 }
                 if (index === STATE_HASH.BACKUP) {
-                    analytics.send({ name: 'Create Backup Phrase Show' });
                 }
                 if (this.stepIndex === STATE_HASH.BACKUP && index > this.stepIndex) {
-                    analytics.send({ name: 'Create Backup Phrase I Written Click' });
                 }
                 if (index === STATE_HASH.CONFIRM_BACKUP) {
-                    analytics.send({ name: 'Create Confirm Phrase Show' });
                 }
 
                 if (!ORDER_LIST[index]) {
@@ -135,10 +125,8 @@
                         .then(() => {
                             this.stepIndex = index;
                             if (index === STATE_HASH.BACKUP) {
-                                analytics.send({ name: 'Create Backup Phrase Show' });
                             }
                             if (index === STATE_HASH.CONFIRM_BACKUP) {
-                                analytics.send({ name: 'Create Confirm Phrase Show' });
                             }
                         });
                 }
@@ -151,10 +139,8 @@
             checkNext() {
                 const step = ORDER_LIST[this.stepIndex];
                 if (step === 'noBackupNoMoney') {
-                    analytics.send({ name: 'Create Warning Show' });
                     return this.showBackupWarningPopup()
                         .then(() => {
-                            analytics.send({ name: 'Create Warning I Understand Click' });
                         });
                 }
                 return $q.when();

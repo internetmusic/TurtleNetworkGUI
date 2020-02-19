@@ -22,7 +22,6 @@
             }
 
             onOpenLink() {
-                analytics.send({ name: 'Onboarding Popup Official Site Click', target: 'ui' });
             }
 
             tryWeb() {

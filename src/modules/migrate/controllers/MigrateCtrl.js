@@ -178,11 +178,9 @@
                     }).then(() => {
                         this.migratePassword = '';
                         this.prevStep();
-                        analytics.send({ name: 'Successfully Unlocked' });
                     });
                 } catch (e) {
                     this._showPasswordError();
-                    analytics.send({ name: 'Failed Unlock' });
                 }
             }
 

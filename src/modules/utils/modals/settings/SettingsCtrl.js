@@ -48,7 +48,6 @@
             }
 
             set advancedMode(mode) {
-                analytics.send({ name: `Settings Advanced Features ${mode ? 'On' : 'Off'}`, target: 'ui' });
                 user.setSetting('advancedMode', mode);
             }
 
@@ -92,11 +91,9 @@
 
             constructor() {
                 super($scope);
-                analytics.send({ name: 'Settings General Show', target: 'ui' });
 
                 this.observe('tab', () => {
                     const tabName = this.tab.slice(0, 1).toUpperCase() + this.tab.slice(1);
-                    analytics.send({ name: `Settings ${tabName} Show`, target: 'ui' });
                 });
 
                 this.isScript = user.hasScript();

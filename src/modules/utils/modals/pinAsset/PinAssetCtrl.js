@@ -87,11 +87,7 @@ const R = require('ramda');
              */
             onSubmit() {
                 const selectedAssets = Object.keys(this.selectedHash);
-                analytics.send({
-                    name: 'Wallet Assets Pin',
-                    params: { Currency: selectedAssets },
-                    target: 'ui'
-                });
+
                 this.pinnedAssetIdList = R.uniq([...this.pinnedAssetIdList, ...selectedAssets]);
                 this.spam = this.spam.filter((spamId) => !this.pinnedAssetIdList.includes(spamId));
                 $mdDialog.hide({ selected: this.selected.length });

@@ -373,13 +373,6 @@
             _initializeLogin() {
                 this._listenChangeLanguage();
 
-                analytics.init(WavesApp.analyticsIframe, {
-                    platform: WavesApp.type,
-                    networkByte: ds.config.get('code'),
-                    userType: 'unknown'
-                });
-
-                analytics.activate();
 
                 this._onInitialTransitions();
 
@@ -390,7 +383,6 @@
                 });
 
                 user.loginSignal.on(() => {
-                    analytics.addDefaultParams({ auuid: base64Encode(blake2b(stringToBytes(user.address))) });
                     userNotification.destroyAll();
                     i18nextReady.then(() => {
                         this._updateUserNotifications();
@@ -583,7 +575,6 @@
 
                     modalManager.openModal.once(changeModalsHandler);
 
-                    analytics.send({ name: 'Create Save Phrase Show', target: 'ui' });
 
                     notification.error({
                         id,
@@ -597,12 +588,10 @@
                         action: {
                             literal: 'notification.backup.action',
                             callback: () => {
-                                analytics.send({ name: 'Create Save Phrase Yes Click', target: 'ui' });
                                 modalManager.showSeedBackupModal();
                             }
                         },
                         onClose: () => {
-                            analytics.send({ name: 'Create Save Phrase No Click', target: 'ui' });
 
                             notification.remove(id);
 
@@ -658,55 +647,20 @@
                 if (toState.name !== fromState.name) {
                     switch (toState.name) {
                         case 'create':
-                            analytics.send({
-                                name: 'Create New Account Show',
-                                params: { from }
-                            });
                             break;
                         case 'import':
-                            analytics.send({
-                                name: 'Import Accounts Show',
-                                params: { from },
-                                target: 'ui'
-                            });
                             break;
                         case 'restore':
-                            analytics.send({
-                                name: 'Import Backup Show',
-                                params: { from },
-                                target: 'ui'
-                            });
                             break;
                         case 'main.wallet.leasing':
-                            analytics.send({
-                                name: 'Leasing Show',
-                                params: { from },
-                                target: 'ui'
-                            });
                             break;
                         case 'main.tokens':
-                            analytics.send({
-                                name: 'Token Generation Show',
-                                target: 'ui'
-                            });
                             break;
                         case 'main.wallet.assets':
-                            analytics.send({
-                                name: 'Wallet Assets Show',
-                                target: 'ui'
-                            });
                             break;
                         case 'main.wallet.portfolio':
-                            analytics.send({
-                                name: 'Wallet Portfolio Show',
-                                target: 'ui'
-                            });
                             break;
                         case 'main.dex':
-                            analytics.send({
-                                name: 'DEX Show',
-                                target: 'ui'
-                            });
                             break;
                         default:
                             break;
@@ -727,8 +681,7 @@
 
                 user.applyState(toState);
                 state.signals.changeRouterStateSuccess.dispatch(toState);
-                analytics.send({ name: 'history_state', params: { url: toState.url } });
-                analytics.send({ name: 'route', params: { from: fromState.url, to: toState.url } });
+
             }
 
             /**

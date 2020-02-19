@@ -354,7 +354,6 @@
                 this.closeDropdown();
                 user.logout('switch', true);
                 user.login(toUser);
-                analytics.send({ name: 'Switch Account' });
             }
 
             unlockUser(userToUnlock) {

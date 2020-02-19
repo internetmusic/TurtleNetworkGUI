@@ -71,7 +71,6 @@
             }
 
             sign() {
-                analytics.send({ name: 'Leasing Popup Start Click', target: 'ui' });
                 const tx = waves.node.transactions.createTransaction({
                     recipient: this.recipient,
                     fee: this.fee,

@@ -269,7 +269,6 @@
             }
 
             showTryDesktopModal() {
-                analytics.send({ name: 'Onboarding Platform Popup Show', target: 'ui' });
                 return this._getModal({
                     id: 'try-desktop',
                     title: '',

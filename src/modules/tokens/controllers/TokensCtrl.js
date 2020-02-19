@@ -189,7 +189,6 @@
             }
 
             sendAnalytics() {
-                analytics.send({ name: 'Token Generation Info Show', target: 'ui' });
             }
 
             getSignable() {

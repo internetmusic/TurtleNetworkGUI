@@ -125,7 +125,6 @@
                 this.getUsers(PRELOAD_USERS_COUNT);
                 this.observe('selectedUser', this._onSelectUser);
                 this.observe('name', this._onChangeName);
-                analytics.send({ name: 'Import Ledger Click', target: 'ui' });
             }
 
             /**

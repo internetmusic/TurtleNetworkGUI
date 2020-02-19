@@ -122,7 +122,6 @@
                     item.amount = this.state.moneyHash[assetId].cloneWithTokens(item.amount.toTokens());
                 });
                 this.tx.transfers = transfers;
-                analytics.send({ name: 'Mass Transfer Click', target: 'ui' });
                 const onHasMoneyHash = () => {
                     const changeTransfers = utils.observe(this.state.massSend, 'transfers');
                     const changeAssetId = utils.observe(this.state, 'assetId');
@@ -197,7 +196,6 @@
             }
 
             onTxSign(signable) {
-                analytics.send({ name: 'Mass Transfer Continue Click', target: 'ui' });
                 this.onContinue({ signable });
             }
 

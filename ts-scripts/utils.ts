@@ -401,13 +401,6 @@ export async function getInitScript(
                 (function () {
                     var analytics = require('@waves/event-sender');
 
-                    analytics.addApi({
-                        apiToken: config._isProduction() ? '7a280fdf83a5efc5b8dfd52fc89de3d7' : '56bc30688ef3d7127feaa8f0dc2e5fc0',
-                        libraryUrl: location.origin + '/amplitude.js',
-                        initializeMethod: 'amplitudeInit',
-                        sendMethod: 'amplitudePushEvent',
-                        type: 'logic'
-                    });
 
                     /*analytics.addApi({
                         apiToken: config._isProduction() ? 'UA-75283398-20' : 'UA-75283398-21',
@@ -417,9 +410,6 @@ export async function getInitScript(
                         type: 'ui'
                     });*/
 
-                    if (location.pathname.replace('/', '') === '') {
-                        analytics.send({ name: 'Onboarding In Show', target: 'ui' });
-                    }
 
                 })();
 

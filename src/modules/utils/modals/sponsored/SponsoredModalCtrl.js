@@ -111,7 +111,6 @@
             }
 
             onConfirm() {
-                analytics.send({ name: 'Enable Sponsorship Continue Click', target: 'ui' });
                 this.step++;
             }
 

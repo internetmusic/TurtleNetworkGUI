@@ -53,7 +53,6 @@
 
             exportTransactions(maxTransactions = 10000) {
                 // analytics.push('TransactionsPage', `TransactionsPage.CSV.${WavesApp.type}`, 'download');
-                analytics.send({ name: 'Transactions Export Click', target: 'ui' });
                 const MAX_LIMIT = 1000;
 
                 const getSeriesTransactions = async ({ allTransactions = [], after = '' } = {}) => {
@@ -163,7 +162,6 @@
                     default:
                         break;
                 }
-                analytics.send({ name: actionName, target: 'ui' });
             }
 
             /**

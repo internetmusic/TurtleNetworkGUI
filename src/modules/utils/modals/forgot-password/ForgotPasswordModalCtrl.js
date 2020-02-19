@@ -17,7 +17,6 @@
                     $state.go('welcome');
                 });
 
-                analytics.send({ name: 'Reset All' });
             }
 
         }

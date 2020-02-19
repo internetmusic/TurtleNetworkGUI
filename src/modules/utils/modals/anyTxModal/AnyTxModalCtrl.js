@@ -30,7 +30,6 @@
 
             onFillTxForm(signable) {
                 if (this.analyticsText) {
-                    analytics.send({ name: this.analyticsText, target: 'ui' });
                 }
                 this.signable = signable;
                 this.step++;

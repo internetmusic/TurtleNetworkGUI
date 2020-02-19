@@ -106,10 +106,8 @@
                 return this.signable.getDataForApi()
                     .then(method)
                     .then(data => {
-                        analytics.send(this.getAnalytics(data, true));
                         return data;
                     }, (error) => {
-                        analytics.send(this.getAnalytics(this.signable.getTxData(), false));
                         return Promise.reject(error);
                     });
             }

@@ -430,7 +430,6 @@
 
                 return this._addUserData(userData).then(() => {
                     this.initScriptInfoPolling();
-                    analytics.send({ name: 'Sign In Success' });
                 });
             }
 
@@ -472,13 +471,7 @@
                         this.initScriptInfoPolling();
 
                         if (!restore) {
-                            analytics.send({
-                                name: 'Create Success',
-                                params: {
-                                    hasBackup,
-                                    userType: userData.userType
-                                }
-                            });
+
                         }
                     });
             }
@@ -521,10 +514,7 @@
                             }
 
                             if (restore) {
-                                analytics.send({
-                                    name: 'Import Backup Success',
-                                    params: { userType: userData.userType }
-                                });
+
                             }
 
                             return { ...createdUser };
@@ -792,7 +782,6 @@
 
                 this._setObserve();
 
-                analytics.addDefaultParams({ userType: this.userType });
 
                 let commonSettings;
 

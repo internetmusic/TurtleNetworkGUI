@@ -100,7 +100,6 @@
                 ]).then(([legacyUsers = [], users = []]) => {
                     this._usersInStorage = [...legacyUsers, ...users];
                 });
-                analytics.send({ name: 'Import Keeper Click', target: 'ui' });
                 this.getUsers();
             }
 

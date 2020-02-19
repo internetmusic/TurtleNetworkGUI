@@ -11,7 +11,6 @@
                 super($scope);
                 this.isDesktop = WavesApp.isDesktop();
                 this.isWeb = WavesApp.isWeb();
-                analytics.send({ name: 'Onboarding SEED Popup Show', target: 'ui' });
             }
 
             showSeedBackupModal() {

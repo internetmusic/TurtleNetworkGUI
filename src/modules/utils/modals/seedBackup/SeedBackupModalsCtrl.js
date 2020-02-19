@@ -69,7 +69,6 @@
 
                 if (this.step === 1) {
                     user.setSetting('hasBackup', true);
-                    analytics.send({ name: 'Create Save Phrase Success Show', target: 'ui' });
                 }
             }
 

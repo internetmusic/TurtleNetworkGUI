@@ -59,10 +59,8 @@
                         });
                     })
                     .then(data => {
-                        analytics.send({ name: `${signableAmountAsset.name.toUpperCase()} Transaction Success` });
                         return data;
                     }, (error) => {
-                        analytics.send({ name: `${signableAmountAsset.name.toUpperCase()} Transaction Error` });
                         return Promise.reject(error);
                     });
             }
