@@ -28,14 +28,6 @@
         utils,
         modalManager) {
 
-        const analytics = require('@waves/event-sender');
-
-        const ANALYTICS_TABS_NAMES = {
-            myOpenOrders: 'My Open Orders',
-            myTradeHistory: 'My Trade History',
-            tradeHistory: 'Trade History',
-            myBalance: 'My Balance'
-        };
 
         class DexCtrl extends Base {
 
@@ -163,8 +155,7 @@
              * @private
              */
             _onChangeTab() {
-                if (ANALYTICS_TABS_NAMES[this.tab]) {
-                }
+
             }
 
             /**

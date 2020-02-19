@@ -13,7 +13,6 @@
      */
     const controller = function (user, Base, $scope, transactionsCsvGen, waves, createPoll, notification) {
 
-        const analytics = require('@waves/event-sender');
 
         class TransactionsCtrl extends Base {
 

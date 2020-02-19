@@ -14,7 +14,6 @@
      */
     const controller = function (Base, waves, $scope, user, balanceWatcher) {
 
-        const analytics = require('@waves/event-sender');
 
         class SetAssetScriptFrom extends Base {
 

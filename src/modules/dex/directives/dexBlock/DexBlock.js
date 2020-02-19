@@ -11,7 +11,6 @@
      */
     const controller = function (Base, $element, utils, i18n, dexDataService) {
 
-        const analytics = require('@waves/event-sender');
 
         class DexBlock extends Base {
 

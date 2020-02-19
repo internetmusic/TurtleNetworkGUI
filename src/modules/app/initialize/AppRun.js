@@ -102,7 +102,6 @@
 
         const phone = WavesApp.device.phone();
         const tablet = WavesApp.device.tablet();
-        const analytics = require('@waves/event-sender');
 
         const isPhone = !!phone;
         const isTablet = !!tablet;

@@ -1,7 +1,6 @@
 (() => {
     'use strict';
 
-    const analytics = require('@waves/event-sender');
 
     /**
      * @param {typeof Base} Base

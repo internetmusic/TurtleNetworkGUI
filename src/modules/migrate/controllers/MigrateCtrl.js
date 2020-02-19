@@ -1,7 +1,6 @@
 (() => {
     'use strict';
 
-    const analytics = require('@waves/event-sender');
     const ds = require('data-service');
     const { libs } = require('@turtlenetwork/waves-transactions');
     const { base58Decode } = libs.crypto;

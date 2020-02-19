@@ -12,7 +12,6 @@
     const controller = function (Base, $scope, $state, user, utils) {
 
         const signatureAdapter = require('@turtlenetwork/signature-adapter');
-        const analytics = require('@waves/event-sender');
 
         class KeeperCtrl extends Base {
 

@@ -3,7 +3,6 @@
 
     const controller = function (Base, $scope) {
 
-        const analytics = require('@waves/event-sender');
 
         class AnyTxModalCtrl extends Base {
 

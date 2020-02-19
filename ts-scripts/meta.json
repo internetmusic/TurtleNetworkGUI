@@ -16,7 +16,6 @@
     "node_modules/ts-utils/dist/ts-utils.min.js",
     "node_modules/@waves/data-entities/dist/data-entities.min.js",
     "node_modules/@waves/waves-browser-bus/dist/browser-bus.min.js",
-    "node_modules/@waves/event-sender/dist/analytics.js",
     "node_modules/@turtlenetwork/ledger/dist/waves-ledger.js",
     "node_modules/@turtlenetwork/ledger/dist/transport-u2f.js",
     "node_modules/qrcode/build/qrcode.min.js",

@@ -26,7 +26,6 @@
      */
     const controller = function (Base, $scope, $state, user, utils, notification) {
 
-        const analytics = require('@waves/event-sender');
 
         class FromBackupCtrl extends Base {
 

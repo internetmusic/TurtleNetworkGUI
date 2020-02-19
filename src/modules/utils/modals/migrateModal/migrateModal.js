@@ -22,7 +22,6 @@
                                  storage,
                                  exportStorageService) {
 
-        const analytics = require('@waves/event-sender');
 
         class MigrateModalCtrl extends Base {
 

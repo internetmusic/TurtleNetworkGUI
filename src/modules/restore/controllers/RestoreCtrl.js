@@ -1,7 +1,6 @@
 (function () {
     'use strict';
 
-    const analytics = require('@waves/event-sender');
     const { validators, libs } = require('@turtlenetwork/waves-transactions');
     const { isPublicKey } = validators;
     const { address, publicKey, base58Decode } = libs.crypto;

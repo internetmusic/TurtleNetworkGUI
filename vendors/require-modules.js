@@ -24,8 +24,7 @@
         'worker-wrapper': 'workerWrapper',
         '@waves/oracle-data': 'OracleDataProvider',
         'jquery': '$',
-        'i18next': 'i18next',
-        '@waves/event-sender': 'analytics'
+        'i18next': 'i18next'
     };
 
     function getModule(require) {

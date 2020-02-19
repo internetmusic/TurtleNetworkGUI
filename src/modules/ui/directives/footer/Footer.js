@@ -1,7 +1,6 @@
 (function () {
     'use strict';
 
-    const analytics = require('@waves/event-sender');
 
     const controller = function (Base, $scope, $element, utils, storage, modalManager, $state) {
 

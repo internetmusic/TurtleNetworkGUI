@@ -20,7 +20,6 @@
         const ds = require('data-service');
         const { Money } = require('@waves/data-entities');
         const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
-        const analytics = require('@waves/event-sender');
 
         const DEFAULT_OPTIONS = {
             clickOutsideToClose: true,

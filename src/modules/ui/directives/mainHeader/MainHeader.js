@@ -1,7 +1,6 @@
 (function () {
     'use strict';
 
-    const analytics = require('@waves/event-sender');
 
     const SELECTORS = {
         MAIN_HEADER_USER: 'js-main-header-user',

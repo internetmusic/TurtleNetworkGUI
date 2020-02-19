@@ -18,7 +18,6 @@
      */
     const controller = function (Base, $scope, $state, user, modalManager, utils) {
 
-        const analytics = require('@waves/event-sender');
 
         class LedgerCtrl extends Base {
 

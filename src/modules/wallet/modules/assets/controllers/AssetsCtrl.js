@@ -28,7 +28,6 @@
 
         const { date } = require('ts-utils');
         const ds = require('data-service');
-        const analytics = require('@waves/event-sender');
 
 
         /**

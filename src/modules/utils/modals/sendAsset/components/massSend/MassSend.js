@@ -16,7 +16,6 @@
 
         const Papa = require('papaparse');
         const { BigNumber } = require('@waves/bignumber');
-        const analytics = require('@waves/event-sender');
 
         class MassSend extends Base {
 

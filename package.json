@@ -109,7 +109,6 @@
     "@turtlenetwork/bignumber": "0.0.2",
     "@turtlenetwork/data-entities": "8.0.2",
     "@waves/data-service-client-js": "^4.1.0",
-    "@waves/event-sender": "^1.2.0",
     "@waves/marshall": "^0.8.0",
     "@waves/oracle-data": "^0.0.6",
     "@waves/parse-json-bignumber": "^1.0.1",

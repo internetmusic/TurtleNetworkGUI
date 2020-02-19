@@ -34,7 +34,6 @@
         const tsUtils = require('ts-utils');
         const ds = require('data-service');
         const { Money } = require('@waves/data-entities');
-        const analytics = require('@waves/event-sender');
 
         /**
          * @class User

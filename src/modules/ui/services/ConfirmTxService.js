@@ -4,7 +4,6 @@
     const ds = require('data-service');
     const { Asset } = require('@waves/data-entities');
     const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
-    const analytics = require('@waves/event-sender');
 
     const NO_EXPORT_TYPES = [
         SIGN_TYPE.MASS_TRANSFER,

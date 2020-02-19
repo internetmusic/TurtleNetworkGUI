@@ -14,7 +14,6 @@
         const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
         const { Money } = require('@waves/data-entities');
         const ds = require('data-service');
-        const analytics = require('@waves/event-sender');
 
         class AnyTransactionForm extends Base {
 

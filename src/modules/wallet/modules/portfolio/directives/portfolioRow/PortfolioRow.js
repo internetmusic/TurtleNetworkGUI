@@ -5,7 +5,6 @@
     const { STATUS_LIST } = require('@waves/oracle-data');
     const { path } = require('ramda');
     const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
-    const analytics = require('@waves/event-sender');
     const { BigNumber } = require('@waves/bignumber');
 
     const TEMPLATE_PATH = 'modules/wallet/modules/portfolio/directives/portfolioRow/row.hbs';

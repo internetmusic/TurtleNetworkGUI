@@ -12,7 +12,6 @@
      */
     const controller = function (Base, $timeout, $element, $scope) {
 
-        const analytics = require('@waves/event-sender');
         class Actions extends Base {
 
             constructor() {

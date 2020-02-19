@@ -4,7 +4,6 @@
     const ds = require('data-service');
     const { libs } = require('@turtlenetwork/waves-transactions');
     const { path } = require('ramda');
-    const analytics = require('@waves/event-sender');
 
     /**
      * @param Base

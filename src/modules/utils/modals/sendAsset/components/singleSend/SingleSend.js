@@ -2,7 +2,6 @@
     'use strict';
 
     const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
-    const analytics = require('@waves/event-sender');
 
     /**
      * @param Base

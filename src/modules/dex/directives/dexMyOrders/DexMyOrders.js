@@ -4,7 +4,6 @@
     const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
     const { filter, whereEq, uniqBy, prop, where, gt, pick, __, map } = require('ramda');
     const ds = require('data-service');
-    const analytics = require('@waves/event-sender');
     const { BigNumber } = require('@waves/bignumber');
     const MAX_EXCHANGE_COUNT = 2000;
     const { Money } = require('@waves/data-entities');

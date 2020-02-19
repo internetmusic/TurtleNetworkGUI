@@ -399,16 +399,6 @@ export async function getInitScript(
                 })();
 
                 (function () {
-                    var analytics = require('@waves/event-sender');
-
-
-                    /*analytics.addApi({
-                        apiToken: config._isProduction() ? 'UA-75283398-20' : 'UA-75283398-21',
-                        libraryUrl: location.origin + '/googleAnalytics.js',
-                        initializeMethod: 'gaInit',
-                        sendMethod: 'gaPushEvent',
-                        type: 'ui'
-                    });*/
 
 
                 })();

@@ -2,7 +2,6 @@
 (function () {
     'use strict';
 
-    const analytics = require('@waves/event-sender');
     const ds = require('data-service');
     const WAVES_GATEWAY_ASSETS_ID = [
         //WavesApp.defaultAssets.ETH

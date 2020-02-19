@@ -8,7 +8,6 @@
      * @returns {ConfirmTxCtrl}
      */
     const controller = function (Base, $scope, $mdDialog) {
-        const analytics = require('@waves/event-sender');
 
         class ConfirmTxCtrl extends Base {
 

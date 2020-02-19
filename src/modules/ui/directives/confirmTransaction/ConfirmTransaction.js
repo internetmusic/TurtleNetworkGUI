@@ -18,13 +18,6 @@
 
         const { flatten, propEq } = require('ramda');
         const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
-        const analytics = require('@waves/event-sender');
-
-        const ANALYTICS_TABS_NAMES = {
-            details: 'View Details',
-            JSON: 'JSON',
-            export: 'Export'
-        };
 
         class ConfirmTransaction extends ConfirmTxService {
 
@@ -51,14 +44,6 @@
                 this.isSetScript = this.type === SIGN_TYPE.SET_SCRIPT && tx.script;
                 this.isTockenIssue = this.type === SIGN_TYPE.ISSUE;
 
-                if (this.isAnyTx) {
-                    this.observe('activeTab', () => {
-                        const name = `Wallet Assets JSON ${ANALYTICS_TABS_NAMES[this.activeTab]} Show`;
-                    });
-                }
-
-                const NAME = this.getEventName(tx);
-
                 this.signable.hasMySignature().then(state => {
                     this.step = state ? 1 : 0;
                     $scope.$apply();
@@ -74,9 +59,6 @@
             }
 
             sendTransaction() {
-                if (this.isAnyTx) {
-                    const name = `Wallet Assets JSON ${ANALYTICS_TABS_NAMES[this.activeTab]} Send Click`;
-                }
                 return super.sendTransaction().then(data => {
                     this.onTransactionSend();
                     return data;

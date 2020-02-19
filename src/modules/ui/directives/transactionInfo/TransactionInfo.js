@@ -9,7 +9,6 @@
      */
     const controller = function (Base, $scope) {
 
-        const analytics = require('@waves/event-sender');
         const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
 
         const ANALYTICS_TX_NAMES = {

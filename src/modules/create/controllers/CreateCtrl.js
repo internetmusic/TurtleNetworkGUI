@@ -13,7 +13,6 @@
      */
     const controller = function (Base, $scope, $q, $state, user, modalManager, seedService) {
 
-        const analytics = require('@waves/event-sender');
         const PATH = 'modules/create/templates';
         const ORDER_LIST = [
             'createAccount',

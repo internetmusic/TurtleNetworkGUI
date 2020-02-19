@@ -1,7 +1,6 @@
 (function () {
     'use strict';
 
-    const analytics = require('@waves/event-sender');
 
     /**
      * @param Base

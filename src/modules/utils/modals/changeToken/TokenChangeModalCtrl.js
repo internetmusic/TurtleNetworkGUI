@@ -16,7 +16,6 @@
         const entities = require('@waves/data-entities');
         const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
 
-        const analytics = require('@waves/event-sender');
         const ds = require('data-service');
 
         class TokenChangeModalCtrl extends Base {

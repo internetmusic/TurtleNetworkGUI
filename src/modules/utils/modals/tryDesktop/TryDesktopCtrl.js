@@ -2,7 +2,6 @@
     'use strict';
 
     const locationHref = location.href;
-    const analytics = require('@waves/event-sender');
 
     const controller = function (Base, $scope, storage, $element) {
 

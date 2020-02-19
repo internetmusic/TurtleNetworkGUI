@@ -17,7 +17,6 @@
      * @return {AccountInfoCtrl}
      */
     const controller = function (Base, $scope, user, waves, notification, utils, balanceWatcher) {
-        const analytics = require('@waves/event-sender');
 
         class AccountInfoCtrl extends Base {
 

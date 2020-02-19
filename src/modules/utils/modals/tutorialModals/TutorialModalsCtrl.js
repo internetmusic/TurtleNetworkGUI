@@ -3,7 +3,6 @@
 
     const controller = function (Base, $scope, modalManager) {
 
-        const analytics = require('@waves/event-sender');
 
         class TutorialModalsCtrl extends Base {
 

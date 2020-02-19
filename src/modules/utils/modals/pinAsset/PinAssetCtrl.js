@@ -18,7 +18,6 @@ const R = require('ramda');
      */
     const controller = function (Base, $scope, waves, PromiseControl, $mdDialog, user) {
 
-        const analytics = require('@waves/event-sender');
 
         class PinAssetCtrl extends Base {
 
