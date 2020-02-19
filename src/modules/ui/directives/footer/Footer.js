@@ -42,9 +42,7 @@
                     'https://itunes.apple.com/us/app/waves-wallet/id1233158971?mt=8' :
                     'https://play.google.com/store/apps/details?id=com.wavesplatform.wallet';
 
-                this.telegramLink = localStorage.getItem('lng') === 'ru' ?
-                    'https://t.me/WavesCommunityRU' :
-                    'https://t.me/WavesCommunity';
+                this.telegramLink = 'https://t.me/TurtleNetwork';
 
                 this.lang = localStorage.getItem('lng') === 'ru' ? 'Ru' : 'Global';
 
