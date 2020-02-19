@@ -36,11 +36,10 @@
     "ETH": "2GRJaVYhhQPKVoWQFyJfTfx3eB5DD7CPdG7ZYx3Cs6Mk"
   },
   "matcherPriorityList": [
-    { "ticker": "TN", "id": "TN"},
-    { "ticker": "BTC", "id": "Fmg13HEHJHuZYbtJq8Da8wifJENq8uBxDuWoP9pVe2Qe"},
-    { "ticker": "USD", "id": "HyFJ3rrq5m7FxdkWtQXkZrDat1F7LjVVGfpSkUuEXQHj"},
-    { "ticker": "EUR", "id": "2xnE3EdpqXtFgCP156qt1AbyjpqdZ5jGjWo3CwTawcux"},
-    { "ticker": "CNY", "id": "6pmDivReTLikwYqQtJTv6dTcE59knriaodB3AK8T9cF8"}
+    { "ticker": "BTC", "id": "4bXds5VEHFQth6AhpF1k6rjvNKzaMf1Yz2Wab9pn9msD"},
+    { "ticker": "WAVES", "id": "3z9tHpm7ZvD3RBTswdc33yQYP4oqkSnzXgLMK4EzFYdV"},
+    { "ticker": "LTC", "id": "EZehVXn6NC8hZQwkYTGp1Rfyp783fsGK2VAJi6tc9zDC"},
+    { "ticker": "TN", "id": "TN"}
   ],
   "wavesExchangeLink": "https://waves.exchange"
 }
