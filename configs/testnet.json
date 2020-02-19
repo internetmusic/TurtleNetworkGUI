@@ -28,7 +28,6 @@
     "desktopUrl": "https://localhost:8888/connect",
     "desktopPort": 8888
   },
-  "WESTNetworkByte": "F",
   "tokenrating": "https://dev.voting.wavesplatform.com",
   "assets": {
     "BTC": "4bXds5VEHFQth6AhpF1k6rjvNKzaMf1Yz2Wab9pn9msD",

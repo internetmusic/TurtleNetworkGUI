@@ -31,7 +31,6 @@
     "desktopUrl": "https://localhost:8888/connect",
     "desktopPort": 8888
   },
-  "WESTNetworkByte": "S",
   "tokenrating": "https://dev.voting.wavesplatform.com",
   "assets": {
     "EUR": "EqZfxiqYKkByP42hqNsvuPdXxVYMHaQDwfKgFnAz5D1x",
