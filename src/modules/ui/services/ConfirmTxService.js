@@ -12,23 +12,6 @@
         SIGN_TYPE.SCRIPT_INVOCATION
     ];
 
-    const ANALYTICS_TX_NAMES = {
-        [SIGN_TYPE.CREATE_ORDER]: 'Create order',
-        [SIGN_TYPE.ISSUE]: 'Token Generation',
-        [SIGN_TYPE.TRANSFER]: 'Transfer',
-        [SIGN_TYPE.REISSUE]: 'Reissue Token',
-        [SIGN_TYPE.BURN]: 'Burn Token',
-        [SIGN_TYPE.EXCHANGE]: 'Exchange',
-        [SIGN_TYPE.LEASE]: 'Leasing',
-        [SIGN_TYPE.CANCEL_LEASING]: 'Leasing cancel',
-        [SIGN_TYPE.CREATE_ALIAS]: 'Create Alias',
-        [SIGN_TYPE.MASS_TRANSFER]: 'Mass Transfer',
-        [SIGN_TYPE.DATA]: 'Data',
-        [SIGN_TYPE.SET_SCRIPT]: 'Set Script',
-        [SIGN_TYPE.SPONSORSHIP]: 'Sponsorship',
-        [SIGN_TYPE.SET_ASSET_SCRIPT]: 'Set Asset Script'
-    };
-
     const factory = function (Base, waves, utils, $mdDialog, modalManager) {
 
         class ConfirmTxService extends Base {
@@ -109,20 +92,6 @@
                     }, (error) => {
                         return Promise.reject(error);
                     });
-            }
-
-            getEventName(data) {
-                if (data.type) {
-                    return data.type in ANALYTICS_TX_NAMES ? ANALYTICS_TX_NAMES[data.type] : 'Unknown';
-                } else {
-                    return ANALYTICS_TX_NAMES[SIGN_TYPE.CREATE_ORDER];
-                }
-            }
-
-            getAnalytics(data, success) {
-                const NAME = this.getEventName(data);
-                const name = success ? `${NAME} Transaction Success` : `${NAME} Transaction Error`;
-                return { name, params: { type: data.type } };
             }
 
             confirm() {

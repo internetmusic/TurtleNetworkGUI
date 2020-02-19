@@ -793,10 +793,6 @@
                         const { controller, controllerAs } = ModalManager._getController(options);
                         const changeCounter = () => {
                             this._counter--;
-
-                            if (options.id) {
-                                // analytics.push('Modal', `Modal.Close.${WavesApp.type}`, options.id);
-                            }
                         };
 
                         target.controller = controller;
@@ -806,9 +802,6 @@
                         this._counter++;
                         const modal = $mdDialog.show(target);
 
-                        if (options.id) {
-                            // analytics.push('Modal', `Modal.Open.${WavesApp.type}`, options.id);
-                        }
 
                         modal.then(changeCounter, changeCounter);
 

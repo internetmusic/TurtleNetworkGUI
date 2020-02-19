@@ -8,27 +8,6 @@
      * @return {TransactionInfoCtrl}
      */
     const controller = function (Base, $scope) {
-
-        const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
-
-        const ANALYTICS_TX_NAMES = {
-            [SIGN_TYPE.CREATE_ORDER]: 'Create order',
-            [SIGN_TYPE.ISSUE]: 'Token Generation',
-            [SIGN_TYPE.TRANSFER]: 'Transfer',
-            [SIGN_TYPE.REISSUE]: 'Reissue',
-            [SIGN_TYPE.BURN]: 'Burn Token',
-            [SIGN_TYPE.EXCHANGE]: 'Exchange',
-            [SIGN_TYPE.LEASE]: 'Leasing',
-            [SIGN_TYPE.CANCEL_LEASING]: 'Cancel Leasing',
-            [SIGN_TYPE.CREATE_ALIAS]: 'Create Alias',
-            [SIGN_TYPE.MASS_TRANSFER]: 'Mass Transfer',
-            [SIGN_TYPE.DATA]: 'Data',
-            [SIGN_TYPE.SET_SCRIPT]: 'Set Script',
-            [SIGN_TYPE.SPONSORSHIP]: 'Sponsorship',
-            [SIGN_TYPE.SET_ASSET_SCRIPT]: 'Set Asset Script',
-            [SIGN_TYPE.SCRIPT_INVOCATION]: 'Script Invocation'
-        };
-
         class TransactionInfoCtrl extends Base {
 
             constructor() {
@@ -42,15 +21,6 @@
             $postLink() {
                 if (!this.signable) {
                     throw new Error('Has no signable!');
-                }
-                const name = `${this.getEventName(this.signable)} Info Show`;
-            }
-
-            getEventName(data) {
-                if (data.type) {
-                    return data.type in ANALYTICS_TX_NAMES ? ANALYTICS_TX_NAMES[data.type] : 'Unknown';
-                } else {
-                    return ANALYTICS_TX_NAMES[SIGN_TYPE.CREATE_ORDER];
                 }
             }
 

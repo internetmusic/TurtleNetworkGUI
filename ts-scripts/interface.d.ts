@@ -9,7 +9,6 @@ export interface IMetaJSON {
     copyNodeModules: Array<string>;
     debugInjections: Array<string>;
     electronScripts: Array<string>;
-    analyticsIframe: string;
     langList: object,
     tradingView: {
         domain: string;
@@ -67,7 +66,6 @@ export interface IConfItem {
     assets: IHash<string>;
     feeConfigUrl: string;
     feeConfig?: unknown;
-    analyticsIframe: string;
 }
 
 export type TConnection = 'mainnet' | 'testnet';

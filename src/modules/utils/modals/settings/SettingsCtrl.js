@@ -189,13 +189,6 @@
                     });
                 });
 
-                this.observe('shownSeed', () => {
-                    // analytics.push('Settings', `Settings.ShowSeed.${WavesApp.type}`);
-                });
-
-                this.observe('shownKey', () => {
-                    // analytics.push('Settings', `Settings.ShowKeyPair.${WavesApp.type}`);
-                });
 
                 createPoll(this, waves.node.height, (height) => {
                     this.blockHeight = height;
@@ -239,7 +232,6 @@
 
             onChangeLanguage(language) {
                 user.setSetting('lng', language);
-                // analytics.push('Settings', `Settings.ChangeLanguage.${WavesApp.type}`, language);
             }
 
             setNetworkDefault() {

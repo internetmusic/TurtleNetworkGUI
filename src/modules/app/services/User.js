@@ -656,7 +656,6 @@
                 if (currentTheme !== newTheme && options && !options.dontSave) {
                     this.setSetting('theme', newTheme);
                 }
-                // analytics.push('Settings', 'Settings.ChangeTheme', newTheme);
             }
 
             changeCandle(name) {

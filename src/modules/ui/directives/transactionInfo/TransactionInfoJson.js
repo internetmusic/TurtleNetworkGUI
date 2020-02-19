@@ -25,13 +25,6 @@
                 });
             }
 
-            addAnalytic() {
-                // analytics.push(
-                //     'ConfirmTransaction',
-                //     `ConfirmTransaction.${this.signable.type}.CopyTransactionJSON`
-                // );
-            }
-
         }
 
         return new TransactionInfoJson();

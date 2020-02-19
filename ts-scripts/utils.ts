@@ -214,7 +214,7 @@ export async function getBuildParams(param: IPrepareHTMLOptions) {
     ]);
 
     const { themes } = themesConf;
-    const { domain, analyticsIframe } = meta as any;
+    const { domain} = meta as any;
     const { type, buildType, outerScripts = [] } = param;
     const scripts = getScripts(param, pack, meta).concat(outerScripts);
     const styles = getStyles(param, meta, themes);
@@ -226,7 +226,6 @@ export async function getBuildParams(param: IPrepareHTMLOptions) {
         pack,
         isWeb,
         origin,
-        analyticsIframe,
         tradingPairs,
         oracles,
         domain,
@@ -367,7 +366,6 @@ export async function getInitScript(
                 // Signed 64-bit integer.
                 const { BigNumber } = require('@waves/bignumber');
                 WavesApp.maxCoinsCount = new BigNumber('9223372036854775807');
-                WavesApp.analyticsIframe = config.analyticsIframe;
                 WavesApp.device = new MobileDetect(navigator.userAgent);
 
                 (function () {

@@ -145,7 +145,6 @@
 
                             this.signLoader = false;
                             return ds.broadcast(preparedTx).then(() => {
-                                // analytics.push('User', `User.CreateAlias.Success.${WavesApp.type}`);
                                 this.aliases.push(this.newAlias);
                                 this.newAlias = '';
                                 this.createAliasStep = 0;
@@ -164,14 +163,6 @@
                     .catch((error) => {
                         this.errorCreateAliasMsg = utils.parseError(error);
                     });
-            }
-
-            onCopyAddress() {
-                // analytics.push('User', `User.CopyAddress.${WavesApp.type}`);
-            }
-
-            onCopyAlias() {
-                // analytics.push('User', `User.CopyAlias.${WavesApp.type}`);
             }
 
             reset() {
