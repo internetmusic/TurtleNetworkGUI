@@ -2,7 +2,7 @@
     'use strict';
 
     const TRADING_ASSETS = WavesApp.tradingPairs;
-    const DROP_DOWN_ORDER_LIST = ['ETH', 'BCH', 'LTC', 'USD', 'EUR', 'BSV'];
+    const DROP_DOWN_ORDER_LIST = ['ETH', 'WAVES', 'LTC'];
     const DROP_DOWN_LIST = [];
 
     DROP_DOWN_ORDER_LIST.forEach((name) => {
@@ -75,7 +75,8 @@
             tabs = [
                 { name: 'directives.watchlist.all', value: 'all' },
                 { name: 'TN', value: WavesApp.defaultAssets.TN },
-                { name: 'BTC', value: WavesApp.defaultAssets.BTC }
+                { name: 'BTC', value: WavesApp.defaultAssets.BTC },
+                { name: 'WAVES', value: WavesApp.defaultAssets.WAVES }
             ];
             /**
              * @type {string}

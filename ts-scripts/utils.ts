@@ -497,9 +497,6 @@ export async function getInitScript(
             config.electronVersion = config.isDesktop() ? navigator.userAgent.replace(/.*?waves-(client|dex)\/(\d+\.\d+\.\d+).*/g, '$2') : '';
 
             config.remappedAssetNames = {};
-            config.remappedAssetNames[config.network.assets.EUR] = 'Euro';
-            config.remappedAssetNames[config.network.assets.USD] = 'US Dollar';
-            config.remappedAssetNames[config.network.assets.TRY] = 'TRY';
             config.remappedAssetNames[config.network.assets.BTC] = 'Bitcoin';
             config.remappedAssetNames[config.network.assets.ETH] = 'Ethereum';
 

@@ -38,6 +38,10 @@
                 price: WavesApp.defaultAssets.BTC
             },
             {
+                amount: 'TN',
+                price: WavesApp.defaultAssets.WAVES
+            },
+            {
                 amount: WavesApp.defaultAssets.ETH,
                 price: WavesApp.defaultAssets.BTC
             }

@@ -54,9 +54,11 @@
     ];
 
     const DEFAULT_ASSET_ICONS_MAP = Object.assign(Object.create(null), {
+        [WavesApp.defaultAssets.WAVES]: '/img/assets/waves.svg',
         [WavesApp.defaultAssets.TN]: '/img/assets/waves.svg',
         [WavesApp.defaultAssets.BTC]: '/img/assets/bitcoin.svg',
         [WavesApp.defaultAssets.ETH]: '/img/assets/ethereum.svg',
+        [WavesApp.defaultAssets.LTC]: '/img/assets/ltc.svg'
     });
 
     const nullOrCb = (name, cb) => (val1, val2) => {
