@@ -147,7 +147,7 @@
 
             _updateBalances() {
                 Promise.all([
-                    balanceWatcher.getBalanceByAssetId(WavesApp.defaultAssets.WAVES),
+                    balanceWatcher.getBalanceByAssetId(WavesApp.defaultAssets.TN),
                     balanceWatcher.getBalanceByAssetId(this.assetId)
                 ]).then(([waves, asset]) => {
                     this.wavesBalance = waves;

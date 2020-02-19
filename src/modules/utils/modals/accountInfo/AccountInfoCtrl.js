@@ -193,7 +193,7 @@
             }
 
             _updateBalance() {
-                balanceWatcher.getBalanceByAssetId(WavesApp.defaultAssets.WAVES)
+                balanceWatcher.getBalanceByAssetId(WavesApp.defaultAssets.TN)
                     .then(money => {
                         this._balance = money;
                         utils.safeApply($scope);

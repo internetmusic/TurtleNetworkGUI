@@ -169,7 +169,7 @@
             }
 
             $postLink() {
-                this._isWaves = this.balance.asset.id === WavesApp.defaultAssets.WAVES;
+                this._isWaves = this.balance.asset.id === WavesApp.defaultAssets.TN;
                 this._isMyAsset = this.balance.asset.sender === this.user.address;
                 this.canShowDex = this._getCanShowDex();
                 const canStopSponsored = this._getCanStopSponsored();
@@ -190,7 +190,7 @@
                     } = utils.getDataFromOracles(this.balance.asset.id);
 
                     this.isGateway = isGateway;
-                    this.isWEST = this.balance.asset.id === WavesApp.defaultAssets.WEST;
+                    this.isWEST = false;
 
                     this.isVerifiedOrGateway = isVerified || isGateway;
 
@@ -284,7 +284,7 @@
                     (this.balance.isPinned ||
                         this._isMyAsset ||
                         this.balance.asset.isMyAsset ||
-                        this.balance.asset.id === WavesApp.defaultAssets.WAVES ||
+                        this.balance.asset.id === WavesApp.defaultAssets.TN ||
                         this.gatewayService.getPurchasableWithCards()[this.balance.asset.id] ||
                         this.gatewayService.getCryptocurrencies()[this.balance.asset.id] ||
                         this.gatewayService.getFiats()[this.balance.asset.id] ||
@@ -323,9 +323,9 @@
                     change24Node.classList.remove('minus');
                     change24Node.classList.remove('plus');
                 } else {
-                    const baseChange24AssetId = WavesApp.defaultAssets.WAVES === balance.asset.id ?
+                    const baseChange24AssetId = WavesApp.defaultAssets.TN === balance.asset.id ?
                         baseAssetId :
-                        WavesApp.defaultAssets.WAVES;
+                        WavesApp.defaultAssets.TN;
                     this.waves.utils.getChange(balance.asset.id, baseChange24AssetId)
                         .then(change24 => {
                             const change24BN = new BigNumber(change24);
@@ -365,7 +365,7 @@
 
                     const hasRate = balance.rating !== null;
 
-                    if (hasRate && !this.isGateway && balance.asset.id !== WavesApp.defaultAssets.WAVES) {
+                    if (hasRate && !this.isGateway && balance.asset.id !== WavesApp.defaultAssets.TN) {
                         new RatingStarsFactory({
                             $container: this.$node.find(`.${SELECTORS.STARS_CONTAINER}`),
                             rating: balance.rating,

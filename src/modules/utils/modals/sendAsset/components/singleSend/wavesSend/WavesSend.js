@@ -2,8 +2,7 @@
     'use strict';
 
     const FIAT_ASSETS = {
-        [WavesApp.defaultAssets.USD]: true,
-        [WavesApp.defaultAssets.EUR]: true
+
     };
 
     const ds = require('data-service');

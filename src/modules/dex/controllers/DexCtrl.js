@@ -146,13 +146,13 @@
 
 
                     user.setSetting('dex.assetIdPair', {
-                        amount: WavesApp.defaultAssets.WAVES,
+                        amount: WavesApp.defaultAssets.TN,
                         price: unLockedAsset
                     });
 
                     return modalManager.showLockPairWarning(amountAssetName, priceAssetName)
                         .then(() => {
-                            $location.search('assetId2', WavesApp.defaultAssets.WAVES);
+                            $location.search('assetId2', WavesApp.defaultAssets.TN);
                             $location.search('assetId1', unLockedAsset);
                             this._initializePair();
                         });
@@ -195,7 +195,7 @@
                         if (urlPair) {
                             return this._getPair(urlPair)
                                 .catch(() => this._getPair({
-                                    amount: WavesApp.defaultAssets.WAVES,
+                                    amount: WavesApp.defaultAssets.TN,
                                     price: WavesApp.defaultAssets.BTC
                                 }))
                                 .then(({ amountAsset, priceAsset }) => {
@@ -228,7 +228,7 @@
                 if (pair) {
                     return ds.api.pairs.get(pair.amount, pair.price);
                 } else {
-                    return ds.api.pairs.get(WavesApp.defaultAssets.WAVES, WavesApp.defaultAssets.BTC);
+                    return ds.api.pairs.get(WavesApp.defaultAssets.TN, WavesApp.defaultAssets.BTC);
                 }
             }
 

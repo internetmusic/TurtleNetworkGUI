@@ -35,7 +35,7 @@
                  * @type {string}
                  */
                 this.title = i18n.translate('modal.startLease.title', 'app.utils');
-                this.assetId = WavesApp.defaultAssets.WAVES;
+                this.assetId = WavesApp.defaultAssets.TN;
                 this.recipient = '';
                 this.amount = null;
 

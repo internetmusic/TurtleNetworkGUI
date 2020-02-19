@@ -54,23 +54,9 @@
     ];
 
     const DEFAULT_ASSET_ICONS_MAP = Object.assign(Object.create(null), {
-        [WavesApp.defaultAssets.WAVES]: '/img/assets/waves.svg',
+        [WavesApp.defaultAssets.TN]: '/img/assets/waves.svg',
         [WavesApp.defaultAssets.BTC]: '/img/assets/bitcoin.svg',
         [WavesApp.defaultAssets.ETH]: '/img/assets/ethereum.svg',
-        [WavesApp.defaultAssets.LTC]: '/img/assets/ltc.svg',
-        [WavesApp.defaultAssets.ZEC]: '/img/assets/zec.svg',
-        [WavesApp.defaultAssets.EUR]: '/img/assets/euro.svg',
-        [WavesApp.defaultAssets.USD]: '/img/assets/usd.svg',
-        [WavesApp.defaultAssets.DASH]: '/img/assets/dash.svg',
-        [WavesApp.defaultAssets.BCH]: '/img/assets/bitcoin-cash.svg',
-        [WavesApp.defaultAssets.BSV]: '/img/assets/bitcoin-cash-sv.svg',
-        [WavesApp.defaultAssets.TRY]: '/img/assets/try.svg',
-        [WavesApp.defaultAssets.XMR]: '/img/assets/xmr.svg',
-        [WavesApp.defaultAssets.WEST]: '/img/assets/west.svg',
-        [WavesApp.defaultAssets.ERGO]: '/img/assets/ergo.svg',
-        [WavesApp.defaultAssets.BNT]: '/img/assets/bnt.svg',
-        [WavesApp.otherAssetsWithIcons.EFYT]: '/img/assets/efyt.svg',
-        [WavesApp.otherAssetsWithIcons.WNET]: '/img/assets/wnet.svg'
     });
 
     const nullOrCb = (name, cb) => (val1, val2) => {
@@ -1043,10 +1029,10 @@
                     }, 50);
                     return null;
                 }
-                if (asset1 === WavesApp.defaultAssets.WAVES) {
+                if (asset1 === WavesApp.defaultAssets.TN) {
                     asset2 = WavesApp.defaultAssets.BTC;
                 } else {
-                    asset2 = WavesApp.defaultAssets.WAVES;
+                    asset2 = WavesApp.defaultAssets.TN;
                 }
                 setTimeout(() => {
                     $state.go(`main.${dex}`, { assetId1: asset1, assetId2: asset2 });

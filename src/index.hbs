@@ -356,34 +356,17 @@
                 },
                 defaultAssets: {
                     TN: 'TN',
-                    EUR: config.network.assets.EUR,
-                    USD: config.network.assets.USD,
                     BTC: config.network.assets.BTC,
                     ETH: config.network.assets.ETH,
-                    LTC: config.network.assets.LTC,
-                    ZEC: config.network.assets.ZEC,
-                    BCH: config.network.assets.BCH,
-                    BSV: config.network.assets.BSV,
-                    DASH: config.network.assets.DASH,
-                    TRY: config.network.assets.TRY,
-                    XMR: config.network.assets.XMR,
-                    WEST: config.network.assets.WEST,
-                    ERGO: config.network.assets.ERGO,
-                    BNT: config.network.assets.BNT
                 },
-                rewriteAssets: [{
-                    id: config.network.assets.WEST,
-                    name: 'WEST',
-                    description: 'Waves Enterprise System Token'
-                }],
+                rewriteAssets: [],
                 tradingPairs: config.tradingPairs,
                 ALWAYS_PINNED_ASSETS: ['TN'],
                 WCTAsset: config.network.assets.WCT,
 
                 otherAssetsWithIcons: {
                     // TODO @xenohunter : remove that when icons are in @dvshur's service
-                    EFYT: config.network.assets.EFYT,
-                    WNET: config.network.assets.WNET
+
                 },
                 remappedAssetNames: config.remappedAssetNames,
                 matcherSignInterval: { count: 20, timeType: 'day' },

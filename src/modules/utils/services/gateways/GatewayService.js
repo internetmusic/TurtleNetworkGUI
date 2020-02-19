@@ -188,12 +188,10 @@
 
             getDefaultCardFiatList() {
                 const FIAT_CODES = {
-                    [WavesApp.defaultAssets.USD]: 'USD',
-                    [WavesApp.defaultAssets.EUR]: 'EURO'
                 };
 
                 return [
-                    {
+                    /**                   {
                         name: 'USD',
                         assetId: WavesApp.defaultAssets.USD,
                         fiatCode: FIAT_CODES[WavesApp.defaultAssets.USD],
@@ -206,7 +204,7 @@
                         fiatCode: FIAT_CODES[WavesApp.defaultAssets.EUR],
                         min: '30',
                         max: '50'
-                    }
+                    }***/
                 ];
             }
 

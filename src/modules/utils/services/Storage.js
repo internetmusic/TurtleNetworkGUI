@@ -26,14 +26,14 @@
 
         const MIGRATION_MAP = {
             '1.0.41': function (storage) {
-                return addNewGateway(storage, WavesApp.defaultAssets.BSV);
+                return addNewGateway(storage, WavesApp.defaultAssets.BTC);
             },
             '1.2.1': function (storage) {
                 return newTerms(storage);
             },
             '1.3.19': function (storage) {
                 return saveUsersWithUniqueName(storage)
-                    .then(data => addNewGateway(data, WavesApp.defaultAssets.BNT));
+                    .then(data => addNewGateway(data, WavesApp.defaultAssets.BTC));
             },
             '1.4.0': storage => migrateCommonSettings(storage),
             '1.4.6': storage => fixMigrateCommonSettings(storage),

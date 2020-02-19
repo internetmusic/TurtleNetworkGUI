@@ -69,7 +69,7 @@
                  * @type {ISendState}
                  */
                 this.state = {
-                    assetId: options.assetId || WavesApp.defaultAssets.WAVES,
+                    assetId: options.assetId || WavesApp.defaultAssets.TN,
                     mirrorId: user.getSetting('baseAssetId'),
                     gatewayData: {
                         details: null,

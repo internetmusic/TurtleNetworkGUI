@@ -14,7 +14,7 @@
 
         const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
         const WCT_ID = WavesApp.WCTAsset;
-        const WAVES_ID = WavesApp.defaultAssets.WAVES;
+        const WAVES_ID = WavesApp.defaultAssets.TN;
         const NEED_WCT = 1;
 
         class RatingStars extends Base {

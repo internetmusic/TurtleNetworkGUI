@@ -48,7 +48,7 @@
                     scamListUrl: WavesApp.network.scamListUrl,
                     tokensNameListUrl: WavesApp.network.tokensNameListUrl,
                     tradeWithScriptAssets: false,
-                    baseAssetId: WavesApp.defaultAssets.USD,
+                    baseAssetId: WavesApp.defaultAssets.BTC,
                     events: Object.create(null)
                 };
                 /**
@@ -88,7 +88,7 @@
                     dex: {
                         chartCropRate: 1.5,
                         assetIdPair: {
-                            amount: WavesApp.defaultAssets.WAVES,
+                            amount: WavesApp.defaultAssets.TN,
                             price: WavesApp.defaultAssets.BTC
                         },
                         createOrder: {
@@ -97,7 +97,7 @@
                         watchlist: {
                             showOnlyFavorite: false,
                             favourite: [
-                                [WavesApp.defaultAssets.WAVES, WavesApp.defaultAssets.BTC]
+                                [WavesApp.defaultAssets.TN, WavesApp.defaultAssets.BTC]
                             ],
                             activeTab: 'all'
                         },

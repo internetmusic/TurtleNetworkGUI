@@ -74,7 +74,7 @@
              */
             tabs = [
                 { name: 'directives.watchlist.all', value: 'all' },
-                { name: 'TN', value: WavesApp.defaultAssets.WAVES },
+                { name: 'TN', value: WavesApp.defaultAssets.TN },
                 { name: 'BTC', value: WavesApp.defaultAssets.BTC }
             ];
             /**
@@ -405,14 +405,14 @@
                     return Promise.resolve(new BigNumber(1));
                 }
 
-                return waves.node.assets.getAsset(activeTab === 'all' ? WavesApp.defaultAssets.WAVES : activeTab)
+                return waves.node.assets.getAsset(activeTab === 'all' ? WavesApp.defaultAssets.TN : activeTab)
                     .then((asset) => {
                         this.volumeAsset = asset;
 
                         if (activeTab === 'all') {
                             return Promise.resolve(new BigNumber(1));
                         } else {
-                            return waves.utils.getRate(WavesApp.defaultAssets.WAVES, activeTab);
+                            return waves.utils.getRate(WavesApp.defaultAssets.TN, activeTab);
                         }
                     });
             }

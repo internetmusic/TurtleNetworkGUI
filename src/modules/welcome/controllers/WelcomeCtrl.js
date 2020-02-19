@@ -32,49 +32,13 @@
         const { flatten, uniqBy } = require('ramda');
         const { BigNumber } = require('@waves/bignumber');
 
-        const WCT_ID = WavesApp.network.code === 'T' ?
-            WavesApp.defaultAssets.TRY :
-            'DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J';
-
         const PAIRS_IN_SLIDER = [
             {
-                amount: WavesApp.defaultAssets.WEST,
-                price: 'TN'
-            },
-            {
-                amount: WavesApp.defaultAssets.BTC,
-                price: 'TN'
-            },
-            {
-                amount: WCT_ID,
-                price: 'TN'
-            },
-            {
-                amount: WavesApp.defaultAssets.DASH,
-                price: WavesApp.defaultAssets.BTC
-            },
-            {
-                amount: WavesApp.defaultAssets.ETH,
-                price: WavesApp.defaultAssets.BTC
-            },
-            {
-                amount: WavesApp.defaultAssets.BCH,
-                price: WavesApp.defaultAssets.BTC
-            },
-            {
-                amount: WavesApp.defaultAssets.ETH,
-                price: 'TN'
-            },
-            {
                 amount: 'TN',
-                price: WavesApp.defaultAssets.USD
+                price: WavesApp.defaultAssets.BTC
             },
             {
-                amount: WavesApp.defaultAssets.ZEC,
-                price: 'TN'
-            },
-            {
-                amount: WavesApp.defaultAssets.XMR,
+                amount: WavesApp.defaultAssets.ETH,
                 price: WavesApp.defaultAssets.BTC
             }
         ];
