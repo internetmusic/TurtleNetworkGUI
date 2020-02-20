@@ -122,7 +122,7 @@
                 });
 
                 createPoll(this, this._getGraphData, 'chartData', 15000);
-                ds.api.assets.get(WavesApp.defaultAssets.WAVES).then(asset => {
+                ds.api.assets.get(WavesApp.defaultAssets.TN).then(asset => {
                     this.receive(balanceWatcher.change, () => this._updateWavesBalance(asset));
                     this._updateWavesBalance(asset);
                 });
@@ -143,7 +143,6 @@
             }
 
             getSignable() {
-                const name = this.txType.slice(0, 1).toUpperCase() + this.txType.slice(1);
                 return this.signable;
             }
 
