@@ -25,7 +25,8 @@
             /**
              * @type {string}
              */
-            tokenratingLink;
+            // TODO: tokenrating, Leave in for future
+            // tokenratingLink;
 
             /**
              * @type {number | null}
@@ -36,7 +37,8 @@
                 this._getAssetInfo();
                 this._setLink();
                 this.observe('assetId', this._getAssetInfo);
-                createPoll(this, this._getTokenRating, this._setTokenRating, 60 * 1000);
+                // TODO: tokenrating, Leave in for future
+                // createPoll(this, this._getTokenRating, this._setTokenRating, 60 * 1000);
             }
 
             /**
@@ -58,16 +60,18 @@
             /**
              * @private
              */
-            _getTokenRating() {
+            // TODO: tokenrating, Leave in for future
+            /** _getTokenRating() {
                 return ds.api.rating.getAssetsRating(this.assetId)
                     .then(assetList => assetList)
                     .catch(() => null);
-            }
+            }**/
 
             /**
              * @private
              */
-            _setTokenRating(assetList) {
+            // TODO: tokenrating, Leave in for future
+            /** _setTokenRating(assetList) {
                 if (!assetList) {
                     this.ratingError = true;
                     return null;
@@ -78,14 +82,15 @@
 
                 this.rating = assetList[0].rating;
                 $scope.$apply();
-            }
+            }**/
 
             /**
              * @private
              */
-            _setLink() {
+            // TODO: tokenrating, Leave in for future
+            /** _setLink() {
                 this.tokenratingLink = `${WavesApp.network.tokenrating}/tokens/${this.assetId}`;
-            }
+            } **/
 
         }
 

@@ -25,16 +25,17 @@
                 this.isVerified = isVerified;
                 this.isGateway = isGateway;
                 this.isTokenomica = isTokenomica;
-                if (!this.isGateway) {
+                // TODO: tokenrating, Leave in for future
+                /** if (!this.isGateway) {
                     createPoll(this, this._getTokenRating, this._setTokenRating, 60 * 1000);
-                }
+                } **/
             }
 
             isUnpinned() {
                 return !WavesApp.ALWAYS_PINNED_ASSETS.includes(this.balance.asset.id);
             }
-
-            _getTokenRating() {
+            // TODO: tokenrating, Leave in for future
+            /** _getTokenRating() {
                 return ds.api.rating.getAssetsRating(this.balance.asset.id)
                     .then(assetList => assetList)
                     .catch(() => null);
@@ -47,7 +48,7 @@
 
                 this.rating = assetList[0].rating;
                 $scope.$apply();
-            }
+            } **/
 
         }
 
