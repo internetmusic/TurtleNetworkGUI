@@ -19,13 +19,6 @@
         class WavesSend extends SingleSend {
 
             /**
-             * @return {boolean}
-             */
-            get canSendToBank() {
-                return FIAT_ASSETS[this.assetId] || false;
-            }
-
-            /**
              * @type {Function}
              */
             onChangeMode = null;

@@ -50,7 +50,6 @@ export interface IConfItem {
     oracles: object;
     apiVersion: string;
     code: string;
-    bankRecipient: string;
     node: string;
     matcher: string;
     api: string;

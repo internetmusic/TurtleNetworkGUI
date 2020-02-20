@@ -112,7 +112,7 @@
                 const wavesFee = list.find(item => item.asset.id === 'TN');
                 const filteredList = list.filter(fee => {
                     const feeBalance = this.balanceHash[fee.asset.id];
-                    const canUseOwnFee = user.address !== fee.asset.sender || this.balanceHash.WAVES.gte(wavesFee);
+                    const canUseOwnFee = user.address !== fee.asset.sender || this.balanceHash.TN.gte(wavesFee);
                     return hasBalances && feeBalance && feeBalance.gte(fee) && canUseOwnFee;
                 });
 

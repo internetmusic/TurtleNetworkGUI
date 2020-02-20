@@ -23,9 +23,7 @@
              */
             tabs = {
                 cryptocurrency: false,
-                invoice: false,
-                card: false,
-                bank: false
+                invoice: false
             };
 
             /**
@@ -42,16 +40,6 @@
              * @type {Array}
              */
             invoicables;
-
-            /**
-             * @type {Array}
-             */
-            purchasablesByCards;
-
-            /**
-             * @type {Array}
-             */
-            fiats;
 
             constructor({ asset }) {
                 super($scope);
@@ -76,15 +64,6 @@
                 }
 
                 this.enableTab('invoice');
-
-                if (gatewayService.hasSupportOf(this.asset, 'card')) {
-                    this.purchasablesByCards = [this.asset];
-                    this.enableTab('card');
-                }
-
-                if (gatewayService.hasSupportOf(this.asset, 'sepa')) {
-                    this.enableTab('bank');
-                }
             }
 
             initForAllAssets() {
@@ -99,28 +78,14 @@
                         .map((balance) => balance.asset);
                 });
 
-                const cardsRequests = this.getExtendedAssets(gatewayService.getPurchasableWithCards());
-                const cardsRequest = Promise.all(cardsRequests).then((results) => {
-                    this.purchasablesByCards = results;
-                });
-
-                const fiatsRequests = this.getExtendedAssets(gatewayService.getFiats());
-                const fiatsRequest = Promise.all(fiatsRequests).then((results) => {
-                    this.fiats = results;
-                });
-
                 Promise.all([
                     cryptocurrenciesRequest,
-                    invoicesRequest,
-                    cardsRequest,
-                    fiatsRequest
+                    invoicesRequest
                 ]).then(() => {
                     this.updateAssetBy(this.cryptocurrencies[0].id);
 
                     this.enableTab('cryptocurrency');
                     this.enableTab('invoice');
-                    this.enableTab('card');
-                    this.enableTab('bank');
 
                     this.initForSingleAsset();
                 });
@@ -143,14 +108,12 @@
             updateAssetBy(id) {
                 this.asset = (
                     this.cryptocurrencies.find((cryptocurrency) => cryptocurrency.id === id) ||
-                    this.invoicables.find((invoicable) => invoicable.id === id) ||
-                    this.purchasablesByCards.find((purchasableByCards) => purchasableByCards.id === id) ||
-                    this.fiats.find((fiat) => fiat.id === id)
+                    this.invoicables.find((invoicable) => invoicable.id === id)
                 );
             }
 
             /**
-             * @param {'cryptocurrency' | 'invoice' | 'card' | 'bank'} name
+             * @param {'cryptocurrency' | 'invoice'} name
              */
             enableTab(name) {
                 this.tabs[name] = true;

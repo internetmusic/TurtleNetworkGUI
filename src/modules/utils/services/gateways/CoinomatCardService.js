@@ -2,7 +2,6 @@
     'use strict';
 
     const CARD_GATEWAYS = {
-        [WavesApp.defaultAssets.TN]: 'TN'
     };
 
     const PATH = `${WavesApp.network.coinomat}/api/v2/indacoin`;

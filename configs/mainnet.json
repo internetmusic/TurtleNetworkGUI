@@ -5,11 +5,10 @@
     "BFWboD9xC64tSmirFbCNARR1NSu6Ep9rP4SRoLkQhBUF"
   ],
   "oracles": {
-    "waves": "3P6t5mKGwVDkyjFhtUqw4NnecyC3DRpLfkw",
+    "waves": "3JwdMmF7xEack9y8SJ4VeQ4UX2qmu1jCoWa",
     "tokenomica": "3P5yz6NiyBoT3KWBrc1iwQeMAen56FcMGTW"
   },
   "apiVersion": "v0",
-  "bankRecipient": "3P7qtv5Z7AMhwyvf5sM6nLuWWypyjVKb7Us",
   "code": "L",
   "node": "https://nodes.wavesplatform.com",
   "matcher": "https://matcher.wavesplatform.com/matcher",

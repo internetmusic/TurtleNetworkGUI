@@ -157,13 +157,13 @@
              * @private
              */
             _currentHasFee() {
-                const waves = balanceWatcher.getBalance().WAVES;
+                const TN = balanceWatcher.getBalance().TN;
 
                 if (!this.fee) {
                     return null;
                 }
 
-                this.hasFee = waves ? waves.gte(this.fee) : false;
+                this.hasFee = TN ? TN.gte(this.fee) : false;
             }
 
         }

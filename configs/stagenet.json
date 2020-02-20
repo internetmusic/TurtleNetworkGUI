@@ -10,7 +10,6 @@
   },
   "apiVersion": "v0",
   "code": "S",
-  "bankRecipient": "3MgT3txVhjUBy8xXBYSbBSezoJNTr1naHhp",
   "node": "https://nodes-stagenet.wavesnodes.com",
   "matcher": "https://matcher-stagenet.wavesplatform.com/matcher",
   "api": "https://api-stagenet.wavesplatform.com",

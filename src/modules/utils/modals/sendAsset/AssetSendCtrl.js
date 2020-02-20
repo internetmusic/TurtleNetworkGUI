@@ -360,5 +360,5 @@
  */
 
 /**
- * @typedef {'waves' | 'bank' | 'gataway'} ISendMode
+ * @typedef {'waves' | 'gataway'} ISendMode
  */

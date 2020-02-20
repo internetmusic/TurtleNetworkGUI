@@ -26,12 +26,6 @@
                                     <ng-include src="::$ctrl.headerPath"></ng-include>
                                 </w-gateway-send>
 
-                                <w-bank-send ng-if="$ctrl.sendMode === 'bank'"
-                                             state="$ctrl.state"
-                                             on-sign="$ctrl.nextStep(signable)"
-                                             on-change-mode="$ctrl.setMode(mode)">
-                                    <ng-include src="::$ctrl.headerPath"></ng-include>
-                                </w-bank-send>
 
                             </w-permit>
                             <w-permit name="CAN_TRANSFER_TRANSACTION" mode="off">

@@ -13,7 +13,8 @@
                                  utils) {
 
         const { SIGN_TYPE } = require('@turtlenetwork/signature-adapter');
-        const WCT_ID = WavesApp.WCTAsset;
+        // const WCT_ID = WavesApp.WCTAsset; we dont use WCT, so change it into an existing asset
+        const WCT_ID = WavesApp.defaultAssets.TN;
         const WAVES_ID = WavesApp.defaultAssets.TN;
         const NEED_WCT = 1;
 

@@ -22,22 +22,6 @@
                     ></w-receive-invoice>
                 </w-tab>
 
-                <w-tab ng-if="$ctrl.tabs.card" title-name="::'modal.receive.card.title'" id="::'card'">
-                    <w-receive-card
-                        asset="$ctrl.asset"
-                        purchasables-by-cards="::$ctrl.purchasablesByCards"
-                        is-single-asset="::$ctrl.isSingleAsset"
-                        on-asset-change="$ctrl.updateAssetBy(id)"
-                    ></w-receive-card>
-                </w-tab>
-
-                <w-tab ng-if="$ctrl.tabs.bank" title-name="::'modal.receive.bank.title'" id="::'bank'">
-                    <w-receive-bank
-                        asset="$ctrl.asset"
-                        fiats="::$ctrl.fiats"
-                        is-single-asset="::$ctrl.isSingleAsset"
-                    ></w-receive-bank>
-                </w-tab>
             </w-tabs>
         </div>
     </md-dialog-content>

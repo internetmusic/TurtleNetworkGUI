@@ -220,7 +220,7 @@ export async function getBuildParams(param: IPrepareHTMLOptions) {
     const styles = getStyles(param, meta, themes);
     const isWeb = type === 'web';
     const isProduction = buildType && buildType === 'production';
-    const { origin, oracles, feeConfigUrl, bankRecipient, tradingPairs } = networkConfig;
+    const { origin, oracles, feeConfigUrl, tradingPairs } = networkConfig;
 
     return {
         pack,
@@ -237,7 +237,6 @@ export async function getBuildParams(param: IPrepareHTMLOptions) {
                 .concat(scripts.slice(meta.vendors.length)),
         isProduction,
         feeConfigUrl,
-        bankRecipient,
         build: { type },
         network: networkConfig,
         themesConf: themesConf,

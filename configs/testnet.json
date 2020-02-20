@@ -4,10 +4,10 @@
     "EZehVXn6NC8hZQwkYTGp1Rfyp783fsGK2VAJi6tc9zDC"
   ],
   "oracles": {
+    "waves": "3XrUtvRZ6LLU8F2wwkuDffwTuLUNcpnjthB"
   },
   "apiVersion": "v0",
   "code": "l",
-  "bankRecipient": "3NCKpqzSnHmXhZEmqYy4U6RUKUAJDTxWgWP",
   "node": " https://apitnetworktest.blackturtle.eu",
   "matcher": "https://tntestnetmatcher.blackturtle.eu/matcher",
   "api":  "https://testnet.data-service.turtlenetwork.eu",
