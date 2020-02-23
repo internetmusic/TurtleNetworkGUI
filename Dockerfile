@@ -11,7 +11,7 @@ RUN npm ci --unsafe-perm && \
 
 RUN mkdir -p /srv/www/TurtleNetworkGUI/dist/web/testnet/trading-view
 
-COPY ./vendors/charting_library.min.js /srv/www/TurtleNetworkGUI/dist/web/testnet/trading-view/charting_library.min.js
+# COPY ./vendors/trading-view/ /srv/www/TurtleNetworkGUI/dist/web/testnet/trading-view/
 
 #RUN npm run build
 #COPY ./dist/web/testnet ./dist/web/testnet/

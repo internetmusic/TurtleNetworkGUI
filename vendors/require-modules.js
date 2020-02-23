@@ -4,6 +4,7 @@
 
     const MODULES_MAP = {
         'ts-utils': 'tsUtils',
+        '@turtlenetwork/bignumber': 'BigNumber',
         '@waves/bignumber': 'BigNumber',
         'ts-api-validator': 'tsApiValidator',
         '@waves/parse-json-bignumber': 'parseJsonBignumber',
@@ -11,6 +12,7 @@
         'waves-api': 'WavesAPI',
         'identity-img': 'identityImg',
         '@waves/data-entities': 'dataEntities',
+        '@turtlenetwork/data-entities': 'dataEntities',
         '@turtlenetwork/waves-transactions': 'WavesTransactions',
         '@waves/waves-crypto': 'WavesCrypto',
         '@turtlenetwork/ledger/dist/transport-u2f': 'TransportU2F',
