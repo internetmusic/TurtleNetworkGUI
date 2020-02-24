@@ -5,13 +5,6 @@
 trigger:
 - dev
 
-resources:
-  repositories:
-  - repository: charting_library
-    type: github
-    endpoint: github.com_BlackTurtle123
-    name: BlackTurtle123/charting_library
-
 variables:
   tag: '$(Build.BuildId)'
 
@@ -25,7 +18,6 @@ stages:
       vmImage: 'ubuntu-latest'
     steps:
     - checkout: self
-    - checkout: charting_library
     - task: Docker@2
       inputs:
         containerRegistry: 'turtlenetwork docker'
