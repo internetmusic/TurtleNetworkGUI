@@ -10,8 +10,7 @@ resources:
   - repository: charting_library
     type: github
     endpoint: github.com_BlackTurtle123
-    name: tradingview/charting_library
-
+    name: BlackTurtle123/charting_library
 
 variables:
   tag: '$(Build.BuildId)'
