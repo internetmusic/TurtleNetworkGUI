@@ -48,10 +48,6 @@ export function set<K extends keyof IConfigParams>(key: K, value: IConfigParams[
         {
             dataService = new DataServiceClient({ rootUrl: `${config.api}`, parse });
         }
-        else
-        {
-            console.error("Failed to log data-service as api was not given")
-        }
     }
     change.dispatch(key);
 }
