@@ -5,7 +5,7 @@
         <rect width="12" height="9" x="10.5" y="48.5" fill="#CAD9FF" rx="1"/>
         <rect width="12" height="9" x="25.5" y="48.5" fill="#CAD9FF" rx="1"/>
         <rect width="12" height="9" x="40.5" y="48.5" fill="#CAD9FF" rx="1"/>
-        <path fill="#1F5AF6" d="M3.5 14h56a2 2 0 0 1 2 2v8.5h-60V16a2 2 0 0 1 2-2z"/>
+        <path fill="#258e25" d="M3.5 14h56a2 2 0 0 1 2 2v8.5h-60V16a2 2 0 0 1 2-2z"/>
         <circle cx="7.125" cy="19.25" r="1.875" fill="#CCDAFF"/>
         <circle cx="13.125" cy="19.25" r="1.875" fill="#CCDAFF" opacity=".5"/>
         <circle cx="19.125" cy="19.25" r="1.875" fill="#CCDAFF" opacity=".1"/>

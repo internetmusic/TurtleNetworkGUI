@@ -249,7 +249,7 @@
                         user.setSetting('lastInterval', e);
                     });
                 });
-                this._chart.options.datafeed.onLoadError = () => {
+                this._chart._options.datafeed.onLoadError = () => {
                     this.notLoaded = true;
                 };
                 return this;

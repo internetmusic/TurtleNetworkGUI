@@ -119,8 +119,7 @@
         'app.dex',
         'app.tokens',
         'app.unavailable',
-        'app.stand',
-        'app.migration'
+        'app.stand'
     ]);
 })();
 

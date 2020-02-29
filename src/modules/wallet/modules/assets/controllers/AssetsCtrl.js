@@ -391,7 +391,7 @@
                         });
                     default:
                         return ({
-                            lineColor: '#1f5af6',
+                            lineColor: '#258e25',
                             fillColor: '#fff',
                             gradientColor: ['#eaf0fe', '#fff'],
                             lineWidth: 4

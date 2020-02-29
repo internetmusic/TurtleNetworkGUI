@@ -9,10 +9,9 @@
      * @param {User} user
      * @param {ModalManager} modalManager
      * @param {ConfigService} configService
-     * @param {Storage} storage
      * @returns {SignInCtrl}
      */
-    const controller = function (Base, $scope, $state, user, modalManager, configService, storage) {
+    const controller = function (Base, $scope, $state, user, modalManager) {
 
         class SignInCtrl extends Base {
 
@@ -41,8 +40,6 @@
                     }
                 });
 
-                this._onLoginHandlers.push(this._showMigrateModal);
-
                 user.onLogin().then(() => {
                     this._onLoginHandlers.forEach((handler) => handler());
                 });
@@ -64,7 +61,7 @@
 
                     if (firstUser) {
                         user.login(firstUser).then(() => {
-                            user.goToActiveState();
+                            user.goToActiveState(true);
                         });
                     } else if (this.legacyUserList && this.legacyUserList.length) {
                         $state.go('migrate');
@@ -88,13 +85,7 @@
 
             _login(userData) {
                 user.login(userData).then(() => {
-                    const DEXW_LOCKED = configService.get('DEXW_LOCKED');
-
-                    if (DEXW_LOCKED) {
-                        $state.go('migration');
-                    } else {
-                        user.goToActiveState();
-                    }
+                    user.goToActiveState();
                 });
             }
 
@@ -109,20 +100,13 @@
                 }
             }
 
-            _showMigrateModal = () => {
-                storage.load('notAutoOpenMigrationModal').then((notAutoOpenMigrationModal) => {
-                    if (!notAutoOpenMigrationModal) {
-                        modalManager.showMigrateModal();
-                    }
-                });
-            };
-
         }
 
         return new SignInCtrl();
+
     };
 
-    controller.$inject = ['Base', '$scope', '$state', 'user', 'modalManager', 'configService', 'storage'];
+    controller.$inject = ['Base', '$scope', '$state', 'user', 'modalManager'];
 
     angular.module('app.signIn').controller('SignInCtrl', controller);
 })();

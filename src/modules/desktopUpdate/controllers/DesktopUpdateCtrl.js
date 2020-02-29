@@ -126,9 +126,7 @@
                     this.password,
                     undefined,
                     this.multiAccountHash
-                ).then(() => {
-                    this.toMigration();
-                }).catch(() => {
+                ).catch(() => {
                     this.password = '';
                     this.showPasswordError = true;
                 });
@@ -216,10 +214,6 @@
                 $state.go(user.getActiveState('wallet'));
             }
 
-            toMigration() {
-                this._showMoving = true;
-            }
-
             _toInstallAndRun() {
                 this.state = 'installAndRun';
                 this._timer = 10;
@@ -278,10 +272,6 @@
                 this._resetProgress();
                 this.downloadDone = false;
                 ds.utils.abortDownloading();
-            }
-
-            showFAQ() {
-                modalManager.showMigrateFAQ();
             }
 
             _decreaseTimer() {

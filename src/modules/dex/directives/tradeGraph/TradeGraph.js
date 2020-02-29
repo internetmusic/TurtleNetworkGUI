@@ -14,7 +14,7 @@
         default: {
             lineColor: {
                 asks: '#e5494d',
-                bids: '#1f5af6'
+                bids: '#258e25'
             },
             fillColor: {
                 asks: '#ffe4e4',

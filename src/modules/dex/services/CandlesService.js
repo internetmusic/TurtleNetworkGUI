@@ -156,7 +156,7 @@
 
                     if (candles.length) {
                         this._updateLastTime(candles);
-                        candles.forEach(onRealtimeCallback);
+                        candles.filter(c => c.time > this._lastTime).forEach(onRealtimeCallback);
                     }
                 };
 

@@ -432,8 +432,8 @@
                 });
             }
 
-            goToActiveState() {
-                if (!this.initRouteState) {
+            goToActiveState(reroute = false) {
+                if (!this.initRouteState || reroute) {
                     $state.go(this.getActiveState('wallet'));
                 }
             }
@@ -460,18 +460,13 @@
              * @param {string} [userData.id]
              * @param {string} userData.name
              * @param {boolean} [hasBackup]
-             * @param {boolean} [restore]
              * @return {Promise}
              */
-            create(userData, hasBackup, restore) {
-                return this.addUser(userData, hasBackup, restore)
+            create(userData, hasBackup) {
+                return this.addUser(userData, hasBackup)
                     .then(createdUser => this.login(createdUser))
                     .then(() => {
                         this.initScriptInfoPolling();
-
-                        if (!restore) {
-
-                        }
                     });
             }
 
@@ -485,10 +480,9 @@
              * @param {string} [userData.id]
              * @param {string} userData.name
              * @param {boolean} hasBackup
-             * @param {boolean} restore
              * @return {Promise}
              */
-            addUser(userData, hasBackup, restore) {
+            addUser(userData, hasBackup) {
                 return multiAccount.addUser({
                     userType: userData.userType || 'seed',
                     seed: userData.seed,
@@ -510,10 +504,6 @@
 
                             if (!createdUser) {
                                 throw new Error('Can\'t save user');
-                            }
-
-                            if (restore) {
-
                             }
 
                             return { ...createdUser };

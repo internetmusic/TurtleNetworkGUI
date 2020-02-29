@@ -8,8 +8,6 @@
     // });
 
     const { Money } = require('@waves/data-entities');
-    const { libs } = require('@turtlenetwork/waves-transactions');
-    const { base64Encode, blake2b, stringToBytes } = libs.crypto;
 
     const locationHref = location.href;
     const i18next = require('i18next');
@@ -156,7 +154,6 @@
                 this._setHandlers();
                 this._initializeLogin();
                 this._initializeOutLinks();
-                this._openMigrationModal();
 
                 if (WavesApp.isDesktop()) {
                     window.listenMainProcessEvent((type, url) => {
@@ -642,7 +639,6 @@
             _onChangeStateSuccess(transition) {
                 const toState = transition.to();
                 const fromState = transition.from();
-                const from = fromState.name || document.referrer;
                 if (toState.name !== fromState.name) {
                     switch (toState.name) {
                         case 'create':
@@ -711,21 +707,6 @@
                         LOADER.addProgress(PROGRESS_MAP.LOCALIZE_READY);
                         resolve();
                     });
-                });
-            }
-
-            /**
-             * @private
-             */
-            _openMigrationModal() {
-                Promise.all([
-                    user.getMultiAccountData(),
-                    user.getFilteredUserList(),
-                    storage.load('notAutoOpenMigrationModal')
-                ]).then(([multiAccountData, userList, notAutoOpenMigrationModal]) => {
-                    if (!notAutoOpenMigrationModal && !multiAccountData && userList && userList.length) {
-                        modalManager.showMigrateModal();
-                    }
                 });
             }
 

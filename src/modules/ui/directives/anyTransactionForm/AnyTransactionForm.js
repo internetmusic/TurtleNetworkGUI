@@ -80,6 +80,11 @@
                     return null;
                 }
 
+                if (this.json === 'null') {
+                    this.isValidJSON = false;
+                    return null;
+                }
+
                 WavesApp.parseJSON(json)
                     .then(data => this._updateSignable(data)
                         .then(() => {
