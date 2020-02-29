@@ -350,8 +350,7 @@
                     //tokenrating: config.network.tokenrating,
                     featuresConfig: config.network.featuresConfig,
                     feeConfig: config.network.feeConfig,
-                    wavesExchangeLink: config.network.wavesExchangeLink,
-                    migration: config.network.migration,
+                    wavesExchangeLink: config.network.wavesExchangeLink
                 },
                 defaultAssets: {
                     TN: 'TN',
@@ -716,14 +715,6 @@
                     data: {
                         url: '/desktop-update',
                         noLogin: true,
-                        views: [{ name: 'main' }]
-                    }
-                },
-                {
-                    id: 'migration',
-                    data: {
-                        noLogin: true,
-                        url: '/migration',
                         views: [{ name: 'main' }]
                     }
                 },

@@ -79,10 +79,6 @@
                 });
             }
 
-            showMovingModal() {
-                modalManager.showMigrateModal();
-            }
-
             /**
              * @param last
              * @private

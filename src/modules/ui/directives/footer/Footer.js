@@ -48,10 +48,6 @@
 
                 storage.load(this._toasterMobilesStorageKey).then(wasHidden => {
                     this.isToasterMobilesVisible = !wasHidden && window.innerWidth <= 768;
-
-                    if (this.isToasterMobilesVisible) {
-
-                    }
                     utils.safeApply($scope);
                 });
             }
@@ -65,13 +61,10 @@
                 storage.save(this._toasterMobilesStorageKey, true);
             }
 
-            showFAQ() {
-                modalManager.showMigrateFAQ();
-            }
-
         }
 
         return new FooterCtrl();
+
     };
 
     controller.$inject = ['Base', '$scope', '$element', 'utils', 'storage', 'modalManager', '$state'];

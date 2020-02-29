@@ -25,14 +25,6 @@
   "origin": "https://wallet.turtlenetwork.eu",
   "featuresConfigUrl": "https://raw.githubusercontent.com/wavesplatform/waves-client-config/master/config.json",
   "feeConfigUrl": "https://raw.githubusercontent.com/wavesplatform/waves-client-config/master/fee.json",
-  "migration": {
-    "webUrl": "https://waves.exchange/migration",
-    "desktopUrl": "http://localhost:8888/connect",
-    "desktopPort": 8888,
-    "origins": [
-      "https://waves.exchange"
-    ]
-  },
   "tokenrating": "https://tokenrating.wavesexplorer.com",
   "assets": {
     "BTC": "5Asy9P3xjcvBAgbeyiitZhBRJZJ2TPGSZJz9ihDTnB3d",
