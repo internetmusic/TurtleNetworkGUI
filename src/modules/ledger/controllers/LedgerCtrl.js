@@ -275,7 +275,7 @@
 
                 this._calculateDisabled(true);
 
-                return user.create(newUser, true, true).then(() => {
+                return user.create(newUser, true).then(() => {
                     $state.go(user.getActiveState('wallet'));
                 }).catch(() => {
                     this.error = true;

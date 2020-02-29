@@ -61,7 +61,7 @@
 
                     if (firstUser) {
                         user.login(firstUser).then(() => {
-                            user.goToActiveState();
+                            user.goToActiveState(true);
                         });
                     } else if (this.legacyUserList && this.legacyUserList.length) {
                         $state.go('migrate');

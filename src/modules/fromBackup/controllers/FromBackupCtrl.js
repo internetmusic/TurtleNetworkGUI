@@ -303,7 +303,7 @@
                 const promises = [];
                 users.reduce(
                     (acc, newUser) => {
-                        const userPromise = acc.then(() => user.addUser(newUser, true, true));
+                        const userPromise = acc.then(() => user.addUser(newUser, true));
                         promises.push(userPromise);
                         return userPromise;
                     },

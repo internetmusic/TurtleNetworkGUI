@@ -103,8 +103,6 @@
             }
 
             restore() {
-                if (this.saveUserData) {
-                }
 
                 const { keyOrSeed, type } = this._getEncryptedAndType();
 
@@ -115,7 +113,7 @@
                     ...keyOrSeed
                 };
 
-                return user.create(newUser, true, true).then(() => {
+                return user.create(newUser, true).then(() => {
                     $state.go(user.getActiveState('wallet'));
                 });
             }
