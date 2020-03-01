@@ -10,6 +10,8 @@ RUN mkdir -p /srv/www/TurtleNetworkGUI/dist/web/$web_environment/
 ARG platform=web
 RUN npm ci --unsafe-perm && \
     node_modules/.bin/gulp build --platform web --config ./configs/$web_environment.json
+RUN rm -rf /srv/www/WavesGUI/node_modules/
+
 
 FROM nginx:stable-alpine
 ARG web_environment=testnet
