@@ -1,15 +1,17 @@
 FROM node:lts-alpine as static-temp
+ARG web_environment=testnet
+
 RUN apk update && apk add git
 
 COPY ./ /srv/www/TurtleNetworkGUI/
 WORKDIR /srv/www/TurtleNetworkGUI
-RUN mkdir -p /srv/www/TurtleNetworkGUI/dist/web/testnet/
+RUN mkdir -p /srv/www/TurtleNetworkGUI/dist/web/$web_environment/
 
 ARG platform=web
 RUN npm ci --unsafe-perm && \
-    node_modules/.bin/gulp build --platform web --config ./configs/testnet.json
+    node_modules/.bin/gulp build --platform web --config ./configs/$web_environment.json
 
-RUN mkdir -p /srv/www/TurtleNetworkGUI/dist/web/testnet/trading-view
+RUN mkdir -p /srv/www/TurtleNetworkGUI/dist/web/$web_environment/trading-view
 
 # COPY ./vendors/trading-view/ /srv/www/TurtleNetworkGUI/dist/web/testnet/trading-view/
 
