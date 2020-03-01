@@ -24,4 +24,21 @@ stages:
         repository: 'turtlenetwork/tngui'
         command: 'buildAndPush'
         Dockerfile: 'Dockerfile'
-      displayName: 'Build and push docker container'  
+      displayName: 'Build and push docker container for testnet'  
+
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'turtlenetwork docker'
+        repository: 'turtlenetwork/mainnet-tngui'
+        command: 'build'
+        Dockerfile: '**/Dockerfile'
+        arguments: '--build-arg web_environment=mainnet'
+      displayName: 'Build docker container for mainnet'
+
+
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'turtlenetwork docker'
+        repository: 'turtlenetwork/mainnet-tngui'
+        command: 'push'  
+      displayName: 'Push mainnet container'    
