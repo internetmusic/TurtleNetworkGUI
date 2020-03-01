@@ -28,4 +28,4 @@ COPY ./build-wallet/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=static-temp /srv/www/TurtleNetworkGUI/dist/web/$web_environment/ /srv/www/TurtleNetworkGUI/dist/web/$web_environment/
 EXPOSE 80
 
-CMD ["/bin/sh","-c", "envsubst '\${WEB_ENVIRONMENT}' < /etc/nginx/sites-available/default.conf > /etc/nginx/sites-enabled/web-\${WEB_ENVIRONMENT}.conf ; nginx -g 'daemon off;'"]
+CMD ["/bin/sh","-c", "envsubst '${WEB_ENVIRONMENT}' < /etc/nginx/sites-available/default.conf > /etc/nginx/sites-enabled/web-${WEB_ENVIRONMENT}.conf ; nginx -g 'daemon off;'"]
