@@ -25,7 +25,8 @@
 
             @decorators.cachable(5)
             searchAsset(userInput) {
-                return ds.fetch(`${WavesApp.network.api}/assets/search/${userInput}`);
+                return ds.fetch(`${WavesApp.network.api}/${WavesApp.network.apiVersion}/assets?
+                    search=/${encodeURIComponent(userInput)}`);
             }
 
             /**

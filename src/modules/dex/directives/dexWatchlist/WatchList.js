@@ -2,17 +2,18 @@
     'use strict';
 
     const TRADING_ASSETS = WavesApp.tradingPairs;
-    const DROP_DOWN_ORDER_LIST = ['ETH', 'WAVES', 'LTC'];
+    const DROP_DOWN_ORDER_LIST = ['ETH', 'LTC'];
     const DROP_DOWN_LIST = [];
 
     DROP_DOWN_ORDER_LIST.forEach((name) => {
         DROP_DOWN_LIST.push({ name, id: WavesApp.defaultAssets[name] });
     });
     Object.keys(WavesApp.defaultAssets).forEach((name) => {
-        if (!DROP_DOWN_ORDER_LIST.includes(name) && name !== 'TN' && name !== 'BTC') {
+        if (!DROP_DOWN_ORDER_LIST.includes(name) && name !== 'TN' && name !== 'BTC' && name !== 'WAVES') {
             DROP_DOWN_LIST.push({ name, id: WavesApp.defaultAssets[name] });
         }
     });
+    DROP_DOWN_LIST.push({ name: 'ALL', id: 'all' });
 
     /**
      * @param Base
@@ -73,7 +74,6 @@
              * @type {{name: string, value: string}[]}
              */
             tabs = [
-                { name: 'directives.watchlist.all', value: 'all' },
                 { name: 'TN', value: WavesApp.defaultAssets.TN },
                 { name: 'BTC', value: WavesApp.defaultAssets.BTC },
                 { name: 'WAVES', value: WavesApp.defaultAssets.WAVES }
@@ -89,7 +89,7 @@
             /**
              * @type {string}
              */
-            activeTab = 'all';
+            activeTab = 'TN';
             /**
              * @type {boolean}
              */
@@ -556,6 +556,13 @@
 
                 this.searchRequest = new PromiseControl(Promise.all(queryParts.map(waves.node.assets.search)))
                     .then(([d1 = [], d2 = []]) => {
+                        d1 = d1.data.map((item) => {
+                            return {
+                                ticker: item.data.ticker,
+                                name: WavesApp.remappedAssetNames[item.data.id] || item.data.name,
+                                id: item.data.id
+                            };
+                        });
                         this._searchAssets = uniqBy(prop('id'), d1.concat(d2));
                         return this._poll.restart().then(() => {
                             this.searchInProgress = false;

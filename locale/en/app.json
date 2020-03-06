@@ -77,9 +77,7 @@
     "error": {
 
         "updateClient": {
-
-            "body": "We are constantly working to make Turtle Network Exchange better and more useful.\nPlease update the application to continue.  Download the application from the official [website](https://turtlenetwork.eu)!",
-
+            "body": "We are constantly working to make Turtle Network DEX better and more useful.\nPlease update the application to continue.  Download the application from the official [website](https://turtlenetwork.eu)!",
             "title": "It's time to update your app!"
 
         }
