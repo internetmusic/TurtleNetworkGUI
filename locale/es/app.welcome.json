@@ -69,7 +69,7 @@
         },
         "jan2019": {
             "date": "Enero 2019",
-            "text": "El soporte para operar en Waves DEX con Smart Accounts está habilitado.",
+            "text": "El soporte para operar en Turtle Network DEX con Smart Accounts está habilitado.",
             "text_2": "Lanzamiento de la puerta de enlace Bitcoin Satoshi Vision",
             "title": "Comercio con Smart Accounts",
             "title_2": "Puerta de enlace BSV"
@@ -107,12 +107,12 @@
         },
         "sep2018": {
             "date": "Septiembre 2018",
-            "text": "La integración con Waves DEX permite a los usuarios operar con la máxima seguridad.",
+            "text": "La integración con Turtle Network DEX permite a los usuarios operar con la máxima seguridad.",
             "title": "Ledger Nano S"
         },
         "sep2019": {
             "date": "Septiembre 2019",
-            "text": "La autenticación de dos factores ofrece a los usuarios del Waves DEX una seguridad aún mayor.",
+            "text": "La autenticación de dos factores ofrece a los usuarios del Turtle Network DEX una seguridad aún mayor.",
             "title": "2FA"
         }
     },
@@ -142,7 +142,7 @@
         "changeName": "Cambiar nombre",
         "chart": "GRÁFICO",
         "comingSoon": "Coming soon",
-        "contestLinkDescription": "¡Gana 5.000 WAVES en un concurso de trading en Waves DEX!",
+        "contestLinkDescription": "¡Gana 5.000 WAVES en un concurso de trading en Turtle Network DEX!",
         "contestLinkLink": "Reglas",
         "controlAssets": "El control de los activos es solo suyo, los fondos no salen de su billetera y no se pueden congelar",
         "cookies": "Cookies",
@@ -192,7 +192,7 @@
         "mainPage": "Pagina principal",
         "majorFiatCryptocurrencies": "Compatible con las principales criptomonedas y fiat: BTC, LTC, ETH, USD y otros",
         "markets": "Mercados",
-        "marketsDescription": "Waves DEX le permite ejecutar operaciones de forma rápida y segura, independientemente de si se realizan transacciones a través de una aplicación móvil, un cliente de escritorio, una billetera web o la API de Waves.",
+        "marketsDescription": "Turtle Network DEX le permite ejecutar operaciones de forma rápida y segura, independientemente de si se realizan transacciones a través de una aplicación móvil, un cliente de escritorio, una billetera web o la API de Waves.",
         "marketsTableDescription": "Para ver más pares negociados, haga clic en",
         "marketsTableDescriptionLink": "Ver intercambio",
         "menu": "Menú",
@@ -206,7 +206,7 @@
         "productsTools": "Productos y herramientas",
         "renameAccount": "Cambiar el nombre de la cuenta",
         "roadmap": "Hoja de ruta",
-        "roadmapOpportunitiesAhead": "El futuro de Waves DEX: nuestra hoja de ruta para las oportunidades que tenemos por delante.",
+        "roadmapOpportunitiesAhead": "El futuro de Turtle Network DEX: nuestra hoja de ruta para las oportunidades que tenemos por delante.",
         "save": "Guardar",
         "scanQrCode": "Escanear código QR",
         "scriptAccount": "La cuenta del Script",
