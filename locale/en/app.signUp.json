@@ -1,16 +1,31 @@
 {
+
     "signUp": {
+
         "headers": {
+
             "onePassBtn": "Let’s start!",
-            "onePassDesc": "Local data storage, seed phrases and encryption make Turtle Network DEX reliable. However, we are going further. It’s time to switch on a new security level. Log into your accounts and switch between them by a couple of taps.",
+
+            "onePassDesc": "Local data storage, seed phrases and encryption make Turtle Network Lite reliable. However, we are moving onwards and upwards. It’s time to ramp up the security level. Log into your accounts and switch between them with a few simple clicks.",
+
             "onePassword": "One password for all your accounts",
+
             "protect": "Protect Your Accounts",
+
             "protectDesc": "Set a single password for all your accounts",
+
             "protectPass": "Create password"
+
         },
+
         "password": {
+
             "notMatch": "Password does not match"
+
         },
-        "termsAgreement": "I have read and agree with the [Terms and Conditions](https://wavesplatform.com/files/docs/Waves_terms_and_conditions.pdf), [Privacy Policy](https://wavesplatform.com/files/docs/Privacy_Policy_SW.pdf)."
+
+        "termsAgreement": "I have read and agree with the [Terms and Conditions](https://docs.turtlenetwork.eu/files/placeholder.pdf), [Privacy Policy](https://docs.turtlenetwork.eu/files/placeholder.pdf)."
+
     }
+
 }
