@@ -95,3 +95,19 @@ export $(cat variables.env | xargs) && NODE_ENV=production node dist/index.js
 Fees
 > Config/{environment}/feeConfigUrl
 
+
+- [ ] Dex
+- [x] show graps)
+- [ ] can find assets by asset id ( besides default assets)
+- [x] remove sentry 
+- [ ] connect to TurtleShell
+  - [ ] client asks to connect to turtleshell
+  - [ ] import account works from turtleshell 
+- [x] remove migration stuff
+- [ ] find out what data is readed from the data oracle and how we can use it
+- [x] solve all console errors
+- [ ] make mainnet work
+- [ ] gateway TN (will only work for mainnet)
+PIPELINE/BUILD PROCESS
+- [ ] add somehow off basic testing/verification
+- [ ] fix bug after auto logout, you can't log in again
