@@ -556,6 +556,13 @@
 
                 this.searchRequest = new PromiseControl(Promise.all(queryParts.map(waves.node.assets.search)))
                     .then(([d1 = [], d2 = []]) => {
+                        d1 = d1.data.map((item) => {
+                            return {
+                                ticker: item.data.ticker,
+                                name: WavesApp.remappedAssetNames[item.data.id] || item.data.name,
+                                id: item.data.id
+                            };
+                        });
                         this._searchAssets = uniqBy(prop('id'), d1.concat(d2));
                         return this._poll.restart().then(() => {
                             this.searchInProgress = false;
