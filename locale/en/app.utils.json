@@ -74,7 +74,7 @@
 
             "fee": "Fee {{fee, money-currency}}",
 
-            "ideLink": "Script can be developed with [Waves Ride IDE](https://ide.wavesplatform.com/) and setting the network byte to: 'L' and setting network node to: https://privatenode2.blackturtle.eu/.",
+            "ideLink": "Script can be developed with [Waves Ride IDE](https://ide.wavesplatform.com/) and setting the network byte to: 'L' and setting network node to: https://tnnode2.turtlenetwork.eu/.",
 
             "ok": "Sign",
 
