@@ -191,10 +191,10 @@
                                 .then(({ amountAsset, priceAsset }) => {
                                     const activeTab = user.getSetting('dex.watchlist.activeTab');
 
-                                    if (activeTab !== 'all' &&
+                                    if (activeTab !== 'TN' &&
                                         activeTab !== amountAsset.id &&
                                         activeTab !== priceAsset.id) {
-                                        user.setSetting('dex.watchlist.activeTab', 'all');
+                                        user.setSetting('dex.watchlist.activeTab', 'TN');
                                     }
 
                                     this._assetIdPair = {

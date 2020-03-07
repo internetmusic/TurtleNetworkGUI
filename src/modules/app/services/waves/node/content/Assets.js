@@ -105,16 +105,17 @@
              * @return {JQuery.jqXHR}
              */
             search(query) {
-                return $.get(`${WavesApp.network.api}/${WavesApp.network.apiVersion}/assets?
-                    search=${encodeURIComponent(query)}`, (result) => {
-                    return result.data.map((item) => {
-                        return {
-                            ticker: item.data.ticker,
-                            name: WavesApp.remappedAssetNames[item.data.id] || item.data.name,
-                            id: item.data.id
-                        };
+                const encodedURI = encodeURIComponent(query);
+                return $.get(`${WavesApp.network.api}/${WavesApp.network.apiVersion}/assets?search=${encodedURI}`,
+                    (result) => {
+                        return result.data.map((item) => {
+                            return {
+                                ticker: item.data.ticker,
+                                name: WavesApp.remappedAssetNames[item.data.id] || item.data.name,
+                                id: item.data.id
+                            };
+                        });
                     });
-                });
             }
 
             /**
