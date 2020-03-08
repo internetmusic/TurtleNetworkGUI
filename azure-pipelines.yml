@@ -26,7 +26,13 @@ stages:
     - task: Npm@1
       inputs:
         command: 'custom'
-        customCommand: 'run electron'
+        customCommand: 'run electron:linux'
+      displayName: 'Build electron wallets' 
+
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run electron:osx'
       displayName: 'Build electron wallets' 
 
     - task: Docker@2
