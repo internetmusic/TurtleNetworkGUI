@@ -95,7 +95,7 @@ stages:
         publishLocation: 'Container'
       displayName: 'Create osx artifacts'
 
-  - job: Build
+  - job: BuildDockerTestnet
     displayName: Build docker Testnet
     pool:
       vmImage: 'ubuntu-latest'
@@ -157,7 +157,7 @@ stages:
         Dockerfile: 'Dockerfile'
       displayName: 'Build and push docker container for testnet'
 
-  - job: Build
+  - job: BuildDockerMainnet
     displayName: Build docker Mainnet
     pool:
       vmImage: 'ubuntu-latest'
