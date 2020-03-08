@@ -22,7 +22,11 @@ stages:
       inputs:
         command: 'install'
       displayName: 'Install npm dependencies'
-      
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'
+
     - task: Npm@1
       inputs:
         command: 'custom'
@@ -33,6 +37,12 @@ stages:
       inputs:
         command: 'custom'
         customCommand: 'run electron:osx'
+      displayName: 'Build electron wallets' 
+
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run electron:win'
       displayName: 'Build electron wallets' 
 
     - task: Docker@2
