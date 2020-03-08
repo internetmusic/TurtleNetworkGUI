@@ -71,7 +71,7 @@ stages:
   - job: BuildOSX
     displayName: Build osx
     pool:
-      vmImage: 'linux-latest'
+      vmImage: 'ubuntu-latest'
     steps:
     - checkout: self
     - task: Npm@1
