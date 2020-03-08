@@ -34,10 +34,10 @@ stages:
       displayName: 'Build win electron wallets' 
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: './dist/linux'
-        ArtifactName: 'linux'
+        PathtoPublish: './dist/win'
+        ArtifactName: 'win'
         publishLocation: 'Container'
-      displayName: 'Create linux artifacts'  
+      displayName: 'Create win artifacts'  
 
 
   - job: BuildLinux
@@ -91,7 +91,7 @@ stages:
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: './dist/osx'
-        ArtifactName: 'linux'
+        ArtifactName: 'osx'
         publishLocation: 'Container'
       displayName: 'Create osx artifacts'  
 
