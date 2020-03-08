@@ -12,8 +12,36 @@ stages:
 - stage: Build
   displayName: Build image
   jobs:
-  - job: Build
-    displayName: Build
+  - job: BuildWindows
+    displayName: Build Windows
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - checkout: self
+    - task: Npm@1
+      inputs:
+        command: 'install'
+      displayName: 'Install npm dependencies'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'
+
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run electron:win'
+      displayName: 'Build win electron wallets' 
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: './dist/linux'
+        ArtifactName: 'linux'
+        publishLocation: 'Container'
+      displayName: 'Create linux artifacts'  
+
+
+  - job: BuildLinux
+    displayName: Build linux
     pool:
       vmImage: 'ubuntu-latest'
     steps:
@@ -33,17 +61,32 @@ stages:
         customCommand: 'run electron:linux'
       displayName: 'Build linux electron wallets' 
 
-    - task: Npm@1
-      inputs:
-        command: 'custom'
-        customCommand: 'run electron:osx'
-      displayName: 'Build osx electron wallets' 
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: './dist/linux'
         ArtifactName: 'linux'
         publishLocation: 'Container'
       displayName: 'Create linux artifacts'  
+
+  - job: BuildOSX
+    displayName: Build osx
+    pool:
+      vmImage: 'linux-latest'
+    steps:
+    - checkout: self
+    - task: Npm@1
+      inputs:
+        command: 'install'
+      displayName: 'Install npm dependencies'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'  
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run electron:osx'
+      displayName: 'Build osx electron wallets' 
 
     - task: PublishBuildArtifacts@1
       inputs:
@@ -52,12 +95,17 @@ stages:
         publishLocation: 'Container'
       displayName: 'Create osx artifacts'  
 
-
-#    - task: Npm@1
-#      inputs:
-#        command: 'custom'
-#        customCommand: 'run electron:win'
-#      displayName: 'Build electron wallets' 
+  - job: Build
+    displayName: Build docker
+    pool:
+      vmImage: 'linux-latest'
+    dependsOn:  
+    - BuildLinux
+    - BuildWindows
+    - BuildOSX
+    
+    steps:
+    - checkout: self
 
     - task: Docker@2
       inputs:
