@@ -212,21 +212,21 @@ stages:
         downloadPath: '.'
     - task: ArchiveFiles@2
       inputs:
-        rootFolderOrFile: './win'
+        rootFolderOrFile: './win-test'
         includeRootFolder: true
         archiveType: 'zip'
         archiveFile: './win.zip'
         replaceExistingArchive: true
     - task: ArchiveFiles@2
       inputs:
-        rootFolderOrFile: './linux'
+        rootFolderOrFile: './linux-test'
         includeRootFolder: true
         archiveType: 'tar'
         archiveFile: './linux.tar.gz'
         replaceExistingArchive: true
     - task: ArchiveFiles@2
       inputs:
-        rootFolderOrFile: './osx'
+        rootFolderOrFile: './osx-test'
         includeRootFolder: true
         archiveType: 'tar'
         archiveFile: './osx.tar.gz'
