@@ -41,7 +41,7 @@ stages:
 
 
   - job: BuildLinux
-    displayName: Build linux
+    displayName: Build Linux
     pool:
       vmImage: 'ubuntu-latest'
     steps:
@@ -69,7 +69,7 @@ stages:
       displayName: 'Create linux artifacts'
 
   - job: BuildOSX
-    displayName: Build osx
+    displayName: Build OSX
     pool:
       vmImage: 'ubuntu-latest'
     steps:
@@ -124,7 +124,7 @@ stages:
 
 
   - job: BuildLinuxTest
-    displayName: Build linux test
+    displayName: Build Linux Test
     pool:
       vmImage: 'ubuntu-latest'
     steps:
@@ -152,7 +152,7 @@ stages:
         displayName: 'Create linux artifacts'
 
   - job: BuildOSXTest
-    displayName: Build osx test
+    displayName: Build OSX Test
     pool:
       vmImage: 'ubuntu-latest'
     steps:
