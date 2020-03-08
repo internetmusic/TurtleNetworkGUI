@@ -11,7 +11,7 @@ variables:
 stages:
 - stage: Build
   displayName: Build image
-  jobs:  
+  jobs:
   - job: Build
     displayName: Build
     pool:
@@ -31,19 +31,19 @@ stages:
       inputs:
         command: 'custom'
         customCommand: 'run electron:linux'
-      displayName: 'Build electron wallets' 
+      displayName: 'Build linux electron wallets' 
 
     - task: Npm@1
       inputs:
         command: 'custom'
         customCommand: 'run electron:osx'
-      displayName: 'Build electron wallets' 
+      displayName: 'Build osx electron wallets' 
 
-    - task: Npm@1
-      inputs:
-        command: 'custom'
-        customCommand: 'run electron:win'
-      displayName: 'Build electron wallets' 
+#    - task: Npm@1
+#      inputs:
+#        command: 'custom'
+#        customCommand: 'run electron:win'
+#      displayName: 'Build electron wallets' 
 
     - task: Docker@2
       inputs:
