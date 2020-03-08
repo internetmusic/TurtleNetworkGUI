@@ -98,7 +98,7 @@ stages:
   - job: Build
     displayName: Build docker
     pool:
-      vmImage: 'linux-latest'
+      vmImage: 'ubuntu-latest'
     dependsOn:  
     - BuildLinux
     - BuildWindows
