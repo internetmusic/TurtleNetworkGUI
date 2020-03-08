@@ -38,6 +38,20 @@ stages:
         command: 'custom'
         customCommand: 'run electron:osx'
       displayName: 'Build osx electron wallets' 
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: './dist/linux'
+        ArtifactName: 'linux'
+        publishLocation: 'Container'
+      displayName: 'Create linux artifacts'  
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: './dist/osx'
+        ArtifactName: 'linux'
+        publishLocation: 'Container'
+      displayName: 'Create osx artifacts'  
+
 
 #    - task: Npm@1
 #      inputs:
