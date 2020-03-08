@@ -1,4 +1,5 @@
 # Turtle Network DEX
+[![Build Status](https://dev.azure.com/BlackTurtleBVBA/TurtleNetwork_OpenSource/_apis/build/status/TurtleNetwork.TurtleNetworkGUI?branchName=dev)](https://dev.azure.com/BlackTurtleBVBA/TurtleNetwork_OpenSource/_build/latest?definitionId=19&branchName=dev)
 
 [**Website**](https://wavesplatform.com/) | [**Discord**](https://discord.gg/cnFmDyA) | [**Forum**](https://forum.wavesplatform.com/) | [**Support**](https://support.wavesplatform.com/) | [**Documentation**](https://docs.wavesplatform.com)
 
