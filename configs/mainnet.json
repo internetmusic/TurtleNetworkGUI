@@ -10,7 +10,7 @@
   "apiVersion": "v0",
   "code": "L",
   "node": "https://tnnode2.turtlenetwork.eu",
-  "matcher": "https://privatematcher.blackturtle.eu/matcher\n",
+  "matcher": "https://privatematcher.blackturtle.eu/matcher",
   "api": "https://data-service.turtlenetwork.eu",
   "explorer": "https://explorer.turtlenetwork.eu",
   "coinomat": "",
