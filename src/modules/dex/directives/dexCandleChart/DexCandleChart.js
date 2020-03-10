@@ -110,6 +110,8 @@
                  */
                 this.candle = user.getSetting('candle');
 
+                this._interval = user.getSetting('lastInterval');
+
                 this.observe('_assetIdPair', this._onChangeAssetPair);
                 this.observe('theme', () => {
                     this._changeTheme = true;
@@ -216,7 +218,7 @@
                     // debug: true,
                     locale: DexCandleChart._remapLanguageCode(i18next.language),
                     symbol: `${this._assetIdPair.amount}/${this._assetIdPair.price}`,
-                    interval: user.getSetting('lastInterval'),
+                    interval: this._interval,
                     container_id: this.elementId,
                     datafeed: candlesService,
                     library_path: 'trading-view/',
@@ -259,9 +261,7 @@
              * @private
              */
             _setChartPair() {
-                this._chart.symbolInterval(({ interval }) => {
-                    this._chart.setSymbol(`${this._assetIdPair.amount}/${this._assetIdPair.price}`, interval);
-                });
+                this._chart.setSymbol(`${this._assetIdPair.amount}/${this._assetIdPair.price}`, this._interval);
             }
 
             /**
