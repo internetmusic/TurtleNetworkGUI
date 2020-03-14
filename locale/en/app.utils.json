@@ -74,7 +74,7 @@
 
             "fee": "Fee {{fee, money-currency}}",
 
-            "ideLink": "Script can be developed with [Waves Ride IDE](https://ide.wavesplatform.com/) and setting the network byte to: 'L' and setting network node.",
+            "ideLink": "Script can be developed with [Waves Ride IDE](https://ide.wavesplatform.com/) and setting the network byte to: 'L' and setting network node to: https://tnnode2.turtlenetwork.eu/.",
 
             "ok": "Sign",
 
@@ -1486,7 +1486,7 @@
 
                 "security": "I understand that my funds are held securely on this device, not by a company",
 
-                "securityAndBackup": "I understand that my funds are held securely on this device, not by a company. If this app is moved to another device or deleted, my Waves can only be recovered with the backup phrase.",
+                "securityAndBackup": "I understand that my funds are held securely on this device, not by a company. If this app is moved to another device or deleted, my Turtle Network can only be recovered with the backup phrase.",
 
                 "terms": "Terms of Use"
 
@@ -1590,7 +1590,7 @@
 
                 "cell3": "If you forget your password, you can easily create a new one by using the account recovery form via your secret phrase. If you lose your secret phrase, however, you will have no way to access your account.",
 
-                "cell4": "You cannot change your secret phrase. If you accidentally sent it to someone or suspect that scammers have taken it over, then create a new Waves wallet immediately and transfer your funds to it.",
+                "cell4": "You cannot change your secret phrase. If you accidentally sent it to someone or suspect that scammers have taken it over, then create a new Turtle Network wallet immediately and transfer your funds to it.",
 
                 "nextButton": "Protect Yourself",
 

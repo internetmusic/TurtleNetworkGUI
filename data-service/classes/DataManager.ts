@@ -86,7 +86,7 @@ export class DataManager {
             .element(document.body).injector().get('configService').get('GATEWAYS_SOON') || [];
 
         const descriptionHash = {
-            WAVES: { en: 'Turtle Network is a blockchain ecosystem that offers comprehensive and effective blockchain-based tools for businesses, individuals and developers. Waves Platform offers unprecedented throughput and flexibility. Features include the LPoS consensus algorithm, Waves-NG protocol and advanced smart contract functionality.' }
+            WAVES: { en: 'Turtle Network is a blockchain ecosystem that offers comprehensive and effective blockchain-based tools for businesses, individuals and developers. Turtle Network offers unprecedented throughput and flexibility. Features include the LPoS consensus algorithm, Bitcoin-NG protocol and advanced smart contract functionality.' }
         };
 
         const gatewayAsset = {

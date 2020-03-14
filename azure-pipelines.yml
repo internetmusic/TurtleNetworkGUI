@@ -1,5 +1,5 @@
 # Docker
-# Build a Docker image 
+# Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
@@ -11,34 +11,302 @@ variables:
 stages:
 - stage: Build
   displayName: Build image
-  jobs:  
-  - job: Build
-    displayName: Build
+  jobs:
+  - job: BuildWindows
+    displayName: Build Windows
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - checkout: self
+    - task: Npm@1
+      inputs:
+        command: 'install'
+      displayName: 'Install npm dependencies'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'
+
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run electron:win'
+      displayName: 'Build win electron wallets'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: './dist/win'
+        ArtifactName: 'win'
+        publishLocation: 'Container'
+      displayName: 'Create win artifacts'
+
+
+  - job: BuildLinux
+    displayName: Build Linux
     pool:
       vmImage: 'ubuntu-latest'
     steps:
     - checkout: self
+    - task: Npm@1
+      inputs:
+        command: 'install'
+      displayName: 'Install npm dependencies'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'
+
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run electron:linux'
+      displayName: 'Build linux electron wallets'
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: './dist/linux'
+        ArtifactName: 'linux'
+        publishLocation: 'Container'
+      displayName: 'Create linux artifacts'
+
+  - job: BuildOSX
+    displayName: Build OSX
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - checkout: self
+    - task: Npm@1
+      inputs:
+        command: 'install'
+      displayName: 'Install npm dependencies'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run electron:osx'
+      displayName: 'Build osx electron wallets'
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: './dist/osx'
+        ArtifactName: 'osx'
+        publishLocation: 'Container'
+      displayName: 'Create osx artifacts'
+
+  - job: BuildWindowsTest
+    displayName: Build Windows Test
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+      - checkout: self
+      - task: Npm@1
+        inputs:
+          command: 'install'
+        displayName: 'Install npm dependencies'
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          customCommand: 'run build'
+
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          customCommand: 'run electron:win-test'
+        displayName: 'Build win electron wallets'
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: './dist/win'
+          ArtifactName: 'win-test'
+          publishLocation: 'Container'
+        displayName: 'Create win artifacts'
+
+
+  - job: BuildLinuxTest
+    displayName: Build Linux Test
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - checkout: self
+      - task: Npm@1
+        inputs:
+          command: 'install'
+        displayName: 'Install npm dependencies'
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          customCommand: 'run build'
+
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          customCommand: 'run electron:linux-test'
+        displayName: 'Build linux electron wallets'
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: './dist/linux'
+          ArtifactName: 'linux-test'
+          publishLocation: 'Container'
+        displayName: 'Create linux artifacts'
+
+  - job: BuildOSXTest
+    displayName: Build OSX Test
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - checkout: self
+      - task: Npm@1
+        inputs:
+          command: 'install'
+        displayName: 'Install npm dependencies'
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          customCommand: 'run build'
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          customCommand: 'run electron:osx-test'
+        displayName: 'Build osx electron wallets'
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: './dist/osx'
+          ArtifactName: 'osx-test'
+          publishLocation: 'Container'
+        displayName: 'Create osx artifacts'
+
+  - job: BuildDockerTestnet
+    displayName: Build docker Testnet
+    pool:
+      vmImage: 'ubuntu-latest'
+    dependsOn:
+    - BuildLinuxTest
+    - BuildWindowsTest
+    - BuildOSXTest
+
+    steps:
+    - checkout: self
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'linux-test'
+        itemPattern:
+        downloadPath: '.'
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'win-test'
+        itemPattern:
+        downloadPath: '.'
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'osx-test'
+        itemPattern:
+        downloadPath: '.'
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: './win-test'
+        includeRootFolder: true
+        archiveType: 'zip'
+        archiveFile: './win.zip'
+        replaceExistingArchive: true
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: './linux-test'
+        includeRootFolder: true
+        archiveType: 'tar'
+        archiveFile: './linux.tar.gz'
+        replaceExistingArchive: true
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: './osx-test'
+        includeRootFolder: true
+        archiveType: 'tar'
+        archiveFile: './osx.tar.gz'
+        replaceExistingArchive: true
+
     - task: Docker@2
       inputs:
         containerRegistry: 'turtlenetwork docker'
         repository: 'turtlenetwork/tngui'
         command: 'buildAndPush'
         Dockerfile: 'Dockerfile'
-      displayName: 'Build and push docker container for testnet'  
+      displayName: 'Build and push docker container for testnet'
 
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'turtlenetwork docker'
-        repository: 'turtlenetwork/mainnet-tngui'
-        command: 'build'
-        Dockerfile: '**/Dockerfile'
-        arguments: '--build-arg web_environment=mainnet'
-      displayName: 'Build docker container for mainnet'
+  - job: BuildDockerMainnet
+    displayName: Build docker Mainnet
+    pool:
+      vmImage: 'ubuntu-latest'
+    dependsOn:
+      - BuildLinux
+      - BuildWindows
+      - BuildOSX
+
+    steps:
+      - checkout: self
+      - task: DownloadBuildArtifacts@0
+        inputs:
+          buildType: 'current'
+          downloadType: 'single'
+          artifactName: 'linux'
+          itemPattern:
+          downloadPath: '.'
+      - task: DownloadBuildArtifacts@0
+        inputs:
+          buildType: 'current'
+          downloadType: 'single'
+          artifactName: 'win'
+          itemPattern:
+          downloadPath: '.'
+      - task: DownloadBuildArtifacts@0
+        inputs:
+          buildType: 'current'
+          downloadType: 'single'
+          artifactName: 'osx'
+          itemPattern:
+          downloadPath: '.'
+      - task: ArchiveFiles@2
+        inputs:
+          rootFolderOrFile: './win'
+          includeRootFolder: true
+          archiveType: 'zip'
+          archiveFile: './win.zip'
+          replaceExistingArchive: true
+      - task: ArchiveFiles@2
+        inputs:
+          rootFolderOrFile: './linux'
+          includeRootFolder: true
+          archiveType: 'tar'
+          archiveFile: './linux.tar.gz'
+          replaceExistingArchive: true
+      - task: ArchiveFiles@2
+        inputs:
+          rootFolderOrFile: './osx'
+          includeRootFolder: true
+          archiveType: 'tar'
+          archiveFile: './osx.tar.gz'
+          replaceExistingArchive: true
+
+      - task: Docker@2
+        inputs:
+          containerRegistry: 'turtlenetwork docker'
+          repository: 'turtlenetwork/mainnet-tngui'
+          command: 'build'
+          Dockerfile: '**/Dockerfile'
+          arguments: '--build-arg web_environment=mainnet'
+        displayName: 'Build docker container for mainnet'
 
 
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'turtlenetwork docker'
-        repository: 'turtlenetwork/mainnet-tngui'
-        command: 'push'  
-      displayName: 'Push mainnet container'    
+      - task: Docker@2
+        inputs:
+          containerRegistry: 'turtlenetwork docker'
+          repository: 'turtlenetwork/mainnet-tngui'
+          command: 'push'
+        displayName: 'Push mainnet container'
