@@ -74,15 +74,19 @@ export class DataManager {
         const WavesApp = (window as any).WavesApp;
 
         const gateways = {
-            [WavesApp.defaultAssets.BTC]: true,
-            [WavesApp.defaultAssets.ETH]: true,
+            [WavesApp.defaultAssets.TN]: true,
+            [WavesApp.defaultAssets.WAVES]: true,
+            [WavesApp.defaultAssets.DOGE]: true,
+            [WavesApp.defaultAssets.TUSD]: true,
+            [WavesApp.defaultAssets.ETHO]: true,
+            [WavesApp.defaultAssets.SENT]: true,
         };
 
         const gatewaysSoon = (window as any).angular
             .element(document.body).injector().get('configService').get('GATEWAYS_SOON') || [];
 
         const descriptionHash = {
-            WAVES: { en: 'Waves is a blockchain ecosystem that offers comprehensive and effective blockchain-based tools for businesses, individuals and developers. Waves Platform offers unprecedented throughput and flexibility. Features include the LPoS consensus algorithm, Waves-NG protocol and advanced smart contract functionality.' }
+            WAVES: { en: 'Turtle Network is a blockchain ecosystem that offers comprehensive and effective blockchain-based tools for businesses, individuals and developers. Waves Platform offers unprecedented throughput and flexibility. Features include the LPoS consensus algorithm, Waves-NG protocol and advanced smart contract functionality.' }
         };
 
         const gatewayAsset = {

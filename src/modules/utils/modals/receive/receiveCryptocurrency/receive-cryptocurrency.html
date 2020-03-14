@@ -36,31 +36,52 @@
     </div>
 
     <div class="plate-warning margin-1" ng-if="!$ctrl.gatewayServerError && !$ctrl.isWEST">
-        <div class="body-2 warning-500" w-i18n="modal.deposit.{{$ctrl.assetKeyName}}.warningTitle"></div>
-        <div class="footnote-1 basic-500" w-i18n="modal.deposit.{{$ctrl.assetKeyName}}.warningText"></div>
+        <div class="body-2 warning-500" w-i18n="modal.deposit.warningTitle"></div>
+        <div class="footnote-1 basic-500" w-i18n="modal.deposit.warningText"></div>
+        <div class="footnote-1 basic-500"
+        w-i18n="modal.deposit.attachmentInstructions"
+        params="{  walletAddress: $ctrl.walletAddress  }"></div>
     </div>
 
     <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending">
         <div class="body-2 warning-500 margin-05"
-             w-i18n="modal.deposit.{{$ctrl.assetKeyName}}.warningMinAmountTitle"
+             w-i18n="modal.deposit.warningMinAmountTitle"
              params="{  minAmount: $ctrl.minAmount.getTokens(),
                         assetTicker: $ctrl.asset.displayName,
                         maxAmount: $ctrl.maxAmount.getTokens().toFormat()  }"
         ></div>
         <div class="footnote-1 basic-500"
-             ng-if="!$ctrl.isWEST" w-i18n="modal.deposit.{{$ctrl.assetKeyName}}.warningMinAmountText"
+             ng-if="!$ctrl.isWEST" w-i18n="modal.deposit.warningMinAmountText"
              params="{minAmount: $ctrl.minAmount.getTokens(), assetTicker: $ctrl.asset.displayName}"
         ></div>
-    </div>
+
+        <div class="footnote-1 basic-500"
+        w-i18n="modal.deposit.disclaimer"
+        params="{  disclaimerLink: $ctrl.disclaimerLink  }"></div>
+
+        <div class="footnote-1 basic-500"
+        w-i18n="modal.deposit.recoveryStatement"
+        params="{  minRecoveryAmount: $ctrl.minRecoveryAmount,
+            recoveryFee: $ctrl.recoveryFee,
+        }"></div>
+
+        <div class="footnote-1 basic-500"
+        w-i18n="modal.deposit.support"
+        params="{  supportEmail: $ctrl.supportEmail  }"></div>
+
+        <div class="footnote-1 basic-500"
+        w-i18n="modal.deposit.operator"
+        params="{  operator: $ctrl.operator  }"></div>
+   </div>
 
     <div class="body-2 basic-900 margin-05" ng-if="!$ctrl.gatewayServerError">
         <span w-i18n="modal.deposit.copyAndShare"></span>
         <w-help-icon>
             <div class="help-icon__row headline-3">
-                <span w-i18n="modal.deposit.{{$ctrl.assetKeyName}}.helpDescrTitle"></span>
+                <span w-i18n="modal.deposit.helpDescrTitle"></span>
             </div>
             <div class="help-icon__row">
-                <span w-i18n="modal.deposit.{{$ctrl.assetKeyName}}.helpDescrText"></span>
+                <span w-i18n="modal.deposit.helpDescrText"></span>
             </div>
             <div class="help-icon__row">
                 <span w-i18n="modal.deposit.pleaseNote"></span>

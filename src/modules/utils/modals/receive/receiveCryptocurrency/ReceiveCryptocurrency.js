@@ -73,9 +73,39 @@
             minAmount = null;
 
             /**
+             * @type {string}
+             */
+            supportEmail = null;
+
+            /**
+             * @type {string}
+             */
+            disclaimerLink = null;
+
+            /**
+             * @type {string}
+             */
+            operator = null;
+
+            /**
+             * @type {Money | null}
+             */
+            minRecoveryAmount = null;
+
+            /**
+             * @type {Money | null}
+             */
+            recoveryFee = null;
+
+            /**
              * @type {Money | null}
              */
             maxAmount = null;
+
+            /**
+             * @type {string}
+             */
+            walletAddress = null;
 
             constructor() {
                 super();
@@ -99,7 +129,13 @@
                         this.gatewayAddress = details.address;
                         this.minAmount = Money.fromTokens(details.minimumAmount, this.asset);
                         this.maxAmount = Money.fromTokens(details.maximumAmount, this.asset);
+                        this.disclaimerLink = details.disclaimerLink;
+                        this.minRecoveryAmount = Money.fromTokens(details.minRecoveryAmount, this.asset);
+                        this.recoveryFee = Money.fromTokens(details.recoveryFee, this.asset);
+                        this.supportEmail = details.supportEmail;
+                        this.operator = details.operator;
                         this.gatewayServerPending = false;
+                        this.walletAddress = details.walletAddress;
                         $scope.$apply();
                     }, () => {
                         this.minAmount = Money.fromTokens(0.001, this.asset);

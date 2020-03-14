@@ -9,12 +9,17 @@
   },
   "apiVersion": "v0",
   "code": "L",
-  "node": "https://tnnode2.turtlenetwork.eu",
-  "matcher": "https://privatematcher.blackturtle.eu/matcher\n",
+  "node": "https://privatenode.blackturtle.eu",
+  "matcher": "https://privatematcher.blackturtle.eu/matcher",
   "api": "https://data-service.turtlenetwork.eu",
   "explorer": "https://explorer.turtlenetwork.eu",
   "coinomat": "",
-  "wavesGateway": "",
+  "wavesGateway": {
+    "TN": "https://gateway.turtlenetwork.eu",
+    "EzwaF58ssALcUCZ9FbyeD1GTSteoZAQZEDTqBAXHfq8y": "https://wavesgw.turtlenetwork.eu",
+    "HDeemVktm2Z68RMkyA7AexhpaCqot1By7adBzaN9j5Xg":"https://dogegw.turtlenetwork.eu",
+    "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f":"https://dogegw.turtlenetwork.eu"
+  },
   "support": "https://support@turtlenetwork.eu",
   "termsAndConditions": "https://docs.turtlenetwork.eu/files/placeholder.pdf",
   "privacyPolicy": "https://docs.turtlenetwork.eu/files/placeholder.pdf",
@@ -29,8 +34,11 @@
     "BTC": "5Asy9P3xjcvBAgbeyiitZhBRJZJ2TPGSZJz9ihDTnB3d",
     "ETH": "6Mh41byVWPg8JVCfuwG5CAPCh9Q7gnuaAVxjDfVNDmcD",
     "WAVES": "EzwaF58ssALcUCZ9FbyeD1GTSteoZAQZEDTqBAXHfq8y",
-    "LTC":"3vB9hXHTCYbPiQNuyxCQgXF6AvFg51ozGKL9QkwoCwaS"
-
+    "LTC":"3vB9hXHTCYbPiQNuyxCQgXF6AvFg51ozGKL9QkwoCwaS",
+    "TN": "TN",
+    "DOGE": "HDeemVktm2Z68RMkyA7AexhpaCqot1By7adBzaN9j5Xg",
+    "TUSD": "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f",
+    "ETHO": "GzHRyYtdwvaGSkUC4i8d3Xzmsz9aXBWdrpMNszi6bcvR"
   },
   "matcherPriorityList": [
     { "ticker": "BTC", "id": "5Asy9P3xjcvBAgbeyiitZhBRJZJ2TPGSZJz9ihDTnB3d"},
