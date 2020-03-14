@@ -20,7 +20,7 @@
                 title: 'A New Start',
                 text: 'CryptoBrokers funds refactor in collaboration with Mr. Turtle and Xucito.',
                 timeWhenMade: 'past'
-            },         
+            },
             {
                 date: 'Sep-2020',
                 title: 'The Rising Tide',

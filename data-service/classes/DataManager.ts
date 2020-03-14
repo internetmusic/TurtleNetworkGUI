@@ -74,8 +74,12 @@ export class DataManager {
         const WavesApp = (window as any).WavesApp;
 
         const gateways = {
-            [WavesApp.defaultAssets.BTC]: true,
-            [WavesApp.defaultAssets.ETH]: true,
+            [WavesApp.defaultAssets.TN]: true,
+            [WavesApp.defaultAssets.WAVES]: true,
+            [WavesApp.defaultAssets.DOGE]: true,
+            [WavesApp.defaultAssets.TUSD]: true,
+            [WavesApp.defaultAssets.ETHO]: true,
+            [WavesApp.defaultAssets.SENT]: true,
         };
 
         const gatewaysSoon = (window as any).angular
