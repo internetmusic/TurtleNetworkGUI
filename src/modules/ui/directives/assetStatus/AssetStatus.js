@@ -25,14 +25,14 @@
                 const {
                     isVerified,
                     isGateway,
-                    isTokenomica,
                     isSuspicious,
                     isGatewaySoon,
+                    isThirdPartyGateway,
                     hasLabel
                 } = utils.getDataFromOracles(this.assetId);
-                this.isGateway = isGateway;
-                this.isTokenomica = isGateway ? false : isTokenomica;
-                this.isVerified = isTokenomica ? false : isVerified;
+                this.isThirdPartyGateway = isThirdPartyGateway;
+                this.isGateway = isThirdPartyGateway === false ? isGateway : false;
+                this.isVerified = isVerified;
                 this.isSuspicious = isVerified ? false : isSuspicious;
                 this.isGatewaySoon = isGateway ? false : isGatewaySoon;
                 this.hasLabel = hasLabel;

@@ -74,12 +74,7 @@ export class DataManager {
         const WavesApp = (window as any).WavesApp;
 
         const gateways = {
-            [WavesApp.defaultAssets.TN]: true,
-            [WavesApp.defaultAssets.WAVES]: true,
-            [WavesApp.defaultAssets.DOGE]: true,
-            [WavesApp.defaultAssets.TUSD]: true,
-            [WavesApp.defaultAssets.ETHO]: true,
-            [WavesApp.defaultAssets.SENT]: true,
+            [WavesApp.defaultAssets.TN]: true
         };
 
         const gatewaysSoon = (window as any).angular
@@ -114,8 +109,8 @@ export class DataManager {
             return gatewaySoonAsset;
         }
 
-        if (gateways[id]) {
-            return gatewayAsset;
+        if (gateways[id] || WavesApp.network.wavesGateway[id]) {
+            return assets[id] ? { ...assets[id], provider: lastData.oracle.name, status: 3 } : gatewayAsset;
         }
 
         return assets[id] ? { ...assets[id], provider: lastData.oracle.name } : null;

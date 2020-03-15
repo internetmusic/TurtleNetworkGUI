@@ -2,12 +2,7 @@
     'use strict';
 
     const GATEWAYS = {
-        [WavesApp.defaultAssets.TN]: { waves: 'TN', gateway: 'TN' },
-        [WavesApp.defaultAssets.WAVES]: { waves: 'WAVES', gateway: 'WAVES' },
-        [WavesApp.defaultAssets.DOGE]: { waves: 'DOGE', gateway: 'DOGE' },
-        [WavesApp.defaultAssets.TUSD]: { waves: 'TUSD', gateway: 'TUSD' },
-        [WavesApp.defaultAssets.ETHO]: { waves: 'ETHO', gateway: 'ETHO' },
-        [WavesApp.defaultAssets.SENT]: { waves: 'SENT', gateway: 'SENT' }
+        [WavesApp.defaultAssets.TN]: { waves: 'TN', gateway: 'TN' }
     };
 
     const KEY_NAME_PREFIX = 'wavesGateway';
@@ -26,7 +21,7 @@
              * @return {IGatewaySupportMap}
              */
             getSupportMap(asset) {
-                if (GATEWAYS[asset.id]) {
+                if (GATEWAYS[asset.id] || WavesApp.network.wavesGateway[asset.id]) {
                     return {
                         deposit: true,
                         withdraw: asset.id !== WavesApp.defaultAssets.BTC,
@@ -45,7 +40,7 @@
             getDepositDetails(asset, walletAddress) {
                 WavesGatewayService._assertAsset(asset.id);
 
-                const ASSETGATEWAY = `${WavesApp.network.wavesGateway[asset.id]}`;
+                const ASSETGATEWAY = `${WavesApp.network.wavesGateway[asset.id].url}`;
                 const headers = {};
                 headers['Content-Type'] = 'application/json';
                 headers.Accept = 'application/json';
@@ -78,7 +73,7 @@
             getWithdrawDetails(asset, targetAddress) {
                 WavesGatewayService._assertAsset(asset.id);
 
-                const ASSETGATEWAY = `${WavesApp.network.wavesGateway[asset.id]}`;
+                const ASSETGATEWAY = `${WavesApp.network.wavesGateway[asset.id].url}`;
                 const headers = {};
                 headers['Content-Type'] = 'application/json';
                 headers.Accept = 'application/json';
@@ -90,7 +85,7 @@
                             address: details.tnAddress,
                             minimumAmount: new BigNumber(details.minAmount),
                             maximumAmount: new BigNumber(details.maxAmount),
-                            gatewayFee: new BigNumber(details.fee),
+                            gatewayFee: new BigNumber(details.other_total_fee),
                             type: details.type,
                             attachment: targetAddress
                         };

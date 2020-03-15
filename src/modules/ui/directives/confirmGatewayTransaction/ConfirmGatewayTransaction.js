@@ -4,7 +4,7 @@
 
     const ds = require('data-service');
     const WAVES_GATEWAY_ASSETS_ID = [
-        //WavesApp.defaultAssets.ETH
+        // WavesApp.defaultAssets.ETH
         // WavesApp.defaultAssets.BTC
     ];
 
@@ -49,7 +49,7 @@
 
                 return this.signable.getDataForApi()
                     .then(data => {
-                        return ds.fetch(`${WavesApp.network.wavesGateway}/api/v1/external/send`, {
+                        return ds.fetch(`${WavesApp.network.wavesGateway.url}/api/v1/external/send`, {
                             method: 'POST',
                             body: WavesApp.stringifyJSON({
                                 ...data,

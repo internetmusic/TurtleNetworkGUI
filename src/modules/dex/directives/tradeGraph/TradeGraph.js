@@ -24,7 +24,7 @@
         black: {
             lineColor: {
                 asks: '#e5494d',
-                bids: '#5a81ea'
+                bids: '#81ea5a'
             },
             fillColor: {
                 asks: 'rgba(229, 73, 77, 0.15)',
