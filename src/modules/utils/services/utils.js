@@ -1174,17 +1174,20 @@
 
                 const isGateway = path(['status'], dataOracle) === 3;
 
-                const isTokenomica = path(['status'], dataOracle) === STATUS_LIST.VERIFIED &&
-                    path(['provider'], dataOracle) === 'Tokenomica';
+                const isTokenomica = false;
 
-                const isVerified = path(['status'], dataOracle) === STATUS_LIST.VERIFIED &&
-                    path(['provider'], dataOracle) !== 'Tokenomica';
+                const isVerified = path(['status'], dataOracle) === STATUS_LIST.VERIFIED;
 
                 const isSuspicious = user.scam[assetId];
 
                 const isGatewaySoon = path(['status'], dataOracle) === 4;
 
-                const hasLabel = isVerified || isGateway || isSuspicious || isTokenomica || isGatewaySoon;
+                const assetGateway = WavesApp.network.wavesGateway[assetId];
+
+                const isThirdPartyGateway = assetGateway ? assetGateway.isThirdParty : false;
+
+                const hasLabel =
+                isVerified || isGateway || isSuspicious || isTokenomica || isGatewaySoon || isThirdPartyGateway;
 
                 const ticker = path(['ticker'], dataOracle);
                 const link = path(['link'], dataOracle);
@@ -1199,6 +1202,7 @@
                     isTokenomica,
                     isSuspicious,
                     isGatewaySoon,
+                    isThirdPartyGateway,
                     hasLabel,
                     ticker,
                     link,

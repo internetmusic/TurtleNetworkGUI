@@ -185,7 +185,7 @@
                     const canPayFee = list.find(item => item.asset.id === this.balance.asset.id) && !this._isWaves;
                     const {
                         isVerified, isGateway,
-                        isTokenomica, logo, isGatewaySoon
+                        isTokenomica, logo, isGatewaySoon, isThirdPartyGateway
                     } = utils.getDataFromOracles(this.balance.asset.id);
 
                     this.isGateway = isGateway;
@@ -201,6 +201,7 @@
                         isTokenomica: isTokenomica,
                         isWEST: this.isWEST,
                         isGatewaySoon: isGatewaySoon,
+                        isThirdPartyGateway: isThirdPartyGateway,
                         assetIconPath: logo ||
                             this.utils.getAssetLogo(this.balance.asset.id),
                         firstAssetChar,

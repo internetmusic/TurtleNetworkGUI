@@ -5,7 +5,7 @@
   ],
   "oracles": {
     "waves": "3JwdMmF7xEack9y8SJ4VeQ4UX2qmu1jCoWa",
-    "tokenomica": "3P5yz6NiyBoT3KWBrc1iwQeMAen56FcMGTW"
+    "tokenomica": "3JwdMmF7xEack9y8SJ4VeQ4UX2qmu1jCoWa"
   },
   "apiVersion": "v0",
   "code": "L",
@@ -15,11 +15,30 @@
   "explorer": "https://explorer.turtlenetwork.eu",
   "coinomat": "",
   "wavesGateway": {
-    "TN": "https://gateway.turtlenetwork.eu",
-    "EzwaF58ssALcUCZ9FbyeD1GTSteoZAQZEDTqBAXHfq8y": "https://wavesgw.turtlenetwork.eu",
-    "HDeemVktm2Z68RMkyA7AexhpaCqot1By7adBzaN9j5Xg":"https://dogegw.turtlenetwork.eu",
-    "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f":"https://gateway.mortysnode.nl",
-    "AVJc3uYu8HdjQEx4rroaq6v4Xv4L1etG1tQPeuqs38Sf":"https://sentgw.mortysnode.nl"
+    "TN": {
+      "url": "https://gateway.turtlenetwork.eu",
+      "isThirdParty": false
+    },
+    "EzwaF58ssALcUCZ9FbyeD1GTSteoZAQZEDTqBAXHfq8y": {
+      "url": "https://wavesgw.turtlenetwork.eu",
+      "isThirdParty": false
+    },
+    "HDeemVktm2Z68RMkyA7AexhpaCqot1By7adBzaN9j5Xg": {
+      "url": "https://dogegw.turtlenetwork.eu",
+      "isThirdParty": false
+    },
+    "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f": {
+      "url": "https://gateway.mortysnode.nl",
+      "isThirdParty": true
+    },
+    "AVJc3uYu8HdjQEx4rroaq6v4Xv4L1etG1tQPeuqs38Sf": {
+      "url": "https://sentgw.mortysnode.nl",
+      "isThirdParty": true
+    },
+    "Fr2kNhe7XR3E16W7Mfh7NhNcsQWLXx3hSLjoFgpbFsNj": {
+      "url": "https://bchgw.turtlenetwork.eu",
+      "isThirdParty": false
+    }
   },
   "support": "https://support@turtlenetwork.eu",
   "termsAndConditions": "https://docs.turtlenetwork.eu/files/placeholder.pdf",
@@ -35,18 +54,19 @@
     "BTC": "5Asy9P3xjcvBAgbeyiitZhBRJZJ2TPGSZJz9ihDTnB3d",
     "ETH": "6Mh41byVWPg8JVCfuwG5CAPCh9Q7gnuaAVxjDfVNDmcD",
     "WAVES": "EzwaF58ssALcUCZ9FbyeD1GTSteoZAQZEDTqBAXHfq8y",
-    "LTC":"3vB9hXHTCYbPiQNuyxCQgXF6AvFg51ozGKL9QkwoCwaS",
+    "LTC": "3vB9hXHTCYbPiQNuyxCQgXF6AvFg51ozGKL9QkwoCwaS",
     "TN": "TN",
     "DOGE": "HDeemVktm2Z68RMkyA7AexhpaCqot1By7adBzaN9j5Xg",
     "TUSD": "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f",
     "ETHO": "GzHRyYtdwvaGSkUC4i8d3Xzmsz9aXBWdrpMNszi6bcvR",
-    "SENT": "AVJc3uYu8HdjQEx4rroaq6v4Xv4L1etG1tQPeuqs38Sf"
+    "SENT": "AVJc3uYu8HdjQEx4rroaq6v4Xv4L1etG1tQPeuqs38Sf",
+    "BCH": "Fr2kNhe7XR3E16W7Mfh7NhNcsQWLXx3hSLjoFgpbFsNj"
   },
   "matcherPriorityList": [
-    { "ticker": "BTC", "id": "5Asy9P3xjcvBAgbeyiitZhBRJZJ2TPGSZJz9ihDTnB3d"},
-    { "ticker": "WAVES", "id": "EzwaF58ssALcUCZ9FbyeD1GTSteoZAQZEDTqBAXHfq8y"},
-    { "ticker": "LTC", "id": "3vB9hXHTCYbPiQNuyxCQgXF6AvFg51ozGKL9QkwoCwaS"},
-    { "ticker": "TN", "id": "TN"}
+    { "ticker": "BTC", "id": "5Asy9P3xjcvBAgbeyiitZhBRJZJ2TPGSZJz9ihDTnB3d" },
+    { "ticker": "WAVES", "id": "EzwaF58ssALcUCZ9FbyeD1GTSteoZAQZEDTqBAXHfq8y" },
+    { "ticker": "LTC", "id": "3vB9hXHTCYbPiQNuyxCQgXF6AvFg51ozGKL9QkwoCwaS" },
+    { "ticker": "TN", "id": "TN" }
   ],
   "wavesExchangeLink": "https://waves.exchange"
 }
