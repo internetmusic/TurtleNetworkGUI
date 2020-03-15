@@ -90,7 +90,7 @@
                             address: details.tnAddress,
                             minimumAmount: new BigNumber(details.minAmount),
                             maximumAmount: new BigNumber(details.maxAmount),
-                            gatewayFee: new BigNumber(details.fee),
+                            gatewayFee: new BigNumber(details.other_total_fee),
                             type: details.type,
                             attachment: targetAddress
                         };
