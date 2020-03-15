@@ -106,7 +106,7 @@
             </a>
         </div>
     </div>
-    <a class="top-menu__link top-menu__link-tokens" ui-sref="main.tokens" w-i18n="welcome.createToken"></a>
+    <a ng-if="$ctrl.advancedMode" class="top-menu__link top-menu__link-tokens" ui-sref="main.tokens" w-i18n="welcome.createToken"></a>
 </nav>
 
 <w-web-only class="block-right">
