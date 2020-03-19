@@ -384,7 +384,7 @@
                 switch (this.theme) {
                     case 'black':
                         return ({
-                            lineColor: '#5a81ea',
+                            lineColor: '#81ea5a',
                             fillColor: '#2d2d2d',
                             gradientColor: ['#334375', '#2d2d2d'],
                             lineWidth: 4

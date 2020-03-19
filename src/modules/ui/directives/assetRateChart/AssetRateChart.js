@@ -27,7 +27,7 @@
                     checkWidth: true,
                     view: {
                         rate: {
-                            lineColor: '#5a81ea',
+                            lineColor: '#81ea5a',
                             fillColor: '#FFF',
                             lineWidth: 4
                         }

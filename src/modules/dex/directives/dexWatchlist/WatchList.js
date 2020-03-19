@@ -89,7 +89,7 @@
             /**
              * @type {string}
              */
-            activeTab = 'TN';
+            activeTab = WavesApp.defaultAssets.TN;
             /**
              * @type {boolean}
              */

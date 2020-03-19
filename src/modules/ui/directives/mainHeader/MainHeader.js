@@ -77,6 +77,10 @@
              * @type {boolean}
              */
             isShowAccounts = false;
+            /**
+             * @type {boolean}
+             */
+            advancedMode = false;
 
             get isSignedIn() {
                 return multiAccount.isSignedIn;
@@ -130,6 +134,9 @@
 
                 user.getMultiAccountData().then(data => {
                     this.hasMultiAccount = !!data;
+                });
+                this.syncSettings({
+                    advancedMode: 'advancedMode'
                 });
             }
 

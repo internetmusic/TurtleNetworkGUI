@@ -21,13 +21,19 @@
                     <span class="status-label-min active" w-i18n-literal="qualified"></span>
                 {{/if}}
                 {{#if isGateway}}
+                    {{#if isThirdPartyGateway}}
+                    {{else}}
                     <span class="status-label-min active" w-i18n-literal="gateway"></span>
+                    {{/if}}
                 {{/if}}
                 {{#if isTokenomica}}
                     <span class="status-label-min active" w-i18n-literal="tokenomica"></span>
                 {{/if}}
                 {{#if isGatewaySoon}}
                     <span class="status-label-min active" w-i18n-literal="gateway soon"></span>
+                {{/if}}
+                {{#if isThirdPartyGateway}}
+                    <span class="status-label-min active" w-i18n-literal="thirdPartyGateway"></span>
                 {{/if}}
                 <span class="status-label-min inactive {{SELECTORS.SUSPICIOUS_LABEL}}"
                       w-i18n-literal="suspicious"></span>

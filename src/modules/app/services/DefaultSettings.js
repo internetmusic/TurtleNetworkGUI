@@ -99,7 +99,7 @@
                             favourite: [
                                 [WavesApp.defaultAssets.TN, WavesApp.defaultAssets.BTC, WavesApp.defaultAssets.WAVES]
                             ],
-                            activeTab: 'all'
+                            activeTab: WavesApp.defaultAssets.TN
                         },
                         layout: {
                             watchlist: {

@@ -190,7 +190,7 @@
         "mailtoVordex": "support@vordex.com",
         "mailtoWavesExchange": "support@waves.exchange",
         "mainPage": "Main page",
-        "majorFiatCryptocurrencies": "Major fiat and cryptocurrencies supported: BTC, LTC, ETH, USD, and others",
+        "majorFiatCryptocurrencies": "Major cryptocurrencies supported: BTC, LTC, Waves, ETH, tUSD and others",
         "markets": "Markets",
         "marketsDescription": "Turtle Network DEX allows you to execute trades swiftly and securely, regardless of whether you’re trading via mobile app, desktop client, web wallet or the Waves API.",
         "marketsTableDescription": "To view more traded pairs click",

@@ -133,7 +133,7 @@ const R = require('ramda');
             _filterAndSort(assetsList) {
                 const filteredList = [];
 
-                for (const asset of assetsList) {
+                for (const asset of Array.from(assetsList)) {
                     if (this.pinnedAssetIdList.includes(asset.id)) {
                         continue;
                     }

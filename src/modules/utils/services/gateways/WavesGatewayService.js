@@ -2,11 +2,8 @@
     'use strict';
 
     const GATEWAYS = {
-        [WavesApp.defaultAssets.ETH]: { waves: 'ETH', gateway: 'ETH' },
-        [WavesApp.defaultAssets.BTC]: { waves: 'WBTC', gateway: 'BTC' }
+        [WavesApp.defaultAssets.TN]: { waves: 'TN', gateway: 'TN' }
     };
-
-    const PATH = `${WavesApp.network.wavesGateway}/api/v1`;
 
     const KEY_NAME_PREFIX = 'wavesGateway';
 
@@ -15,7 +12,6 @@
      */
 
     const factory = function () {
-
         const { BigNumber } = require('@waves/bignumber');
 
         class WavesGatewayService {
@@ -25,7 +21,7 @@
              * @return {IGatewaySupportMap}
              */
             getSupportMap(asset) {
-                if (GATEWAYS[asset.id]) {
+                if (GATEWAYS[asset.id] || WavesApp.network.wavesGateway[asset.id]) {
                     return {
                         deposit: true,
                         withdraw: asset.id !== WavesApp.defaultAssets.BTC,
@@ -38,27 +34,32 @@
             /**
              * From VST to Waves
              * @param {Asset} asset
-             * @param {string} wavesAddress
+             * @param {string} walletAddress
              * @return {Promise}
              */
-            getDepositDetails(asset, wavesAddress) {
+            getDepositDetails(asset, walletAddress) {
                 WavesGatewayService._assertAsset(asset.id);
 
-                const body = JSON.stringify({
-                    userAddress: wavesAddress,
-                    assetId: asset.id
-                });
+                const ASSETGATEWAY = `${WavesApp.network.wavesGateway[asset.id].url}`;
+                const headers = {};
+                headers['Content-Type'] = 'application/json';
+                headers.Accept = 'application/json';
 
-                return ds.fetch(`${PATH}/external/deposit`, { method: 'POST', body })
+                return ds
+                    .fetch(`${ASSETGATEWAY}/api/fullinfo`, { method: 'GET', headers })
                     .then(details => {
-                        const [minAmount, maxAmount, fee] = [details.minAmount, details.maxAmount, details.fee]
-                            .map(value => this._normalaizeValue(value, -asset.precision));
-                        return ({
-                            address: details.address,
-                            minimumAmount: new BigNumber(minAmount),
-                            maximumAmount: new BigNumber(maxAmount),
-                            gatewayFee: new BigNumber(fee)
-                        });
+                        return {
+                            address: details.otherAddress,
+                            minimumAmount: new BigNumber(details.minAmount),
+                            maximumAmount: new BigNumber(details.maxAmount),
+                            gatewayFee: new BigNumber(details.fee),
+                            disclaimerLink: details.disclaimer,
+                            minRecoveryAmount: new BigNumber(details.recovery_amount),
+                            recoveryFee: new BigNumber(details.recovery_fee),
+                            supportEmail: details.email,
+                            operator: details.company,
+                            walletAddress: walletAddress
+                        };
                     });
             }
 
@@ -72,22 +73,22 @@
             getWithdrawDetails(asset, targetAddress) {
                 WavesGatewayService._assertAsset(asset.id);
 
-                const body = JSON.stringify({
-                    userAddress: targetAddress,
-                    assetId: asset.id
-                });
+                const ASSETGATEWAY = `${WavesApp.network.wavesGateway[asset.id].url}`;
+                const headers = {};
+                headers['Content-Type'] = 'application/json';
+                headers.Accept = 'application/json';
 
-                return ds.fetch(`${PATH}/external/withdraw`, { method: 'POST', body })
+                return ds
+                    .fetch(`${ASSETGATEWAY}/api/fullinfo`, { method: 'GET', headers: headers })
                     .then(details => {
-                        const [minAmount, maxAmount, fee] = [details.minAmount, details.maxAmount, details.fee]
-                            .map(value => this._normalaizeValue(value, -asset.precision));
-                        return ({
-                            address: details.recipientAddress,
-                            minimumAmount: new BigNumber(minAmount),
-                            maximumAmount: new BigNumber(maxAmount),
-                            gatewayFee: new BigNumber(fee),
-                            attachment: details.processId
-                        });
+                        return {
+                            address: details.tnAddress,
+                            minimumAmount: new BigNumber(details.minAmount),
+                            maximumAmount: new BigNumber(details.maxAmount),
+                            gatewayFee: new BigNumber(details.other_total_fee),
+                            type: details.type,
+                            attachment: targetAddress
+                        };
                     });
             }
 
