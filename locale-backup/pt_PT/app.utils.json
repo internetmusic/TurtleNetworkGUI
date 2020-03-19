@@ -802,7 +802,7 @@
             "signErrorKeeper": "You did not confirm the request using Waves Keeper",
             "signErrorText": "You did not confirm the request on your Ledger Device",
             "signErrorTextImportKeeper": "Sign in to Waves Keeper with address {{address}}, and then refresh page to continue.",
-            "signErrorTextKeeper": "Please try again. If the error persists, please create a ticket to [Support](https://support.wavesplatform.com/)",
+            "signErrorTextKeeper": "Please try again. If the error persists, please create a ticket to [Support](support@turtlenetwork.eu/)",
             "signErrorTextKeeperWrongUser": "This account does not match the selected account in your Waves Keeper. Please activate another account in Waves Keeper and try again.",
             "timestamp": "Timestamp",
             "txId": "TXID"

@@ -75,7 +75,7 @@
         "sign": "Firmar",
         "success": "¡Tu transacción está en marcha!",
         "wavesKeeperUnconfirmed": {
-            "description": "Por favor, inténtelo de nuevo. Si el error persiste, por favor enviar un ticket a [soporte](https://support.wavesplatform.com)",
+            "description": "Por favor, inténtelo de nuevo. Si el error persiste, por favor enviar un ticket a [soporte](support@turtlenetwork.eu)",
             "header": "No ha confirmado la solicitud utilizando Waves Keeper"
         }
     },
@@ -99,7 +99,7 @@
         "sign": {
             "confirmRequestKeeper": {
                 "cancel": "Anular",
-                "errorDescription": "Por favor, inténtelo de nuevo. Si el error persiste, por favor enviar un ticket a [soporte](https://support.wavesplatform.com)",
+                "errorDescription": "Por favor, inténtelo de nuevo. Si el error persiste, por favor enviar un ticket a [soporte](support@turtlenetwork.eu)",
                 "errorDescriptionSwitchUser": "This account does not match the selected account in your Waves Keeper. Please activate another account in Waves Keeper and try again.",
                 "errorHeader": "No ha confirmado la solicitud utilizando Waves Keeper",
                 "sign": "Reintentar",

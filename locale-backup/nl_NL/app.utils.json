@@ -802,7 +802,7 @@
             "signErrorKeeper": "U heeft het verzoek van Waves Keeper niet bevestigd",
             "signErrorText": "U hebt het verzoek op uw Ledger niet bevestigd",
             "signErrorTextImportKeeper": "Login met Waves Keeper met {{address}} adres, en ververs dan de pagina om door te gaan.",
-            "signErrorTextKeeper": "Probeer alstublieft opnieuw. Als deze error aanhoudt maak dan een ticket op [Support](https://support.wavesplatform.com/)",
+            "signErrorTextKeeper": "Probeer alstublieft opnieuw. Als deze error aanhoudt maak dan een ticket op [Support](support@turtlenetwork.eu/)",
             "signErrorTextKeeperWrongUser": "Dit account komt niet overeen met het geselecteerde account in uw Waves Keeper. Activeer een ander account in Waves Keeper en probeer het opnieuw.",
             "timestamp": "Tijdstempel",
             "txId": "TXID"
