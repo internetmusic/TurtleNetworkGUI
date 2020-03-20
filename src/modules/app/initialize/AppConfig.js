@@ -87,7 +87,7 @@
 
             _initAdapters() {
                 const TransportU2F = WavesApp.isWeb() ? require('@ledgerhq/hw-transport-u2f') : window.TransportNodeHid;
-
+                let TurtleShell;
                 ds.signAdapters.adapterList.forEach((Adapter) => {
                     try {
                         Adapter.initOptions({
@@ -97,7 +97,7 @@
                             exchangeTimeout: WavesApp.sign.exchangeTimeout,
                             debug: !WavesApp.isProduction(),
                             transport: TransportU2F && TransportU2F.default,
-                            extension: () => typeof Waves === 'undefined' ? null : Waves
+                            extension: () => typeof TurtleShell === 'undefined' ? null : TurtleShell
                         });
                     } catch (e) {
                         return null;
