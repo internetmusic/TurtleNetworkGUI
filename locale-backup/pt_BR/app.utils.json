@@ -802,7 +802,7 @@
             "signErrorKeeper": "Você não confirmou o pedido usando o Waves Keeper",
             "signErrorText": "Você não confirmou a autorização em sua Ledger Nano S",
             "signErrorTextImportKeeper": "Entre na Waves Keeper com o endereço {{address}}, e atualize a página para continuar.",
-            "signErrorTextKeeper": "Por favor, tente novamente. Se o erro persistir, crie um ticket para o [Suporte](https://support.wavesplatform.com/)",
+            "signErrorTextKeeper": "Por favor, tente novamente. Se o erro persistir, crie um ticket para o [Suporte](support@turtlenetwork.eu/)",
             "signErrorTextKeeperWrongUser": "This account does not match the selected account in your Waves Keeper. Please activate another account in Waves Keeper and try again.",
             "timestamp": "Timestamp",
             "txId": "TXID"
