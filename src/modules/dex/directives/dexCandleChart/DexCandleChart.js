@@ -247,6 +247,11 @@
                         this._chartReady = true;
                     }
 
+                    this._chart.subscribe('series_properties_changed', () => {
+                        this._resetTradingView();
+                        this._chart.resetData();
+                    });
+
                     this._chart.subscribe('onIntervalChange', (e) => {
                         user.setSetting('lastInterval', e);
                     });
