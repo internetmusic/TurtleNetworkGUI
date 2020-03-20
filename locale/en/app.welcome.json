@@ -142,6 +142,8 @@
 
         "apple": "App Store",
 
+        "bitcointalk": "Bitcointalk",
+
         "blog": "Blog",
 
         "broughtBy": "Brought to you by CryptoBrokers and Turtle Network (based on WavesPlatform)",
@@ -166,9 +168,9 @@
 
         "copyAddress": "Copy address",
 
-        "copyright": "© 2019 Waves Platform",
+        "copyright": "© 2020 Turtle Network",
 
-        "copyright-new": "© 2019 Waves.Exchange",
+        "copyright-new": "© 2020 TurtleNetwork",
 
         "copyrightVordex": "© 2019 VORDEX",
 
@@ -194,6 +196,8 @@
 
         "exchange": "Exchange",
 
+        "facebook": "Facebook",
+
         "forDevelopers": "For developers",
 
         "forum": "Forum",
@@ -214,6 +218,8 @@
 
         "inputErrorNameExists": "That name is taken. Try another",
 
+        "instagram": "Instagram",
+
         "instantAccessWalletDex": "Instant access to your wallet and DEX",
 
         "keeperAccount": "Keeper account",
@@ -227,6 +233,8 @@
         "ledgerSupport": "Ledger support",
 
         "legal": "Legal",
+
+        "linkedin": "LinkedIn",
 
         "linux": "Linux",
 
@@ -252,7 +260,7 @@
 
         "mainPage": "Main page",
 
-        "majorFiatCryptocurrencies": "Major fiat and cryptocurrencies supported: BTC, LTC, ETH, USD, and others",
+        "majorFiatCryptocurrencies": "Major cryptocurrencies supported: BTC, LTC, Waves, ETH, tUSD and others",
 
         "markets": "Markets",
 
@@ -279,6 +287,8 @@
         "privacyPolicy": "Privacy Policy",
 
         "productsTools": "Products & tools",
+
+        "reddit": "Reddit",
 
         "renameAccount": "Rename account",
 
@@ -334,6 +344,18 @@
 
         "transactions": "Transactions",
 
+        "turtleExplorer": "Turtle Network Explorer",
+
+        "turtleOldWallet": "Old Turtle Network Wallet",
+
+        "turtleMobileWallet": "Turtle Network Mobile Wallet",
+
+        "turtleShell": "TurtleShell",
+
+        "turtleStats": "Turtle Network Statistics",
+
+        "turtleWebsite": "Turtle Network Wallet",
+
         "twitter": "Twitter",
 
         "volume": "VOLUME",
@@ -344,17 +366,11 @@
 
         "wavesDexWeb": "Turtle Network Web Exchange",
 
-        "wavesExplorer": "Turtle Network Explorer",
-
         "wavesIde": "Waves IDE",
-
-        "wavesKeeper": "TurtleShell",
 
         "wavesLabs": "ArcaneLabs",
 
         "wavesOrderFilled": "0.04 TN per order filled",
-
-        "wavesWallet": "Turtle Network Wallet",
 
         "windows": "Windows",
 

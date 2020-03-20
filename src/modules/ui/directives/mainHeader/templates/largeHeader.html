@@ -11,19 +11,10 @@
            w-i18n="welcome.exchange">
         </a>
         <a w-analytics event-target="'ui'"
-           event="'Menu API Click'"
-           event-target="'ui'"
-           class="top-menu__link"
-           href="https://api.marketdata.turtlenetwork.eu/"
-           target="_blank"
-           rel="noopener noreferrer"
-           w-i18n="welcome.api">
-        </a>
-        <a w-analytics event-target="'ui'"
            event="'Menu Help Click'"
            event-target="'ui'"
            class="top-menu__link"
-           href="https://docs.wavesplatform.com/en/waves-client/install-waves-client.html"
+           href="https://www.turtlenetwork.eu/#contact"
            target="_blank"
            rel="noopener noreferrer"
            w-i18n="welcome.help">
@@ -32,7 +23,7 @@
            event="'Menu News Click'"
            event-target="'ui'"
            class="top-menu__link"
-           href="https://twitter.com/TurtleNetworkTN"
+           href="https://www.turtlenetwork.eu/#blog"
            target="_blank"
            rel="noopener noreferrer"
            w-i18n="welcome.news"></a>
@@ -106,7 +97,7 @@
             </a>
         </div>
     </div>
-    <a class="top-menu__link top-menu__link-tokens" ui-sref="main.tokens" w-i18n="welcome.createToken"></a>
+    <a ng-if="$ctrl.advancedMode" class="top-menu__link top-menu__link-tokens" ui-sref="main.tokens" w-i18n="welcome.createToken"></a>
 </nav>
 
 <w-web-only class="block-right">

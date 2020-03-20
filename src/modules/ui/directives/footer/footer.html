@@ -4,17 +4,13 @@
             <a ng-if="!$ctrl._isDesktopUpdate" class="footer-action footnote-1 submit-400" target="_blank" rel="noopener noreferrer"
                href="http://dex.wavesplatform.com" w-analytics event="'Waves DEX Web Click'" w-i18n="welcome.wavesDexWeb"></a>
             <a ng-if="!$ctrl._isDesktopUpdate" class="footer-action footnote-1 submit-400" target="_blank" rel="noopener noreferrer"
-               href="https://support.wavesplatform.com" w-analytics event="'Footer Support Click'" w-i18n="welcome.support"></a>
+               href="support@turtlenetwork.eu" w-analytics event="'Footer Support Click'" w-i18n="welcome.support"></a>
         </div>
     </w-desktop-only>
     <div class="footer__left">
-        <w-web-only>
-            <a class="footer__logo logo logo_footer margin-2" href="https://wavesplatform.com" target="_blank" rel="noopener noreferrer"></a>
-            <div class="footer__left-item margin-2" w-i18n="welcome.broughtBy"></div>
-        </w-web-only>
         <div class="footer__left-item margin-1" w-i18n="welcome.copyright"></div>
         <w-web-only>
-            <a class="footer__link footer__link_support" w-i18n="welcome.mailto" target="_blank" rel="noopener noreferrer" href="https://support.wavesplatform.com"></a>
+            <a class="footer__link footer__link_support" w-i18n="welcome.mailto" target="_blank" rel="noopener noreferrer" href="mailto: support@turtlenetwork.eu"></a>
         </w-web-only>
         <w-change-language w-web-only-class="web-footer-language" up-direction="true"></w-change-language>
     </div>
@@ -22,21 +18,41 @@
         <div class="footer__right">
             <div class="footer__right-item">
                 <div class="footer__title" w-i18n="welcome.productsTools"></div>
-                <a w-analytics event="'Footer Wallet Click'"
-                   w-i18n="welcome.wavesWallet"
+                <a w-analytics event="'Footer Website Click'"
+                   w-i18n="welcome.turtleWebsite"
                    event-target="'ui'"
                    class="footer__link" target="_blank" rel="noopener noreferrer"
-                   href="https://wavesplatform.com/products-wallet"></a>
+                   href="https://www.turtlenetwork.eu"></a>
+                <a w-analytics event="'Footer Statistics Click'"
+                   w-i18n="welcome.turtleStats"
+                   event-target="'ui'"
+                   class="footer__link" target="_blank" rel="noopener noreferrer"
+                   href="http://statistics.turtlenetwork.eu"></a>
                 <a w-analytics event="'Footer Keeper Click'"
                    w-i18n="welcome.TurtleShell"
                    event-target="'ui'"
                    class="footer__link" target="_blank" rel="noopener noreferrer"
-                   href="https://wavesplatform.com/products-keeper"></a>
+                   href="https://chrome.google.com/webstore/detail/turtleshell/billhkeiifjfbbkmmfpcpchikbajnfje?hl=en"></a>
                 <a w-analytics event="'Footer Explorer Click'"
-                   w-i18n="welcome.wavesExplorer"
+                   w-i18n="welcome.turtleExplorer"
                    event-target="'ui'"
                    class="footer__link" target="_blank" rel="noopener noreferrer"
                    href="http://explorer.turtlenetwork.eu"></a>
+                <a w-analytics event="'Footer TurtleShell Click'"
+                   w-i18n="welcome.turtleShell"
+                   event-target="'ui'"
+                   class="footer__link" target="_blank" rel="noopener noreferrer"
+                   href="https://chrome.google.com/webstore/detail/turtleshell/billhkeiifjfbbkmmfpcpchikbajnfje"></a>
+                <a w-analytics event="'Footer Mobile Wallet Click'"
+                   w-i18n="welcome.turtleMobileWallet"
+                   event-target="'ui'"
+                   class="footer__link" target="_blank" rel="noopener noreferrer"
+                   href="{{::$ctrl.mobileAppLink}}"></a>
+                <a w-analytics event="'Footer Old Wallet Click'"
+                   w-i18n="welcome.turtleOldWallet"
+                   event-target="'ui'"
+                   class="footer__link" target="_blank" rel="noopener noreferrer"
+                   href="https://client.turtlenetwork.eu"></a>
             </div>
 
             <div class="footer__right-item">
@@ -46,13 +62,18 @@
                    event-target="'ui'"
                    class="footer__link" target="_blank" rel="noopener noreferrer"
                    href="https://github.com/TurtleNetwork"></a>
+                <a w-analytics event="'Footer API Click'"
+                   w-i18n="welcome.api"
+                   event-target="'ui'"
+                   class="footer__link" target="_blank" rel="noopener noreferrer"
+                   href="https://api.marketdata.turtlenetwork.eu"></a>
             </div>
 
             <div class="footer__right-item">
                 <div class="footer__title" w-i18n="welcome.legal"></div>
                 <a w-analytics event="'Footer Privacy Policy Click'"
                    event-target="'ui'"
-                   class="footer__link" w-i18n="welcome.privacyPolicy" target="_blank" rel="noopener noreferrer" href="https://wavesplatform.com/files/docs/Privacy_Policy_SW.pdf"></a>
+                   class="footer__link" w-i18n="welcome.privacyPolicy" target="_blank" rel="noopener noreferrer" href="https://docs.turtlenetwork.eu/files/placeholder.pdf"></a>
                 <a w-analytics event="'Footer Terms of use Click'"
                    event-target="'ui'"class="footer__link" w-i18n="welcome.termsOfUse" target="_blank" rel="noopener noreferrer" href="https://docs.turtlenetwork.eu/files/placeholder.pdf"></a>
             </div>
@@ -60,9 +81,19 @@
             <div class="footer__right-item">
                 <div class="footer__title" w-i18n="welcome.social"></div>
                 <a w-analytics event="'Footer Twitter Click'"
-                   class="footer__link" w-i18n="welcome.twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/TurtleNetworkTN"></a>
+                   class="footer__link" w-i18n="welcome.twitter" target="_blank" rel="noopener noreferrer" href="https://www.turtlenetwork.eu/#blog"></a>
                 <a w-analytics event="'Footer Telegram Click'" event-params='{Language: $ctrl.lang}'
                    class="footer__link" w-i18n="welcome.telegram" target="_blank" rel="noopener noreferrer" href="{{::$ctrl.telegramLink}}"></a>
+                <a w-analytics event="'Footer Facebook Click'" event-params='{Language: $ctrl.lang}'
+                   class="footer__link" w-i18n="welcome.facebook" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/TurtleNetworkTN"></a>
+                <a w-analytics event="'Footer Instagram Click'" event-params='{Language: $ctrl.lang}'
+                   class="footer__link" w-i18n="welcome.instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/turtlenetworktn"></a>
+                <a w-analytics event="'Footer Reddit Click'" event-params='{Language: $ctrl.lang}'
+                   class="footer__link" w-i18n="welcome.reddit" target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/TurtleNetwork"></a>
+                <a w-analytics event="'Footer Bitcointalk Click'" event-params='{Language: $ctrl.lang}'
+                   class="footer__link" w-i18n="welcome.bitcointalk" target="_blank" rel="noopener noreferrer" href="https://bitcointalk.org/index.php?topic=5138663"></a>
+                <a w-analytics event="'Footer LinkedIn Click'" event-params='{Language: $ctrl.lang}'
+                   class="footer__link" w-i18n="welcome.linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/blackturtle-bvba"></a>
             </div>
         </div>
 

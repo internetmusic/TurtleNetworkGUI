@@ -802,7 +802,7 @@
             "signErrorKeeper": "您没有使用Waves Keeper确认请求",
             "signErrorText": "您未在Ledger设备上确认该请求",
             "signErrorTextImportKeeper": "使用地址{{address}}登录Waves Keeper，然后刷新页面以继续。",
-            "signErrorTextKeeper": "请再试一次。如果错误仍然存在，请创建[帮助]的票证（https://support.wavesplatform.com/）",
+            "signErrorTextKeeper": "请再试一次。如果错误仍然存在，请创建[帮助]的票证（support@turtlenetwork.eu/）",
             "signErrorTextKeeperWrongUser": "此帐户与Waves Keeper中的所选帐户不匹配。请在Waves Keeper中激活另一个帐户，然后重试。",
             "timestamp": "时间戳",
             "txId": "TXID"
