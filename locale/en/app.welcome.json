@@ -142,6 +142,8 @@
 
         "apple": "App Store",
 
+        "bitcointalk": "Bitcointalk",
+
         "blog": "Blog",
 
         "broughtBy": "Brought to you by CryptoBrokers and Turtle Network (based on WavesPlatform)",
@@ -194,6 +196,8 @@
 
         "exchange": "Exchange",
 
+        "facebook": "Facebook",
+
         "forDevelopers": "For developers",
 
         "forum": "Forum",
@@ -214,6 +218,8 @@
 
         "inputErrorNameExists": "That name is taken. Try another",
 
+        "instagram": "Instagram",
+
         "instantAccessWalletDex": "Instant access to your wallet and DEX",
 
         "keeperAccount": "Keeper account",
@@ -227,6 +233,8 @@
         "ledgerSupport": "Ledger support",
 
         "legal": "Legal",
+
+        "linkedin": "LinkedIn",
 
         "linux": "Linux",
 
@@ -279,6 +287,8 @@
         "privacyPolicy": "Privacy Policy",
 
         "productsTools": "Products & tools",
+
+        "reddit": "Reddit",
 
         "renameAccount": "Rename account",
 
