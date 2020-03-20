@@ -334,6 +334,18 @@
 
         "transactions": "Transactions",
 
+        "turtleExplorer": "Turtle Network Explorer",
+
+        "turtleOldWallet": "Old Turtle Network Wallet",
+
+        "turtleMobileWallet": "Turtle Network Mobile Wallet",
+
+        "turtleShell": "TurtleShell",
+
+        "turtleStats": "Turtle Network Statistics",
+
+        "turtleWebsite": "Turtle Network Wallet",
+
         "twitter": "Twitter",
 
         "volume": "VOLUME",
@@ -344,17 +356,11 @@
 
         "wavesDexWeb": "Turtle Network Web Exchange",
 
-        "wavesExplorer": "Turtle Network Explorer",
-
         "wavesIde": "Waves IDE",
-
-        "wavesKeeper": "TurtleShell",
 
         "wavesLabs": "ArcaneLabs",
 
         "wavesOrderFilled": "0.04 TN per order filled",
-
-        "wavesWallet": "Turtle Network Wallet",
 
         "windows": "Windows",
 
