@@ -195,6 +195,7 @@
                 const studiesOverrides = getStudiesOverrides({ volume0, volume1 });
                 this._chart.applyOverrides(overrides);
                 this._chart.applyStudiesOverrides(studiesOverrides);
+                this._chart.changeTheme(this.theme === 'black' ? 'Dark' : 'Light');
             }
 
             /**
@@ -224,6 +225,7 @@
                     library_path: 'trading-view/',
                     autosize: true,
                     toolbar_bg,
+                    theme: this.theme === 'black' ? 'Dark' : 'Light',
                     disabled_features: DISABLED_FEATURES,
                     // enabled_features: ENABLED_FEATURES,
                     overrides,
@@ -236,6 +238,7 @@
                     if (this._changeTheme) {
                         this._chart.applyOverrides(overrides);
                         this._chart.applyStudiesOverrides(studies_overrides);
+                        this._chart.changeTheme(this.theme === 'black' ? 'Dark' : 'Light');
                     }
 
                     this._changeTheme = false;
