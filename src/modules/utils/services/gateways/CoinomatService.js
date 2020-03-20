@@ -2,7 +2,7 @@
     'use strict';
 
     const GATEWAYS = {
-        [WavesApp.defaultAssets.BTC]: { waves: 'WBTC', gateway: 'BTC' },
+        [WavesApp.defaultAssets.BTC]: { waves: 'WBTC', gateway: 'BTC' }
     };
 
     const PATH_V1 = `${WavesApp.network.coinomat}/api/v1`;
@@ -197,7 +197,7 @@
             }
 
             static _assertAsset(assetId) {
-                if (!GATEWAYS[assetId]) {
+                if (!GATEWAYS[assetId] && !WavesApp.network.wavesGateway[assetId]) {
                     throw new Error('Asset is not supported by Coinomat');
                 }
             }
