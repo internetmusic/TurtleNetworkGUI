@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 (function () {
     'use strict';
 
@@ -87,7 +89,6 @@
 
             _initAdapters() {
                 const TransportU2F = WavesApp.isWeb() ? require('@ledgerhq/hw-transport-u2f') : window.TransportNodeHid;
-                let TurtleShell;
                 ds.signAdapters.adapterList.forEach((Adapter) => {
                     try {
                         Adapter.initOptions({
