@@ -26,7 +26,8 @@
             getCryptocurrencies() {
                 return {
                     ...coinomatService.getAll(),
-                    ...wavesGatewayService.getAll()
+                    ...wavesGatewayService.getAll(),
+                    ...WavesApp.network.wavesGateway
                 };
             }
 

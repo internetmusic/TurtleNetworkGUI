@@ -15,6 +15,16 @@
     });
     DROP_DOWN_LIST.push({ name: 'ALL', id: 'all' });
 
+    DROP_DOWN_LIST.sort((a, b) => {
+        if (a.name < b.name) {
+            return -1;
+        }
+        if (a.name > b.name) {
+            return 1;
+        }
+        return 0;
+    });
+
     /**
      * @param Base
      * @param {$rootScope.Scope} $scope
@@ -634,7 +644,7 @@
                     .filter(item => item && item.filter(Boolean).length === 2)
                     .map(p => p.sort());
                 const chosen = [this._assetIdPair.amount, this._assetIdPair.price].sort();
-                const searchIdList = Object.keys(this._searchAssetsHash);
+                const searchIdList = Object.keys(this._searchAssetsHash).filter(key => key !== 'undefined');
                 // const userBalances = this._lastUserBalanceIdList;
                 const assetsIds = Object.values(WavesApp.defaultAssets);
                 const idList = uniq(assetsIds.concat(searchIdList, defaultAssets));

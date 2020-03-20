@@ -68,10 +68,8 @@
           "volume1": "rgba(0,200,0,0.3)"
         }
       },
-      "toolbarBg": "#2d2d2d",
       "customCssUrl": "/tradingview-style/dark-style.css",
       "OVERRIDES": {
-        "paneProperties.background": "#2d2d2d",
         "scalesProperties.lineColor": "#424242",
         "scalesProperties.textColor": "#8c8c8c",
         "paneProperties.gridProperties.color": "#424242",

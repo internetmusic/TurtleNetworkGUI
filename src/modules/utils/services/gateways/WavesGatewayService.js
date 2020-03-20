@@ -97,7 +97,7 @@
              * @return {string}
              */
             getAssetKeyName(asset) {
-                return `${KEY_NAME_PREFIX}${GATEWAYS[asset.id].gateway}`;
+                return `${KEY_NAME_PREFIX}${WavesApp.network.wavesGateway[asset.id].gateway}`;
             }
 
             /**
@@ -130,7 +130,7 @@
             }
 
             static _assertAsset(assetId) {
-                if (!GATEWAYS[assetId]) {
+                if (!GATEWAYS[assetId] && !WavesApp.network.wavesGateway[assetId]) {
                     throw new Error('Asset is not supported by VST');
                 }
             }
