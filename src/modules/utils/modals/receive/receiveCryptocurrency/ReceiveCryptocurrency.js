@@ -43,6 +43,16 @@
             gatewayAddress;
 
             /**
+             * @type {string}
+             */
+            gatewayType;
+
+            /**
+             * @type {string}
+             */
+            gatewayUrl;
+
+            /**
              * @type {boolean}
              */
             gatewayServerError = false;
@@ -136,6 +146,8 @@
                         this.operator = details.operator;
                         this.gatewayServerPending = false;
                         this.walletAddress = details.walletAddress;
+                        this.gatewayType = details.gatewayType;
+                        this.gatewayUrl = details.gatewayUrl;
                         $scope.$apply();
                     }, () => {
                         this.minAmount = Money.fromTokens(0.001, this.asset);

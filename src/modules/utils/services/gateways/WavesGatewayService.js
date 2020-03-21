@@ -58,7 +58,9 @@
                             recoveryFee: new BigNumber(details.recovery_fee),
                             supportEmail: details.email,
                             operator: details.company,
-                            walletAddress: walletAddress
+                            walletAddress: walletAddress,
+                            gatewayType: details.type,
+                            gatewayUrl: `${ASSETGATEWAY}`
                         };
                     });
             }
@@ -86,8 +88,9 @@
                             minimumAmount: new BigNumber(details.minAmount),
                             maximumAmount: new BigNumber(details.maxAmount),
                             gatewayFee: new BigNumber(details.other_total_fee),
-                            type: details.type,
-                            attachment: targetAddress
+                            gatewayType: details.type,
+                            attachment: targetAddress,
+                            gatewayUrl: `${ASSETGATEWAY}`
                         };
                     });
             }
