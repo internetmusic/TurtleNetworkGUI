@@ -94,7 +94,7 @@
 
         "import": "Import accounts",
 
-        "importDescription": "via Seed or private key, Ledger, Keystore File",
+        "importDescription": "via Seed or private key, Keystore File",
 
         "protect": "Protect your account with a password or",
 
