@@ -31,6 +31,25 @@
                 }
             }
 
+            // Only used for deposit type gateways
+            getDepositAddress(asset, walletAddress) {
+                WavesGatewayService._assertAsset(asset.id);
+
+                const ASSETGATEWAY = `${WavesApp.network.wavesGateway[asset.id].url}`;
+                const headers = {};
+                headers['Content-Type'] = 'application/json';
+                headers.Accept = 'application/json';
+
+                return ds
+                    .fetch(`${ASSETGATEWAY}/tunnel/${walletAddress}`, { method: 'GET', headers })
+                    .then(details => {
+                        return {
+                            address: details.address
+                        };
+                    });
+
+            }
+
             /**
              * From VST to Waves
              * @param {Asset} asset
