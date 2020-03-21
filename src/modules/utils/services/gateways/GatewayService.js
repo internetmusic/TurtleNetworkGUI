@@ -54,6 +54,15 @@
                 return null;
             }
 
+            getDepositAddress(asset, walletAddress) {
+                const gateway = this._findGatewayFor(asset, 'deposit');
+
+                if (gateway) {
+                    return gateway.getDepositAddress(asset, walletAddress);
+                }
+
+            }
+
             /**
              * @param {Asset} asset
              * @param {string} targetAddress

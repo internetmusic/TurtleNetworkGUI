@@ -407,9 +407,9 @@
 
             "helpDescrTitle": "Enter this address into your Bitcoin Cash client or wallet",
 
-            "warningMinAmountText": "If you will send less than {{minAmount, BigNumber}} {{assetTicker}}, you will lose that money.",
+            "warningMinAmountText": "If you send less than {{minAmount, BigNumber}} {{assetTicker}}, you will lose that money.",
 
-            "warningMinAmountTitle": "The minimum amount of deposit is {{minAmount, BigNumber}} {{assetTicker}}, the maximum amount of deposit is {{maxAmount}} {{assetTicker}}",
+            "warningMinAmountTitle": "The minimum deposit is {{minAmount, BigNumber}} {{assetTicker}}, the maximum deposit is {{maxAmount}} {{assetTicker}}",
 
             "warningText": "Sending any other currency to this address may result in the loss of your deposit.",
 
@@ -424,6 +424,8 @@
             "operator": "This gw is operated by {{operator}}.",
 
             "attachmentInstructions": "Dont forget to use {{walletAddress}} as the attachment.",
+
+            "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use {{tunnelUrl}}.",
 
             "copyAndShare": "Copy & Share Address",
 

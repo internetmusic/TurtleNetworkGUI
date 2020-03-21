@@ -43,6 +43,16 @@
             gatewayAddress;
 
             /**
+             * @type {string}
+             */
+            gatewayType;
+
+            /**
+             * @type {string}
+             */
+            gatewayUrl;
+
+            /**
              * @type {boolean}
              */
             gatewayServerError = false;
@@ -126,7 +136,14 @@
 
                 if (depositDetails) {
                     depositDetails.then((details) => {
-                        this.gatewayAddress = details.address;
+
+                        if (details.gatewayType === 'deposit') {
+                            gatewayService.getDepositAddress(this.asset, user.address).then(result => {
+                                this.gatewayAddress = result.address;
+                            });
+                        } else {
+                            this.gatewayAddress = details.address;
+                        }
                         this.minAmount = Money.fromTokens(details.minimumAmount, this.asset);
                         this.maxAmount = Money.fromTokens(details.maximumAmount, this.asset);
                         this.disclaimerLink = details.disclaimerLink;
@@ -136,6 +153,8 @@
                         this.operator = details.operator;
                         this.gatewayServerPending = false;
                         this.walletAddress = details.walletAddress;
+                        this.gatewayType = details.gatewayType;
+                        this.gatewayUrl = details.gatewayUrl;
                         $scope.$apply();
                     }, () => {
                         this.minAmount = Money.fromTokens(0.001, this.asset);
