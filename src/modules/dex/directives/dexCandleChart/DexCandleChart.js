@@ -110,6 +110,8 @@
                  */
                 this.candle = user.getSetting('candle');
 
+                this.chartType = undefined;
+
                 this._interval = user.getSetting('lastInterval');
 
                 this.observe('_assetIdPair', this._onChangeAssetPair);
@@ -251,8 +253,14 @@
                     }
 
                     this._chart.subscribe('series_properties_changed', () => {
-                        this._resetTradingView();
-                        this._chart.resetData();
+                        const newChartType = this._chart.activeChart().chartType();
+                        if (this.chartType !== undefined && this.chartType !== newChartType) {
+                            this.chartType = newChartType;
+                            this._resetTradingView();
+                            this._chart.resetData();
+                        } else if (this.chartType === undefined) {
+                            this.chartType = newChartType;
+                        }
                     });
 
                     this._chart.subscribe('onIntervalChange', (e) => {
