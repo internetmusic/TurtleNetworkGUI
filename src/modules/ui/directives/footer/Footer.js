@@ -32,6 +32,8 @@
              * @type {string}
              */
             _toasterMobilesStorageKey = 'toasterMobilesHidden';
+            privacyPolicy = WavesApp.network.privacyPolicy;
+            termsAndConditionsLink = WavesApp.network.termsAndConditions;
 
             constructor() {
                 super();
