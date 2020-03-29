@@ -238,6 +238,9 @@ stages:
         repository: 'turtlenetwork/tngui'
         command: 'buildAndPush'
         Dockerfile: 'Dockerfile'
+        tags: |
+            $(Build.BuildId)
+            latest
       displayName: 'Build and push docker container for testnet'
 
   - job: BuildDockerMainnet
