@@ -313,6 +313,6 @@ stages:
           command: 'push'
           tags: |
             $(Build.BuildId)
-            'latest'
+            latest
         displayName: 'Push mainnet container'
         
