@@ -301,7 +301,7 @@ stages:
           command: 'build'
           tags: |
             $(Build.BuildId)
-            'latest'
+            latest
           Dockerfile: '**/Dockerfile'
           arguments: '--build-arg web_environment=mainnet'
         displayName: 'Build docker container for mainnet'
