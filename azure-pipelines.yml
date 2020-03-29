@@ -299,6 +299,9 @@ stages:
           containerRegistry: 'turtlenetwork docker'
           repository: 'turtlenetwork/mainnet-tngui'
           command: 'build'
+          tags: |
+            $(Build.BuildId)
+            'latest'
           Dockerfile: '**/Dockerfile'
           arguments: '--build-arg web_environment=mainnet'
         displayName: 'Build docker container for mainnet'
