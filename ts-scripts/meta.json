@@ -79,7 +79,7 @@
       "license"
     ],
     "defaults": {
-      "homepage": "https://wavesplatform.com",
+      "homepage": "https://www.turtlenetwork.eu",
       "main": "main.js",
       "devDependencies": {
         "electron": "^6.0.12",
@@ -100,6 +100,6 @@
         "postinstall": "node_modules/.bin/electron-rebuild --force"
       }
     },
-    "server": "desktop.wavesplatform.com"
+    "server": "wallet.turtlenetwork.eu"
   }
 }
