@@ -1172,7 +1172,9 @@
 
                 const dataOracle = ds.dataManager.getOraclesAssetData(assetId);
 
-                const isGateway = path(['status'], dataOracle) === 3;
+                const assetGateway = WavesApp.network.wavesGateway[assetId];
+
+                const isGateway = assetGateway ? !assetGateway.isThirdParty : false;
 
                 const isTokenomica = false;
 
@@ -1181,8 +1183,6 @@
                 const isSuspicious = user.scam[assetId];
 
                 const isGatewaySoon = path(['status'], dataOracle) === 4;
-
-                const assetGateway = WavesApp.network.wavesGateway[assetId];
 
                 const isThirdPartyGateway = assetGateway ? assetGateway.isThirdParty : false;
 
