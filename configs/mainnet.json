@@ -66,7 +66,8 @@
     "TUSD": "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f",
     "ETHO": "GzHRyYtdwvaGSkUC4i8d3Xzmsz9aXBWdrpMNszi6bcvR",
     "SENT": "AVJc3uYu8HdjQEx4rroaq6v4Xv4L1etG1tQPeuqs38Sf",
-    "BCH": "Fr2kNhe7XR3E16W7Mfh7NhNcsQWLXx3hSLjoFgpbFsNj"
+    "BCH": "Fr2kNhe7XR3E16W7Mfh7NhNcsQWLXx3hSLjoFgpbFsNj",
+    "ARRR": "9gTWnHstaAkhD7hEGBqNdgcAru5872d8Xf1QmoPrz5iz"
   },
   "matcherPriorityList": [
     { "ticker": "BTC", "id": "5Asy9P3xjcvBAgbeyiitZhBRJZJ2TPGSZJz9ihDTnB3d" },
