@@ -26,9 +26,9 @@ RUN  mkdir -p /etc/nginx/sites-enabled && \
 WORKDIR /srv/www
 RUN mkdir /srv/www/static-clients/
 COPY ./build-wallet/nginx/default.conf /etc/nginx/sites-available/default.conf
-ADD ./win.zip /srv/www/static-clients/win.zip
-ADD ./osx.tar.gz /srv/www/static-clients/osx.tar.gz
-ADD ./linux.tar.gz /srv/www/static-clients/linux.tar.gz
+COPY ./win.zip /srv/www/static-clients/win.zip
+COPY ./osx.tar.gz /srv/www/static-clients/osx.tar.gz
+COPY ./linux.tar.gz /srv/www/static-clients/linux.tar.gz
 
 #COPY ./build-wallet/info.html /srv/www/info
 COPY ./build-wallet/nginx/nginx.conf /etc/nginx/nginx.conf
