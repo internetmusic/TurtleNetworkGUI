@@ -194,21 +194,18 @@ stages:
         buildType: 'current'
         downloadType: 'single'
         artifactName: 'linux-test'
-        itemPattern:
         downloadPath: '.'
     - task: DownloadBuildArtifacts@0
       inputs:
         buildType: 'current'
         downloadType: 'single'
         artifactName: 'win-test'
-        itemPattern:
         downloadPath: '.'
     - task: DownloadBuildArtifacts@0
       inputs:
         buildType: 'current'
         downloadType: 'single'
         artifactName: 'osx-test'
-        itemPattern:
         downloadPath: '.'
     - task: ArchiveFiles@2
       inputs:
@@ -259,21 +256,18 @@ stages:
           buildType: 'current'
           downloadType: 'single'
           artifactName: 'linux'
-          itemPattern:
           downloadPath: '.'
       - task: DownloadBuildArtifacts@0
         inputs:
           buildType: 'current'
           downloadType: 'single'
           artifactName: 'win'
-          itemPattern:
           downloadPath: '.'
       - task: DownloadBuildArtifacts@0
         inputs:
           buildType: 'current'
           downloadType: 'single'
           artifactName: 'osx'
-          itemPattern:
           downloadPath: '.'
       - task: ArchiveFiles@2
         inputs:
