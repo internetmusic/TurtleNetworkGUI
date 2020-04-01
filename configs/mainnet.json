@@ -43,7 +43,7 @@
     "9gTWnHstaAkhD7hEGBqNdgcAru5872d8Xf1QmoPrz5iz": {
       "url": "https://arrrgw.mortysnode.nl",
       "isThirdParty": true,
-      "regex": "^zs1[a-km-zA-HJ-NP-Z1-9]{76}"
+      "regex": "^zs1[a-zA-Z0-9]{75}"
     },
     "Fr2kNhe7XR3E16W7Mfh7NhNcsQWLXx3hSLjoFgpbFsNj": {
       "url": "https://bchgw.turtlenetwork.eu",
