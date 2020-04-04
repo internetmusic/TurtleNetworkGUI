@@ -7,7 +7,7 @@
     //     document.addEventListener('DOMContentLoaded', resolve);
     // });
 
-    const { Money } = require('@waves/data-entities');
+    // const { Money } = require('@waves/data-entities');
 
     const locationHref = location.href;
     const i18next = require('i18next');
@@ -508,12 +508,12 @@
                 if (pairs.length === 0) {
                     return;
                 }
-
-                Promise.all([
+                modalManager.showTutorialModals();
+                /* Promise.all([
                     ds.api.assets.get(WavesApp.defaultAssets.BTC),
                     ds.api.matchers.getRates(matcher.currentMatcherAddress, pairs)
                 ]).then(([usdAsset, rates]) => {
-                    const usd = rates.data.reduce((acc, rate) => {
+                     const usd = rates.data.reduce((acc, rate) => {
                         const amountAsset = balance[rate.amountAsset];
                         const amountAssetInUsd = amountAsset.convertTo(usdAsset, rate.data.rate);
 
@@ -529,7 +529,7 @@
                     if (usd.gte(usd.cloneWithTokens(1))) {
                         this._initializeBackupWarning();
                     }
-                });
+                });*/
             }
 
             /**
