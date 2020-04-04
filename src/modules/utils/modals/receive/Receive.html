@@ -15,7 +15,7 @@
                 <w-tab ng-if="$ctrl.tabs.cryptocurrency" title-name="::'modal.receive.cryptocurrency.title'" id="::'cryptocurrency'">
                     <w-receive-cryptocurrency
                         asset="$ctrl.asset"
-                        cryptocurrencies="::$ctrl.cryptocurrencies"
+                        cryptocurrencies="::$ctrl.gatewayCryptocurrencies"
                         is-single-asset="::$ctrl.isSingleAsset"
                         on-asset-change="$ctrl.updateAssetBy(id)"
                     ></w-receive-cryptocurrency>

@@ -163,14 +163,14 @@ const R = require('ramda');
                     return [];
                 }
 
-                if (this._searchPromise) {
+                /* if (this._searchPromise) {
                     this._searchPromise.drop();
-                }
+                }*/
 
-                this._searchPromise = new PromiseControl(waves.node.assets.search(this.search.trim()));
+                this._searchPromise = waves.node.assets.search(this.search.trim());
 
                 return this._searchPromise.then(
-                    list => list,
+                    list => list.data.map(l => l.data),
                     () => []
                 );
             }

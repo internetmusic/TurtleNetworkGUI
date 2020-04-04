@@ -39,6 +39,11 @@
             /**
              * @type {Array}
              */
+            gatewayCryptocurrencies;
+
+            /**
+             * @type {Array}
+             */
             invoicables;
 
             constructor({ asset }) {
@@ -82,7 +87,9 @@
                     cryptocurrenciesRequest,
                     invoicesRequest
                 ]).then(() => {
-                    this.updateAssetBy(this.cryptocurrencies[0].id);
+                    this.gatewayCryptocurrencies = this.cryptocurrencies
+                        .filter(c => WavesApp.network.wavesGateway[c.id] !== undefined);
+                    this.updateAssetBy(this.gatewayCryptocurrencies[0].id);
 
                     this.enableTab('cryptocurrency');
                     this.enableTab('invoice');

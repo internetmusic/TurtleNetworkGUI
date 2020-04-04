@@ -405,7 +405,7 @@
         "deposit": {
             "helpDescrText": "Once the transaction is confirmed, the gateway will process the transfer of {{assetTicker}} to a token in your Turtle Network account.",
 
-            "helpDescrTitle": "Enter this address into your Bitcoin Cash client or wallet",
+            "helpDescrTitle": "Enter this address into your {{assetTicker}} client or wallet",
 
             "warningMinAmountText": "If you send less than {{minAmount, BigNumber}} {{assetTicker}}, you will lose that money.",
 
