@@ -105,13 +105,13 @@ export class DataManager {
             return { status: STATUS_LIST.VERIFIED, description: descriptionHash.WAVES } as any;
         }
 
-        if (gatewaysSoon.indexOf(id) > -1) {
+        /*if (gatewaysSoon.indexOf(id) > -1) {
             return gatewaySoonAsset;
-        }
+        }*/
 
-        if (gateways[id] || WavesApp.network.wavesGateway[id]) {
+        /*if (gateways[id] || WavesApp.network.wavesGateway[id]) {
             return assets[id] ? { ...assets[id], provider: lastData.oracle.name, status: 3 } : gatewayAsset;
-        }
+        }*/
 
         return assets[id] ? { ...assets[id], provider: lastData.oracle.name } : null;
     }
