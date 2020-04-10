@@ -16,7 +16,7 @@
   "coinomat": "",
   "wavesGateway": {
     "TN": {
-      "url": "https://gateway.turtlenetwork.eu",
+      "url": "https://tngw.turtlenetwork.eu",
       "isThirdParty": false,
       "regex":"^3P[a-km-zA-HJ-NP-Z1-9]{33}"
     },
