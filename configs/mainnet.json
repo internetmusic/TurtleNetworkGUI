@@ -64,6 +64,12 @@
       "url": "https://ltcgw.turtlenetwork.eu",
       "isThirdParty": false,
       "regex": "^[LM3][a-km-zA-HJ-NP-Z1-9]{26,33}$"
+    },
+    "91NnG9iyUs3ZT3tqK1oQ3ddpgAkE7v5Kbcgp2hhnDhqd": {
+      "url": "https://wgrgw.turtlenetwork.eu",
+      "isThirdParty": false,
+      "regex": "^W{1}[1-9A-HJ-NP-Za-km-z]{33}"
+
     }
   },
   "support": "https://support@turtlenetwork.eu",
