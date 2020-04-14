@@ -68,7 +68,7 @@
     "91NnG9iyUs3ZT3tqK1oQ3ddpgAkE7v5Kbcgp2hhnDhqd": {
       "url": "https://wgrgw.turtlenetwork.eu",
       "isThirdParty": false,
-      "regex": "^W{1}[1-9A-HJ-NP-Za-km-z]{33}"
+      "regex": "^^[W][a-km-zA-HJ-NP-Z1-9]{33}$"
 
     }
   },
