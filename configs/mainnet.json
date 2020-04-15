@@ -74,7 +74,7 @@
     "HBxBjymrCC8TuL8rwCLr2vakDEq4obqkMwYYPEZtTauA": {
       "url": "https://sysgw.turtlenetwork.eu",
       "isThirdParty": false,
-      "regex": "^(sys1|[13sS])[a-zA-HJ-NP-Z0-9]{25,39}$"
+      "regex": "^(sys1|[13sS])[a-zA-HJ-NP-Z0-9]{25,40}$"
 
     }
   },
