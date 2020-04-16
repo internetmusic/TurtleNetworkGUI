@@ -182,7 +182,7 @@
             }
 
             updateGatewayData() {
-                if (gatewayService.hasSupportOf(this.balance.asset, 'deposit')) {
+                if (gatewayService.hasSupportOf(this.balance.asset, 'withdraw')) {
                     return gatewayService
                         .getWithdrawDetails(this.balance.asset, this.state.singleSend.recipient, this.state.paymentId)
                         .then(details => {

@@ -9,34 +9,29 @@
      * @param {ConfigService} configService
      * @return {GatewayService}
      */
-    const factory = function (coinomatService, coinomatCardService,
-                              coinomatSepaService, wavesGatewayService, configService) {
+    const factory = function (wavesGatewayService, configService) {
 
         class GatewayService {
 
             constructor() {
                 this.gateways = [
-                    coinomatService,
-                    coinomatCardService,
-                    coinomatSepaService,
                     wavesGatewayService
                 ];
             }
 
             getCryptocurrencies() {
                 return {
-                    ...coinomatService.getAll(),
                     ...wavesGatewayService.getAll(),
                     ...WavesApp.network.wavesGateway
                 };
             }
 
             getPurchasableWithCards() {
-                return coinomatCardService.getAll();
+                return [];
             }
 
             getFiats() {
-                return coinomatSepaService.getAll();
+                return [];
             }
 
             /**
@@ -193,7 +188,8 @@
              * @return {Promise}
              */
             hasConfirmation(address) {
-                return coinomatService.hasConfirmation(address);
+                // proxy old implementation for coinmat, check git for old implementation
+                return address === 'z';
             }
 
             /**
@@ -218,9 +214,6 @@
     };
 
     factory.$inject = [
-        'coinomatService',
-        'coinomatCardService',
-        'coinomatSepaService',
         'wavesGatewayService',
         'configService'
     ];
@@ -252,7 +245,6 @@
 
 /**
  * @typedef {object} IGatewayDetails
- * @property {string} address
  * @property {string} attachment
  * @property {BigNumber} exchangeRate
  * @property {BigNumber} gatewayFee
