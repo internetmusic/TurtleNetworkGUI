@@ -24,7 +24,7 @@
                 if (GATEWAYS[asset.id] || WavesApp.network.wavesGateway[asset.id]) {
                     return {
                         deposit: true,
-                        withdraw: asset.id !== WavesApp.defaultAssets.BTC,
+                        withdraw: true,
                         errorAddressMessage: true,
                         wrongAddressMessage: true
                     };
