@@ -31,7 +31,7 @@
       "regex": "^D{1}[5-9A-HJ-NP-U]{1}[1-9A-HJ-NP-Za-km-z]{32}$"
     },
     "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f": {
-      "url": "https://tusdgw.rcanelabs.nl",
+      "url": "https://tusdgw.rcanelabs.com",
       "isThirdParty": true,
       "regex": "^0x[0-9a-f]{40}$"
     },
