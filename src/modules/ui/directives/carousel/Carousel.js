@@ -132,7 +132,7 @@
              * @public
              */
             goToDexDemo(pairAssets) {
-                utils.openDex(pairAssets.assetId1, pairAssets.assetId2, 'dex-demo');
+                utils.openDex(pairAssets.assetId1, pairAssets.assetId2, 'trade');
             }
 
             /**
