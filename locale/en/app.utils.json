@@ -416,14 +416,14 @@
             "warningTitle": "Send only {{assetTicker}} to this deposit address",
 
             "disclaimer": "By using this service you agree to following disclaimer {{disclaimerLink}}.",
-            
+
             "recoveryStatement": "On end-user errors the minimal recover amount is {{minRecoveryAmount, BigNumber}} and recover fee is {{recoveryFee, BigNumber}}. ",
 
             "support": "For support please contact email {{supportEmail}}.",
 
             "operator": "This gw is operated by {{operator}}.",
 
-            "attachmentInstructions": "Dont forget to use {{walletAddress}} as the attachment.",
+            "attachmentInstructions": "Dont forget to use {{walletAddress}} as the attachment (Description).",
 
             "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use {{tunnelUrl}}.",
 
