@@ -1,7 +1,25 @@
 {
   "tradingPairs": [
+    "3HFgaMssup9ssSL139sptsxc2EXLY3Qx5ykY7hf5LD2B",
+    "9gTWnHstaAkhD7hEGBqNdgcAru5872d8Xf1QmoPrz5iz",
+    "Fr2kNhe7XR3E16W7Mfh7NhNcsQWLXx3hSLjoFgpbFsNj",
+    "5Asy9P3xjcvBAgbeyiitZhBRJZJ2TPGSZJz9ihDTnB3d",
+    "A62sRG58HFbWUNvFoEEjX4U3txXKcLm11MXWWS429qpN",
+    "HDeemVktm2Z68RMkyA7AexhpaCqot1By7adBzaN9j5Xg",
+    "6Mh41byVWPg8JVCfuwG5CAPCh9Q7gnuaAVxjDfVNDmcD",
+    "GzHRyYtdwvaGSkUC4i8d3Xzmsz9aXBWdrpMNszi6bcvR",
+    "3GvqjyJFBe1fpiYnGsmiZ1YJTkYiRktQ86M2KMzcTb2s",
+    "3vB9hXHTCYbPiQNuyxCQgXF6AvFg51ozGKL9QkwoCwaS",
+    "7jcY6DDYsSo7NuZEAruWhrB5apebA2cERhrBx6RFk5tL",
+    "DfutD8DdUhDphHoaMds2RQhw7oCmsf7W41s2zR5ZDq9F",
+    "bqs5DvxtTTN3kPQV95q4vjKFSRBcXEsFPuZgvhYkZC5",
+    "AVJc3uYu8HdjQEx4rroaq6v4Xv4L1etG1tQPeuqs38Sf",
+    "7tC2ZukogadhvHUdKQyWJ2cbk6T1viTCFJMgevVeTY1Y",
+    "HBxBjymrCC8TuL8rwCLr2vakDEq4obqkMwYYPEZtTauA",
+    "TN",
+    "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f",
     "EzwaF58ssALcUCZ9FbyeD1GTSteoZAQZEDTqBAXHfq8y",
-    "3vB9hXHTCYbPiQNuyxCQgXF6AvFg51ozGKL9QkwoCwaS"
+    "91NnG9iyUs3ZT3tqK1oQ3ddpgAkE7v5Kbcgp2hhnDhqd"
   ],
   "oracles": {
     "waves": "3JwdMmF7xEack9y8SJ4VeQ4UX2qmu1jCoWa",
