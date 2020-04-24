@@ -109,6 +109,10 @@
              */
             pairDataList = null; // TODO Remove disgusting hack
             /**
+            * @type {Array<WatchList.IPairDataItem>}
+            */
+            filteredPairDataList = null;
+            /**
              * @type {boolean}
              * @private
              */
@@ -154,7 +158,10 @@
              * @private
              */
             _lockedPairs = [];
-
+            /**
+             * @type {boolean}
+             */
+            _showInactive = false;
 
             constructor() {
                 super($scope);
@@ -218,6 +225,14 @@
                 };
             }
 
+            get showInactive() {
+                return this._showInactive;
+            }
+
+            set showInactive(mode) {
+                this._showInactive = mode;
+            }
+
             $postLink() {
                 // this._lastUserBalanceIdList = WatchList._getUserBalanceAssetIdList();
 
@@ -246,6 +261,9 @@
 
                 this._poll.ready.then(() => {
                     this.pending = false;
+                    this.filteredPairDataList = this.pairDataList.filter(
+                        pd => pd.volume != null
+                    );
                 });
             }
 
@@ -336,7 +354,7 @@
              * @private
              */
             _isActiveTrading() {
-                return this.activeTab === 'trading';
+                return this.activeTab === 'all';
             }
 
             /**
@@ -367,6 +385,9 @@
                         this.pairDataList.push(item);
                         WatchList._renderSmartTable();
                     });
+                    this.filteredPairDataList = this.pairDataList.filter(
+                        pd => pd.volume != null
+                    );
                 } else {
                     WatchList._renderSmartTable();
                 }
@@ -639,15 +660,14 @@
                 if (this._isActiveTrading()) {
                     return this._getTradingPairList();
                 }
-                const defaultAssets = configService.get('SETTINGS.DEX.WATCH_LIST_PAIRS') || [];
                 const favorite = (this._favourite || [])
                     .filter(item => item && item.filter(Boolean).length === 2)
                     .map(p => p.sort());
                 const chosen = [this._assetIdPair.amount, this._assetIdPair.price].sort();
                 const searchIdList = Object.keys(this._searchAssetsHash).filter(key => key !== 'undefined');
                 // const userBalances = this._lastUserBalanceIdList;
-                const assetsIds = Object.values(WavesApp.defaultAssets);
-                const idList = uniq(assetsIds.concat(searchIdList, defaultAssets));
+                const assetsIds = Object.values(TRADING_ASSETS);
+                const idList = uniq(assetsIds.concat(searchIdList, TRADING_ASSETS));
                 const other = WatchList._getAllCombinations(idList);
                 return WatchList._uniqPairs(favorite.concat(other, [chosen]));
             }
