@@ -960,7 +960,7 @@
 
                 "accept": "Accept and Continue",
 
-                "text": "By using Gateway service, you agree to be bound by [Gateway Terms of Service](https://client.turtlenetwork.eu/) and [Conduction of Transactions](https://client.turtlenetwork.eu/). If you do not agree to these terms, then do not use this Gateway service.",
+                "text": "By using Gateway service, you agree to be bound by [Gateway Terms of Service](https://wallet.turtlenetwork.eu/) and [Conduction of Transactions](https://wallet.turtlenetwork.eu/). If you do not agree to these terms, then do not use this Gateway service.",
 
                 "title": "Gateway service agreement"
 
@@ -1608,7 +1608,7 @@
 
                 "backButton": "Go Back",
 
-                "cell1": "Always check the URL: [https://client.turtlenetwork.eu](https://client.turtlenetwork.eu)",
+                "cell1": "Always check the URL: [https://wallet.turtlenetwork.eu](https://wallet.turtlenetwork.eu)",
 
                 "cell2": "Do not use browsers that have extensions or plugins to access your account.",
 

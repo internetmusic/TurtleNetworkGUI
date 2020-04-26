@@ -54,7 +54,7 @@
 
             "noUsers": {
 
-                "description": "{div}[We have not found any saved accounts. Return to the] {div}[[client.turtlenetwork.eu](https://client.turtlenetwork.eu)]",
+                "description": "{div}[We have not found any saved accounts. Return to the] {div}[[wallet.turtlenetwork.eu](https://wallet.turtlenetwork.eu)]",
 
                 "title": "No accounts saved"
 
