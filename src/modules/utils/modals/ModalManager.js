@@ -532,19 +532,6 @@
             }
 
             /**
-             * @param {Asset} [asset]
-             * @return {Promise}
-             */
-            showDeposit(asset) {
-                return this._getModal({
-                    id: 'deposit-popup',
-                    locals: { asset },
-                    templateUrl: 'modules/utils/modals/deposit/Deposit.html',
-                    controller: 'DepositCtrl'
-                });
-            }
-
-            /**
              * @param {User} user
              * @param {Asset} asset
              * @return {Promise}
