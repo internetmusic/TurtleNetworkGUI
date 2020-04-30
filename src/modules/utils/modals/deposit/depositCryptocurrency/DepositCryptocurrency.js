@@ -1,0 +1,194 @@
+(function () {
+    'use strict';
+
+    const { Money } = require('@waves/data-entities');
+
+    /**
+     * @param {typeof Base} Base
+     * @param {ng.IScope} $scope
+     * @param {GatewayService} gatewayService
+     * @param {User} user
+     * @return {DepositCryptocurrency}
+     */
+    const controller = function (Base, $scope, gatewayService, user) {
+
+        /**
+         * @extends {ng.IController}
+         */
+        class DepositCryptocurrency extends Base {
+
+            /**
+             * @type {Asset}
+             */
+            asset = null;
+
+            /**
+             * @type {Array}
+             */
+            cryptocurrencies;
+
+            /**
+             * @type {boolean}
+             */
+            isSingleAsset;
+
+            /**
+             * @type {string}
+             */
+            assetKeyName;
+
+            /**
+             * @type {string}
+             */
+            gatewayAddress;
+
+            /**
+             * @type {string}
+             */
+            gatewayType;
+
+            /**
+             * @type {string}
+             */
+            gatewayUrl;
+
+            /**
+             * @type {boolean}
+             */
+            gatewayServerError = false;
+
+            /**
+             * @type {boolean}
+             */
+            gatewayServerPending = false;
+
+            /**
+             * @type {boolean}
+             */
+            isWEST;
+
+            /**
+             * @type {string}
+             */
+            chosenAssetId = null;
+
+            /**
+             * @type {Function}
+             */
+            onAssetChange;
+
+            /**
+             * @type {Money | null}
+             */
+            minAmount = null;
+
+            /**
+             * @type {string}
+             */
+            supportEmail = null;
+
+            /**
+             * @type {string}
+             */
+            disclaimerLink = null;
+
+            /**
+             * @type {string}
+             */
+            operator = null;
+
+            /**
+             * @type {Money | null}
+             */
+            minRecoveryAmount = null;
+
+            /**
+             * @type {Money | null}
+             */
+            recoveryFee = null;
+
+            /**
+             * @type {Money | null}
+             */
+            maxAmount = null;
+
+            /**
+             * @type {string}
+             */
+            walletAddress = null;
+
+            constructor() {
+                super();
+
+                this.observe('chosenAssetId', ({ value: id }) => this.onAssetChange({ id }));
+
+                this.observe('asset', this.updateGatewayAddress);
+            }
+
+            /**
+             * @public
+             */
+            updateGatewayAddress() {
+                let innerAsset = 'TN';
+                if (this.asset) {
+                    innerAsset = this.asset;
+                }
+
+                this.gatewayServerError = false;
+                this.gatewayServerPending = true;
+
+                const depositDetails = gatewayService.getDepositDetails(innerAsset, user.address);
+
+                if (depositDetails) {
+                    depositDetails.then((details) => {
+
+                        if (details.gatewayType === 'deposit') {
+                            gatewayService.getDepositAddress(innerAsset, user.address).then(result => {
+                                this.gatewayAddress = result.address;
+                            });
+                        } else {
+                            this.gatewayAddress = details.address;
+                        }
+                        this.minAmount = Money.fromTokens(details.minimumAmount, innerAsset);
+                        this.maxAmount = Money.fromTokens(details.maximumAmount, innerAsset);
+                        this.disclaimerLink = details.disclaimerLink;
+                        this.minRecoveryAmount = Money.fromTokens(details.minRecoveryAmount, innerAsset);
+                        this.recoveryFee = Money.fromTokens(details.recoveryFee, innerAsset);
+                        this.supportEmail = details.supportEmail;
+                        this.operator = details.operator;
+                        this.gatewayServerPending = false;
+                        this.walletAddress = details.walletAddress;
+                        this.gatewayType = details.gatewayType;
+                        this.gatewayUrl = details.gatewayUrl;
+                        $scope.$apply();
+                    }, () => {
+                        this.minAmount = Money.fromTokens(0.001, innerAsset);
+                        this.gatewayAddress = null;
+                        this.gatewayServerError = true;
+                        this.gatewayServerPending = false;
+                        $scope.$apply();
+                    });
+
+                    this.assetKeyName = gatewayService.getAssetKeyName(innerAsset, 'deposit');
+                    this.isWEST = false;
+                }
+            }
+
+        }
+
+        return new DepositCryptocurrency();
+    };
+
+    controller.$inject = ['Base', '$scope', 'gatewayService', 'user'];
+
+    angular.module('app.utils').component('wDepositCryptocurrency', {
+        controller,
+        bindings: {
+            asset: '<',
+            cryptocurrencies: '<',
+            isSingleAsset: '<',
+            onAssetChange: '&'
+        },
+        templateUrl: 'modules/utils/modals/deposit/depositCryptocurrency/deposit-cryptocurrency.html'
+    });
+})();
