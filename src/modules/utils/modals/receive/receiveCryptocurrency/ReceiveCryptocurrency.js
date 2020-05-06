@@ -152,6 +152,7 @@
                         this.supportEmail = details.supportEmail;
                         this.operator = details.operator;
                         this.gatewayServerPending = false;
+                        this.totalFee = details.tn_total_fee;
                         this.walletAddress = details.walletAddress;
                         this.gatewayType = details.gatewayType;
                         this.gatewayUrl = details.gatewayUrl;

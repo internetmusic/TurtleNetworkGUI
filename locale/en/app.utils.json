@@ -411,19 +411,23 @@
 
             "warningMinAmountTitle": "The minimum deposit is {{minAmount, BigNumber}} {{assetTicker}}, the maximum deposit is {{maxAmount}} {{assetTicker}}",
 
+            "totalFee": "{span.error-500}[Deposit Fee: {{totalFee}} {{assetTicker}}]",
+
             "warningText": "Sending any other currency to this address may result in the loss of your deposit.",
 
             "warningTitle": "Send only {{assetTicker}} to this deposit address",
 
-            "disclaimer": "By using this service you agree to following disclaimer {{disclaimerLink}}.",
+            "disclaimer": "By using this service you agree with the [disclaimer]({{disclaimerLink}}).",
 
             "recoveryStatement": "On end-user errors the minimal recover amount is {{minRecoveryAmount, BigNumber}} and recover fee is {{recoveryFee, BigNumber}}. ",
 
-            "support": "For support please contact email {{supportEmail}}.",
+            "support": "For support please contact email [{{supportEmail}}](mailto:{{supportEmail}}).",
 
             "operator": "This gw is operated by {{operator}}.",
 
-            "attachmentInstructions": "Dont forget to use {{walletAddress}} as the attachment (Description).",
+            "attachmentInstructionsTitle": "Important: Send with a Description",
+
+            "attachmentInstructionsText": "Insert: {span.error-500.bold}[{{walletAddress}}]\ninto the Description field.",
 
             "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use {{tunnelUrl}}.",
 
