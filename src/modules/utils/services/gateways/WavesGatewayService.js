@@ -72,6 +72,7 @@
                             minimumAmount: new BigNumber(details.minAmount),
                             maximumAmount: new BigNumber(details.maxAmount),
                             gatewayFee: new BigNumber(details.fee),
+                            tn_total_fee: new BigNumber(details.tn_total_fee),
                             disclaimerLink: details.disclaimer,
                             minRecoveryAmount: new BigNumber(details.recovery_amount),
                             recoveryFee: new BigNumber(details.recovery_fee),

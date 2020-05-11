@@ -39,14 +39,13 @@
     
 
     <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending && $ctrl.gatewayType === 'attachment'">
-        <div class="body-2 warning-500" w-i18n="modal.deposit.warningTitle"></div>
+        <div class="body-2 warning-500 bold" w-i18n="modal.deposit.warningTitle"></div>
         <div class="footnote-1 basic-500" w-i18n="modal.deposit.warningText"></div>
     </div>
     
     <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending && $ctrl.gatewayType === 'attachment'">
-        <div class="body-2 warning-500"
-        w-i18n="modal.deposit.attachmentInstructions"
-        params="{  walletAddress: $ctrl.walletAddress  }"></div>
+        <div class="body-2 warning-500 bold" w-i18n="modal.deposit.attachmentInstructionsTitle"></div>
+        <div class="footnote-1 basic-500" w-i18n="modal.deposit.attachmentInstructionsText" params="{  walletAddress: $ctrl.walletAddress  }"></div>
     </div>
 
     <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending && $ctrl.gatewayType === 'tunnel'">
@@ -58,7 +57,7 @@
     </div>
 
     <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending">
-        <div class="body-2 warning-500 margin-05"
+        <div class="body-2 warning-500 margin-05 bold"
              w-i18n="modal.deposit.warningMinAmountTitle"
              params="{  minAmount: $ctrl.minAmount.getTokens(),
                         assetTicker: $ctrl.asset.displayName,
@@ -74,6 +73,11 @@
         params="{  disclaimerLink: $ctrl.disclaimerLink  }"></div>
 
         <div class="footnote-1 basic-500"
+             w-i18n="modal.deposit.totalFee"
+             params="{totalFee: $ctrl.totalFee,  assetTicker: $ctrl.asset.displayName}"
+        ></div>
+
+        <div class="footnote-1 basic-500"
         w-i18n="modal.deposit.recoveryStatement"
         params="{  minRecoveryAmount: $ctrl.minRecoveryAmount,
             recoveryFee: $ctrl.recoveryFee,
@@ -82,7 +86,7 @@
 
    <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending">
 
-        <div class="body-2 warning-500 margin-05"
+        <div class="body-2 warning-500 margin-05 bold"
         w-i18n="modal.deposit.support"
         params="{  supportEmail: $ctrl.supportEmail  }"></div>
 
