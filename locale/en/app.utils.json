@@ -423,13 +423,13 @@
 
             "support": "For support please contact email [{{supportEmail}}](mailto:{{supportEmail}}).",
 
-            "operator": "This gw is operated by {{operator}}.",
+            "operator": "This Gateway is operated by {{operator}}.",
 
             "attachmentInstructionsTitle": "Important: Send with a Description",
 
             "attachmentInstructionsText": "Insert: {span.error-500.bold}[{{walletAddress}}]\ninto the Description field.",
 
-            "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use {{tunnelUrl}}.",
+            "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use [{{tunnelUrl}}]({{tunnelUrl}}).",
 
             "copyAndShare": "Copy & Share Address",
 
