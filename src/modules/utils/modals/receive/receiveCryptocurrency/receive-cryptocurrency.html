@@ -37,9 +37,35 @@
 
 
 
-    <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending && $ctrl.gatewayType === 'attachment'">
+    <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending && $ctrl.gatewayType !== 'tunnel'">
         <div class="body-2 warning-500 bold" w-i18n="modal.deposit.warningTitle"></div>
-        <div class="footnote-1 basic-500" w-i18n="modal.deposit.warningText"></div>
+        <div class="footnote-1 basic-500 margin-05" w-i18n="modal.deposit.warningText"></div>
+    
+        <div class="body-2 basic-900 margin-05" ng-if="!$ctrl.gatewayServerError  && $ctrl.gatewayType !== 'tunnel'">
+            <span w-i18n="modal.deposit.copyAndShare"></span>
+            <w-help-icon>
+                <div class="help-icon__row headline-3">
+                    <span w-i18n="modal.deposit.helpDescrTitle"
+                    params="{  assetTicker: $ctrl.asset.displayName  }"></span>
+                </div>
+                <div class="help-icon__row">
+                    <span w-i18n="modal.deposit.helpDescrText"></span>
+                </div>
+                <div class="help-icon__row">
+                    <span w-i18n="modal.deposit.pleaseNote"></span>
+                </div>
+            </w-help-icon>
+        </div>
+
+        <w-copy-wrap
+            class="copy-wrap copy-wrap_receive body-1"
+            info="$ctrl.gatewayAddress"
+            ng-if="!$ctrl.gatewayServerError && $ctrl.gatewayType !== 'tunnel'"
+        >
+            {{$ctrl.gatewayAddress}}
+            <w-loader class="loader" ng-if="!$ctrl.gatewayAddress"></w-loader>
+        </w-copy-wrap>
+
     </div>
 
     <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending && $ctrl.gatewayType === 'attachment'">
@@ -94,30 +120,6 @@
         params="{  operator: $ctrl.operator  }"></div>
    </div>
 
-    <div class="body-2 basic-900 margin-05" ng-if="!$ctrl.gatewayServerError  && $ctrl.gatewayType !== 'tunnel'">
-        <span w-i18n="modal.deposit.copyAndShare"></span>
-        <w-help-icon>
-            <div class="help-icon__row headline-3">
-                <span w-i18n="modal.deposit.helpDescrTitle"
-                params="{  assetTicker: $ctrl.asset.displayName  }"></span>
-            </div>
-            <div class="help-icon__row">
-                <span w-i18n="modal.deposit.helpDescrText"></span>
-            </div>
-            <div class="help-icon__row">
-                <span w-i18n="modal.deposit.pleaseNote"></span>
-            </div>
-        </w-help-icon>
-    </div>
-
-    <w-copy-wrap
-        class="copy-wrap copy-wrap_receive body-1"
-        info="$ctrl.gatewayAddress"
-        ng-if="!$ctrl.gatewayServerError && $ctrl.gatewayType !== 'tunnel'"
-    >
-        {{$ctrl.gatewayAddress}}
-        <w-loader class="loader" ng-if="!$ctrl.gatewayAddress"></w-loader>
-    </w-copy-wrap>
 
 
     <div class="get-started-link__or or" ng-if="!$ctrl.gatewayServerError && $ctrl.gatewayType === 'deposit'">
