@@ -9,10 +9,10 @@
   "apiVersion": "v0",
   "code": "l",
   "node": " https://apitnetworktest.blackturtle.eu",
-  "matcher": "https://tntestnetmatcher.blackturtle.eu/matcher",
+  "matcher": "https://testnet.matcher.turtlenetwork.eu/matcher",
   "api":  "https://testnet.data-service.turtlenetwork.eu",
   "explorer": "https://explorer.turtlenetwork.eu/testnet",
-  "coinomat": "https://localhost:8080/coinomat",  
+  "coinomat": "https://localhost:8080/coinomat",
   "wavesGateway": {
     "TN": {
       "url": "https://gateway.turtlenetwork.eu",
