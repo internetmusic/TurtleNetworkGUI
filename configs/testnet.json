@@ -12,7 +12,7 @@
   "matcher": "https://testnet.matcher.turtlenetwork.eu/matcher",
   "api":  "https://testnet.data-service.turtlenetwork.eu",
   "explorer": "https://explorer.turtlenetwork.eu/testnet",
-  "coinomat": "https://localhost:8080/coinomat",
+  "coinomat": "",
   "wavesGateway": {
   },
   "support": "https://support.turtlenetwork.eu",
@@ -24,7 +24,7 @@
   "origin": "https://testnet.wallet.turtlenetwork.eu",
   "featuresConfigUrl": "https://raw.githubusercontent.com/TurtleNetwork/waves-client-config/master/testnet.config.json",
   "feeConfigUrl": "https://raw.githubusercontent.com/TurtleNetwork/waves-client-config/master/fee.json",
-  "tokenrating": "https://dev.voting.wavesplatform.com",
+  "tokenrating": "",
   "assets": {
     "BTC": "4bXds5VEHFQth6AhpF1k6rjvNKzaMf1Yz2Wab9pn9msD",
     "ETH": "2GRJaVYhhQPKVoWQFyJfTfx3eB5DD7CPdG7ZYx3Cs6Mk",
