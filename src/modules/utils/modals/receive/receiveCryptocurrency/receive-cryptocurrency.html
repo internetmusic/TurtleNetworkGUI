@@ -44,9 +44,13 @@
         <div class="body-2 basic-900 margin-05" ng-if="!$ctrl.gatewayServerError  && $ctrl.gatewayType !== 'tunnel'">
             <span w-i18n="modal.deposit.copyAndShare"></span>
             <w-help-icon>
-                <div class="help-icon__row headline-3">
+                <div class="help-icon__row headline-3" ng-if="$ctrl.asset.displayName !== 'TN'">
                     <span w-i18n="modal.deposit.helpDescrTitle"
                     params="{  assetTicker: $ctrl.asset.displayName  }"></span>
+                </div>
+                <div class="help-icon__row headline-3" ng-if="$ctrl.asset.displayName === 'TN'">
+                    <span w-i18n="modal.deposit.helpDescrTitle"
+                    params="{  assetTicker: 'WAVES'  }"></span>
                 </div>
                 <div class="help-icon__row">
                     <span w-i18n="modal.deposit.helpDescrText"></span>
