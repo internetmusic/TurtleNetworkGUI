@@ -14,11 +14,6 @@
   "explorer": "https://explorer.turtlenetwork.eu/testnet",
   "coinomat": "https://localhost:8080/coinomat",
   "wavesGateway": {
-    "TN": {
-      "url": "https://gateway.turtlenetwork.eu",
-      "isThirdParty": false,
-      "regex":"^3P[a-km-zA-HJ-NP-Z1-9]{33}$"
-    }
   },
   "support": "https://support.turtlenetwork.eu",
   "termsAndConditions": "https://docs.turtlenetwork.eu/files/placeholder.pdf",
