@@ -16,7 +16,8 @@
   "wavesGateway": {
     "TN": {
       "url": "https://gateway.turtlenetwork.eu",
-      "isThirdParty": false
+      "isThirdParty": false,
+      "regex":"^3P[a-km-zA-HJ-NP-Z1-9]{33}$"
     }
   },
   "support": "https://support.turtlenetwork.eu",
