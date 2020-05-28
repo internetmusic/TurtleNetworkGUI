@@ -421,7 +421,7 @@
 
             "recoveryStatement": "On end-user errors the minimal recover amount is {{minRecoveryAmount, BigNumber}} and recover fee is {{recoveryFee, BigNumber}}. ",
 
-            "support": "For support please contact email [{{supportEmail}}](mailto:{{supportEmail}}).",
+            "support": "For support please contact email [{{supportEmail}}](mailto:{{supportEmail}})",
 
             "operator": "This Gateway is operated by {{operator}}.",
 
@@ -429,7 +429,7 @@
 
             "attachmentInstructionsText": "Insert: {span.error-500.bold}[{{walletAddress}}]\ninto the Description field.",
 
-            "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use [{{tunnelUrl}}]({{tunnelUrl}}).",
+            "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use [{{tunnelUrl}}]({{tunnelUrl}})",
 
             "copyAndShare": "Copy & Share Address",
 
