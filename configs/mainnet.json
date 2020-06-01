@@ -28,7 +28,7 @@
   "apiVersion": "v0",
   "code": "L",
   "node": "https://tnnode2.turtlenetwork.eu",
-  "matcher": "https://privatematcher.blackturtle.eu/matcher",
+  "matcher": "https://matcher.turtlenetwork.eu/matcher",
   "api": "https://data-service.turtlenetwork.eu",
   "explorer": "https://explorer.turtlenetwork.eu",
   "coinomat": "",
@@ -100,6 +100,11 @@
       "isThirdParty": false,
       "regex": "^0x[a-fA-F0-9]{40}$"
 
+    },
+    "GzHRyYtdwvaGSkUC4i8d3Xzmsz9aXBWdrpMNszi6bcvR": {
+      "url": "https://ether1tnswap.kgbconcepts.network/",
+      "isThirdParty": true,
+      "regex": "^0x[a-fA-F0-9]{40}$"
     }
   },
   "support": "https://support@turtlenetwork.eu",
