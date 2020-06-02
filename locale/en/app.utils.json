@@ -415,7 +415,7 @@
 
             "warningText": "Sending any other currency to this address may result in the loss of your deposit.",
 
-            "warningTitle": "Send only {{assetTicker}} to this deposit address",
+            "warningTitle": "Send only {{assetTicker}} to this deposit address. This address is for 1 time use only!",
 
             "disclaimer": "By using this service you agree with the [disclaimer]({{disclaimerLink}}).",
 
