@@ -40,10 +40,6 @@
              */
             migrationSuccess = false;
             /**
-             * @type {string}
-             */
-            newDexLink = WavesApp.network.wavesExchangeLink;
-            /**
              * @type {boolean}
              */
             isDesktop = WavesApp.isDesktop();

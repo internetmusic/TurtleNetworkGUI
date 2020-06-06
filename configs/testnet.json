@@ -40,6 +40,5 @@
     { "ticker": "WAVES", "id": "3z9tHpm7ZvD3RBTswdc33yQYP4oqkSnzXgLMK4EzFYdV"},
     { "ticker": "LTC", "id": "EZehVXn6NC8hZQwkYTGp1Rfyp783fsGK2VAJi6tc9zDC"},
     { "ticker": "TN", "id": "TN"}
-  ],
-  "wavesExchangeLink": "https://waves.exchange"
+  ]
 }
