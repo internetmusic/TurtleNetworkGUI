@@ -354,7 +354,7 @@
              * @private
              */
             _isActiveTrading() {
-                return this.activeTab === 'all';
+                return this.activeTab === 'trading';
             }
 
             /**
