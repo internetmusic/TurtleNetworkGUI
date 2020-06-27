@@ -415,7 +415,7 @@
 
             "warningText": "Sending any other currency to this address may result in the loss of your deposit.",
 
-            "warningTitle": "Send only {{assetTicker}} to this deposit address. This address is for 1 time use only!",
+            "warningTitle": "Send only {{assetTicker}} to this deposit address.",
 
             "disclaimer": "By using this service you agree with the [disclaimer]({{disclaimerLink}}).",
 
@@ -429,7 +429,11 @@
 
             "attachmentInstructionsText": "Insert: {span.error-500.bold}[{{walletAddress}}]\ninto the Description field.",
 
-            "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use [{{tunnelUrl}}]({{tunnelUrl}})",
+            "depositInstructionsTitle": "Important: This address is for 1 time use only!",
+
+            "depositInstructionsText": "Please wait until your deposit is completed before doing a second one. Ignoring this might result in a loss off funds.",
+
+            "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use [{{tunnelUrl}}]({{tunnelUrl}}). Be aware, tunnels are one time use, and can only process one transfer at the same time.",
 
             "copyAndShare": "Copy & Share Address",
 
