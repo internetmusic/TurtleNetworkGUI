@@ -425,7 +425,7 @@
 
             "operator": "This Gateway is operated by {{operator}}.",
 
-            "attachmentInstructionsTitle": "Required: Send {{assetTicker}} with deposit address in Description field or you may lose that money.",
+            "attachmentInstructionsTitle": "Required: Send {{assetTicker}} with deposit address in Description field.",
 
             "attachmentInstructionsText": "Insert: {span.error-500.bold}[{{walletAddress}}]\ninto the Description field.\n{span.error-500.bold}[Note]\n: Deposit address must be included in the description field, otherwise may result in the loss of deposit.",
 
