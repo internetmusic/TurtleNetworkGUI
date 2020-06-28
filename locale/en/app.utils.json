@@ -413,7 +413,7 @@
 
             "totalFee": "{span.error-500}[Deposit Fee: {{totalFee}} {{assetTicker}}]",
 
-            "warningText": "Sending any other currency to this address may result in the loss of your deposit.",
+            "warningText": "Sending any other currency othen than {{assetTicker}} to this address may result in the loss of your deposit.",
 
             "warningTitle": "Send only {{assetTicker}} to this deposit address.",
 
@@ -425,15 +425,15 @@
 
             "operator": "This Gateway is operated by {{operator}}.",
 
-            "attachmentInstructionsTitle": "Important: Send with a Description",
+            "attachmentInstructionsTitle": "Required: Send {{assetTicker}} with deposit address in Description field or you may lose that money.",
 
-            "attachmentInstructionsText": "Insert: {span.error-500.bold}[{{walletAddress}}]\ninto the Description field.",
+            "attachmentInstructionsText": "Insert: {span.error-500.bold}[{{walletAddress}}]\ninto the Description field.\n{span.error-500.bold}[Note]\n: Deposit address must be included in the description field, otherwise may result in the loss of deposit.",
 
-            "depositInstructionsTitle": "Important: This address is for 1 time use only!",
+            "depositInstructionsTitle": "Important: This address is for one time use only and can only accept one deposit!",
 
-            "depositInstructionsText": "Please wait until your deposit is completed before doing a second one. Ignoring this might result in a loss off funds.",
+            "depositInstructionsText": "You must wait for your initial {{assetTicker}} deposit to be confirmed on the Turtle Network blockchain before receiving another {{assetTicker}} deposit address for the Turtle Network. If you make more than one {{assetTicker}} deposit to the same deposit address you will lose those deposits.",
 
-            "tunnelInstructions": "To deposit {{assetTicker}} using a tunnel, use [{{tunnelUrl}}]({{tunnelUrl}}). Be aware, tunnels are one time use, and can only process one transfer at the same time.",
+            "tunnelInstructions": "To deposit {{assetTicker}} into the Turtle Network you must use a tunnel provided at [{{tunnelUrl}}]({{tunnelUrl}}). Warning! Tunnels are one time use only\nand will be permanantly closed after that one use! Sending more than one deposit through the same tunnel will result in the loss of that deposit!",
 
             "copyAndShare": "Copy & Share Address",
 

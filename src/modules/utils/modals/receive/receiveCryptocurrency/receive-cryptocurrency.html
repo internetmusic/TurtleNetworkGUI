@@ -38,8 +38,8 @@
 
 
     <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending && $ctrl.gatewayType !== 'tunnel'">
-        <div class="body-2 warning-500 bold" w-i18n="modal.deposit.warningTitle"></div>
-        <div class="footnote-1 basic-500 margin-05" w-i18n="modal.deposit.warningText"></div>
+        <div class="body-2 warning-500 bold" w-i18n="modal.deposit.warningTitle" params="{ assetTicker: $ctrl.asset.displayName}"></div>
+        <div class="footnote-1 basic-500 margin-05" w-i18n="modal.deposit.warningText" params="{ assetTicker: $ctrl.asset.displayName}"></div>
 
         <div class="body-2 basic-900 margin-05" ng-if="!$ctrl.gatewayServerError  && $ctrl.gatewayType !== 'tunnel'">
             <span w-i18n="modal.deposit.copyAndShare"></span>
@@ -73,8 +73,8 @@
     </div>
 
     <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending && $ctrl.gatewayType === 'attachment'">
-        <div class="body-2 warning-500 bold" w-i18n="modal.deposit.attachmentInstructionsTitle"></div>
-        <div class="footnote-1 basic-500" w-i18n="modal.deposit.attachmentInstructionsText" params="{  walletAddress: $ctrl.walletAddress  }"></div>
+        <div class="body-2 warning-500 bold" w-i18n="modal.deposit.attachmentInstructionsTitle" params="{ assetTicker: $ctrl.asset.displayName }"></div>
+        <div class="footnote-1 basic-500 bold" w-i18n="modal.deposit.attachmentInstructionsText" params="{  walletAddress: $ctrl.walletAddress  }"></div>
     </div>
     <div class="plate-warning" ng-if="!$ctrl.gatewayServerError && !$ctrl.gatewayServerPending && $ctrl.gatewayType === 'deposit'">
         <div class="body-2 warning-500 bold" w-i18n="modal.deposit.depositInstructionsTitle"></div>
