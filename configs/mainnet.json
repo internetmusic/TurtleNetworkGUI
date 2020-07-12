@@ -52,7 +52,7 @@
     "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f": {
       "url": "https://tusdgw.rcanelabs.com",
       "isThirdParty": true,
-      "regex": "^0x[0-9a-f]{40}$"
+      "regex": "^0x[a-fA-F0-9]{40}$"
     },
     "AVJc3uYu8HdjQEx4rroaq6v4Xv4L1etG1tQPeuqs38Sf": {
       "url": "https://sentgw.rcanelabs.com",
@@ -110,7 +110,7 @@
     "7RB3BWayeCVPq3kkpkeJZAFv2DYCB5gEwnutEpRofaw4": {
       "url": "https://usdtgw.rcanelabs.com",
       "isThirdParty": true,
-      "regex": "^0x[0-9a-f]{40}$"
+      "regex": "^0x[a-fA-F0-9]{40}$"
     }
   },
   "support": "https://support@turtlenetwork.eu",
