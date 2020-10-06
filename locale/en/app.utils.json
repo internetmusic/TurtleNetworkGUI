@@ -413,7 +413,7 @@
 
             "totalFee": "{span.error-500}[Deposit Fee: {{totalFee}} {{assetTicker}}]",
 
-            "warningText": "Sending any other currency othen than {{assetTicker}} to this address may result in the loss of your deposit.",
+            "warningText": "Sending any other currency other than {{assetTicker}} to this address may result in the loss of your deposit.",
 
             "warningTitle": "Send only {{assetTicker}} to this deposit address.",
 
