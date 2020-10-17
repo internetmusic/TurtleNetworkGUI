@@ -49,17 +49,17 @@
       "regex": "^D{1}[5-9A-HJ-NP-U]{1}[1-9A-HJ-NP-Za-km-z]{32}$"
     },
     "2R7raH74LuuiCbJbcv3Aa7g14WY1vYPUGushCUJFwW1f": {
-      "url": "https://tusdgw.rcanelabs.com",
+      "url": "https://gateway.mortysnode.nl",
       "isThirdParty": true,
       "regex": "^0x[a-fA-F0-9]{40}$"
     },
     "AVJc3uYu8HdjQEx4rroaq6v4Xv4L1etG1tQPeuqs38Sf": {
-      "url": "https://sentgw.rcanelabs.com",
+      "url": "https://sentgw.mortysnode.nl",
       "isThirdParty": true,
       "regex": "^0x[0-9a-f]{40}$"
     },
     "9gTWnHstaAkhD7hEGBqNdgcAru5872d8Xf1QmoPrz5iz": {
-      "url": "https://arrrgw.rcanelabs.com",
+      "url": "https://arrrgw.mortysnode.nl",
       "isThirdParty": true,
       "regex": "^zs1[a-zA-Z0-9]{75}$"
     },
@@ -101,7 +101,7 @@
       "regex": "^0x[a-fA-F0-9]{40}$"
     },
     "7RB3BWayeCVPq3kkpkeJZAFv2DYCB5gEwnutEpRofaw4": {
-      "url": "https://usdtgw.rcanelabs.com",
+      "url": "https://usdtgw.mortysnode.nl",
       "isThirdParty": true,
       "regex": "^0x[a-fA-F0-9]{40}$"
     }
